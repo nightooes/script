@@ -1,4 +1,4 @@
-script_version('3.9.5')
+script_version('3.9.6')
 script_author('plalkeo')
 
 if MONET_DPI_SCALE == nil then MONET_DPI_SCALE = 1.0 end
