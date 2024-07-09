@@ -3928,7 +3928,6 @@ function main()
 			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Для открытия главного меню введите "..curcolor.."/smi", curcolor1)
 			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Скрипт был настроен заместителем директора "..curcolor.."специально для сотрудников СМИ ЛС сервера {ff0000}Yuma.", curcolor1)
 			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Последее обновление информации "..curcolor.."{008000} 09.07.2024", curcolor1)
-			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}--> "..curcolor.."Данная версия тестовая!!!", curcolor1)
 			if not doesFileExist(getFontsPath()) then
 				sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Отсутствует необходимый файл для работы скрипта. Загружаю файл..", curcolor1)
 				downloadFileToPath('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/Trebucbd.ttf', getFontsPath())
