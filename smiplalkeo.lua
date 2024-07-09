@@ -1,4 +1,4 @@
-script_version('3.9.5 CNN beta')
+script_version('3.9.5')
 script_author('plalkeo')
 
 if MONET_DPI_SCALE == nil then MONET_DPI_SCALE = 1.0 end
@@ -3927,7 +3927,7 @@ function main()
 			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Приветствуем вас: "..curcolor.. u_name .. '[' .. u_id .. ']', curcolor1)
 			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Для открытия главного меню введите "..curcolor.."/smi", curcolor1)
 			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Скрипт был настроен заместителем директора "..curcolor.."специально для сотрудников СМИ ЛС сервера {ff0000}Yuma.", curcolor1)
-			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Последее обновление информации "..curcolor.."{008000} 09.07.2024", curcolor1)
+			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Последее обновление скрипта: "..curcolor.."{008000} 08.07.2024", curcolor1)
 			if not doesFileExist(getFontsPath()) then
 				sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Отсутствует необходимый файл для работы скрипта. Загружаю файл..", curcolor1)
 				downloadFileToPath('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/Trebucbd.ttf', getFontsPath())
