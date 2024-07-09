@@ -49,7 +49,7 @@ encoding.default = 'CP1251'
 u8 = encoding.UTF8
 local print, clock, sin, cos, floor, ceil, abs, format, gsub, gmatch, find, char, len, upper, lower, sub, u8, new, str, sizeof = print, os.clock, math.sin, math.cos, math.floor, math.ceil, math.abs, string.format, string.gsub, string.gmatch, string.find, string.char, string.len, string.upper, string.lower, string.sub, encoding.UTF8, imgui.new, ffi.string, ffi.sizeof
 
--- Взято из ADDONS.lua - https://www.blast.hk/threads/127255/
+-- Р’Р·СЏС‚Рѕ РёР· ADDONS.lua - https://www.blast.hk/threads/127255/
 addons = {}
 local AI_TOGGLE = {}
 local ToU32 = imgui.ColorConvertFloat4ToU32
@@ -263,13 +263,13 @@ local mainIni = inicfg.load({
 		dep = true,
 	},
 	tags = {
-		math 		= u8'[Математика]',
-		country 	= u8'[Столицы]',
-		translate 	= u8'[Переводчик]',
-		himia 		= u8'[Химия]',
-		inter		= u8'[Интервью]',
-		sobes		= u8'[Собеседование]',
-		reklama 	= u8'[Реклама]',
+		math 		= u8'[РњР°С‚РµРјР°С‚РёРєР°]',
+		country 	= u8'[РЎС‚РѕР»РёС†С‹]',
+		translate 	= u8'[РџРµСЂРµРІРѕРґС‡РёРє]',
+		himia 		= u8'[РҐРёРјРёСЏ]',
+		inter		= u8'[РРЅС‚РµСЂРІСЊСЋ]',
+		sobes		= u8'[РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ]',
+		reklama 	= u8'[Р РµРєР»Р°РјР°]',
 	}
 }, 'smi.ini')
 
@@ -281,8 +281,8 @@ function saveInfo(first_razdel, second_razdel, value)
 	inicfg.save(mainIni,'smi.ini')
 end
 
-local trstl1 = {['ph'] = 'ф',['Ph'] = 'Ф',['Ch'] = 'Ч',['ch'] = 'ч',['Th'] = 'Т',['th'] = 'т',['Sh'] = 'Ш',['sh'] = 'ш', ['ea'] = 'и',['Ae'] = 'Э',['ae'] = 'э',['size'] = 'сайз',['Jj'] = 'Джейджей',['Whi'] = 'Вай',['whi'] = 'вай',['Ck'] = 'К',['ck'] = 'к',['Kh'] = 'Х',['kh'] = 'х',['hn'] = 'н',['Hen'] = 'Ген',['Zh'] = 'Ж',['zh'] = 'ж',['Yu'] = 'Ю',['yu'] = 'ю',['Yo'] = 'Ё',['yo'] = 'ё',['Cz'] = 'Ц',['cz'] = 'ц', ['ia'] = 'я', ['ea'] = 'и',['Ya'] = 'Я', ['ya'] = 'я', ['ove'] = 'ав',['ay'] = 'эй', ['rise'] = 'райз',['oo'] = 'у', ['Oo'] = 'У'}
-local trstl = {['B'] = 'Б',['Z'] = 'З',['T'] = 'Т',['Y'] = 'Й',['P'] = 'П',['J'] = 'Дж',['X'] = 'Кс',['G'] = 'Г',['V'] = 'В',['H'] = 'Х',['N'] = 'Н',['E'] = 'Е',['I'] = 'И',['D'] = 'Д',['O'] = 'О',['K'] = 'К',['F'] = 'Ф',['y`'] = 'ы',['e`'] = 'э',['A'] = 'А',['C'] = 'К',['L'] = 'Л',['M'] = 'М',['W'] = 'В',['Q'] = 'К',['U'] = 'А',['R'] = 'Р',['S'] = 'С',['zm'] = 'зьм',['h'] = 'х',['q'] = 'к',['y'] = 'и',['a'] = 'а',['w'] = 'в',['b'] = 'б',['v'] = 'в',['g'] = 'г',['d'] = 'д',['e'] = 'е',['z'] = 'з',['i'] = 'и',['j'] = 'ж',['k'] = 'к',['l'] = 'л',['m'] = 'м',['n'] = 'н',['o'] = 'о',['p'] = 'п',['r'] = 'р',['s'] = 'с',['t'] = 'т',['u'] = 'у',['f'] = 'ф',['x'] = 'x',['c'] = 'к',['``'] = 'ъ',['`'] = 'ь',['_'] = ' '}
+local trstl1 = {['ph'] = 'С„',['Ph'] = 'Р¤',['Ch'] = 'Р§',['ch'] = 'С‡',['Th'] = 'Рў',['th'] = 'С‚',['Sh'] = 'РЁ',['sh'] = 'С€', ['ea'] = 'Рё',['Ae'] = 'Р­',['ae'] = 'СЌ',['size'] = 'СЃР°Р№Р·',['Jj'] = 'Р”Р¶РµР№РґР¶РµР№',['Whi'] = 'Р’Р°Р№',['whi'] = 'РІР°Р№',['Ck'] = 'Рљ',['ck'] = 'Рє',['Kh'] = 'РҐ',['kh'] = 'С…',['hn'] = 'РЅ',['Hen'] = 'Р“РµРЅ',['Zh'] = 'Р–',['zh'] = 'Р¶',['Yu'] = 'Р®',['yu'] = 'СЋ',['Yo'] = 'РЃ',['yo'] = 'С‘',['Cz'] = 'Р¦',['cz'] = 'С†', ['ia'] = 'СЏ', ['ea'] = 'Рё',['Ya'] = 'РЇ', ['ya'] = 'СЏ', ['ove'] = 'Р°РІ',['ay'] = 'СЌР№', ['rise'] = 'СЂР°Р№Р·',['oo'] = 'Сѓ', ['Oo'] = 'РЈ'}
+local trstl = {['B'] = 'Р‘',['Z'] = 'Р—',['T'] = 'Рў',['Y'] = 'Р™',['P'] = 'Рџ',['J'] = 'Р”Р¶',['X'] = 'РљСЃ',['G'] = 'Р“',['V'] = 'Р’',['H'] = 'РҐ',['N'] = 'Рќ',['E'] = 'Р•',['I'] = 'Р',['D'] = 'Р”',['O'] = 'Рћ',['K'] = 'Рљ',['F'] = 'Р¤',['y`'] = 'С‹',['e`'] = 'СЌ',['A'] = 'Рђ',['C'] = 'Рљ',['L'] = 'Р›',['M'] = 'Рњ',['W'] = 'Р’',['Q'] = 'Рљ',['U'] = 'Рђ',['R'] = 'Р ',['S'] = 'РЎ',['zm'] = 'Р·СЊРј',['h'] = 'С…',['q'] = 'Рє',['y'] = 'Рё',['a'] = 'Р°',['w'] = 'РІ',['b'] = 'Р±',['v'] = 'РІ',['g'] = 'Рі',['d'] = 'Рґ',['e'] = 'Рµ',['z'] = 'Р·',['i'] = 'Рё',['j'] = 'Р¶',['k'] = 'Рє',['l'] = 'Р»',['m'] = 'Рј',['n'] = 'РЅ',['o'] = 'Рѕ',['p'] = 'Рї',['r'] = 'СЂ',['s'] = 'СЃ',['t'] = 'С‚',['u'] = 'Сѓ',['f'] = 'С„',['x'] = 'x',['c'] = 'Рє',['``'] = 'СЉ',['`'] = 'СЊ',['_'] = ' '}
 
 function trst(name)
 	if name:match('%a+') then
@@ -325,35 +325,35 @@ elseif mainIni.theme['theme'] == 'monet' then
 	end
 end
 
-print(curcolor..'[SMI-plalkeo] {FFFFFF}Проверка библиотек...')
+print(curcolor..'[SMI-plalkeo] {FFFFFF}РџСЂРѕРІРµСЂРєР° Р±РёР±Р»РёРѕС‚РµРє...')
 for lib, bool in pairs(bLib) do 
 	if not bool then
 		if not isMonetLoader() then
-			error('{FF0000}ERROR\n\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Библиотека "' .. lib .. '" не найдена. Скрипт не может быть запущен\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Скачайте библиотеки по ссылке: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar\n')
+			error('{FF0000}ERROR\n\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Р‘РёР±Р»РёРѕС‚РµРєР° "' .. lib .. '" РЅРµ РЅР°Р№РґРµРЅР°. РЎРєСЂРёРїС‚ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р·Р°РїСѓС‰РµРЅ\n'..curcolor..'[SMI-plalkeo] {FFFFFF}РЎРєР°С‡Р°Р№С‚Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїРѕ СЃСЃС‹Р»РєРµ: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar\n')
 		else
-			print('{FF0000}ERROR\n\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Библиотека "' .. lib .. '" не найдена. Скрипт не может быть запущен\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Скачайте библиотеки по ссылке: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar\n')
+			print('{FF0000}ERROR\n\n'..curcolor..'[SMI-plalkeo] {FFFFFF}Р‘РёР±Р»РёРѕС‚РµРєР° "' .. lib .. '" РЅРµ РЅР°Р№РґРµРЅР°. РЎРєСЂРёРїС‚ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р·Р°РїСѓС‰РµРЅ\n'..curcolor..'[SMI-plalkeo] {FFFFFF}РЎРєР°С‡Р°Р№С‚Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїРѕ СЃСЃС‹Р»РєРµ: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar\n')
 		end
 		break
 	end 
 end
-print(curcolor..'[SMI-plalkeo] {FFFFFF}Проверка прошла успешно!')
-print(curcolor..'[SMI-plalkeo] {FFFFFF}Если у вас произошли ошибки в скрипте то:')
-print(curcolor..'[SMI-plalkeo] {FFFFFF}Скачайте библиотеки по ссылке: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar')
+print(curcolor..'[SMI-plalkeo] {FFFFFF}РџСЂРѕРІРµСЂРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ!')
+print(curcolor..'[SMI-plalkeo] {FFFFFF}Р•СЃР»Рё Сѓ РІР°СЃ РїСЂРѕРёР·РѕС€Р»Рё РѕС€РёР±РєРё РІ СЃРєСЂРёРїС‚Рµ С‚Рѕ:')
+print(curcolor..'[SMI-plalkeo] {FFFFFF}РЎРєР°С‡Р°Р№С‚Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїРѕ СЃСЃС‹Р»РєРµ: https://github.com/pla1keo/smiplalkeo/raw/main/smiplalkeo_libs.rar')
 
 changelogtext = u8[[
-Версия 3.9.6 только для сервера Yuma.
-Исправлены волны в эфирах. 
-Исправлен текст собеседования.
+Р’РµСЂСЃРёСЏ 3.9.6 С‚РѕР»СЊРєРѕ РґР»СЏ СЃРµСЂРІРµСЂР° Yuma.
+РСЃРїСЂР°РІР»РµРЅС‹ РІРѕР»РЅС‹ РІ СЌС„РёСЂР°С…. 
+РСЃРїСЂР°РІР»РµРЅ С‚РµРєСЃС‚ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёСЏ.
 
-Версия 3.7:
-Исправлено авторедактирование объявлений
+Р’РµСЂСЃРёСЏ 3.7:
+РСЃРїСЂР°РІР»РµРЅРѕ Р°РІС‚РѕСЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РѕР±СЉСЏРІР»РµРЅРёР№
 
-Версия 3.8:
-Полностью обновлен дизайн
-Убраны лишние разделы
-Сделаны фиксы некоторых систем
-Добавлено меню взаимодействия
-Добавлена поддержка для MonetLoader (MOBILE)
+Р’РµСЂСЃРёСЏ 3.8:
+РџРѕР»РЅРѕСЃС‚СЊСЋ РѕР±РЅРѕРІР»РµРЅ РґРёР·Р°Р№РЅ
+РЈР±СЂР°РЅС‹ Р»РёС€РЅРёРµ СЂР°Р·РґРµР»С‹
+РЎРґРµР»Р°РЅС‹ С„РёРєСЃС‹ РЅРµРєРѕС‚РѕСЂС‹С… СЃРёСЃС‚РµРј
+Р”РѕР±Р°РІР»РµРЅРѕ РјРµРЅСЋ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ
+Р”РѕР±Р°РІР»РµРЅР° РїРѕРґРґРµСЂР¶РєР° РґР»СЏ MonetLoader (MOBILE)
 ]]
 
 local posX, posY = mainIni.pos['x'], mainIni.pos['y']
@@ -400,19 +400,19 @@ imgui.OnInitialize(function()
 	style:ScaleAllSizes(MONET_DPI_SCALE)
 	-- THEME
 
-	-- // Шрифты
+	-- // РЁСЂРёС„С‚С‹
 	local FONTS = imgui.GetIO().Fonts
 	local builder = imgui.ImFontGlyphRangesBuilder()
 	 builder:AddRanges(FONTS:GetGlyphRangesCyrillic())
-	 builder:AddText("‚„…†‡€‰‹‘’“”•–-™›№")
+	 builder:AddText("вЂљвЂћвЂ¦вЂ вЂЎв‚¬вЂ°вЂ№вЂвЂ™вЂњвЂќвЂўвЂ“-в„ўвЂєв„–")
 	 local range = imgui.ImVector_ImWchar()
 	 builder:BuildRanges(range)
 	local defGlyph = imgui.GetIO().Fonts.ConfigData.Data[0].GlyphRanges
-	imgui.GetIO().Fonts:Clear() -- очистим шрифты
-	local font_config = imgui.ImFontConfig() -- у каждого шрифта есть свой конфиг
+	imgui.GetIO().Fonts:Clear() -- РѕС‡РёСЃС‚РёРј С€СЂРёС„С‚С‹
+	local font_config = imgui.ImFontConfig() -- Сѓ РєР°Р¶РґРѕРіРѕ С€СЂРёС„С‚Р° РµСЃС‚СЊ СЃРІРѕР№ РєРѕРЅС„РёРі
 	font_config.SizePixels = 14.0 * MONET_DPI_SCALE;
 	font_config.GlyphExtraSpacing.x = 0.1 * MONET_DPI_SCALE
-	-- основной шрифт
+	-- РѕСЃРЅРѕРІРЅРѕР№ С€СЂРёС„С‚
 	imgui.GetIO().Fonts:AddFontFromFileTTF(getFontsPath(), font_config.SizePixels, font_config, defGlyph)
 	
     -- local configForFA = imgui.ImFontConfig()
@@ -423,11 +423,11 @@ imgui.OnInitialize(function()
 	config.MergeMode = true
 	config.PixelSnapH = true
 	config.FontDataOwnedByAtlas = false
-	config.GlyphOffset.y = 1.0 * MONET_DPI_SCALE -- смещение на 1 пиксеот вниз
+	config.GlyphOffset.y = 1.0 * MONET_DPI_SCALE -- СЃРјРµС‰РµРЅРёРµ РЅР° 1 РїРёРєСЃРµРѕС‚ РІРЅРёР·
     iconRanges = imgui.new.ImWchar[3](faicons.min_range, faicons.max_range, 0)
 	local fa_glyph_ranges = new.ImWchar[3]({ faicons.min_range, faicons.max_range, 0 })
-	-- иконки
-	imgui.GetIO().Fonts:AddFontFromMemoryCompressedBase85TTF(faicons.get_font_data_base85('solid'), 14 * MONET_DPI_SCALE, config, iconRanges) -- solid - тип иконок, так же есть thin, regular, light и duotone
+	-- РёРєРѕРЅРєРё
+	imgui.GetIO().Fonts:AddFontFromMemoryCompressedBase85TTF(faicons.get_font_data_base85('solid'), 14 * MONET_DPI_SCALE, config, iconRanges) -- solid - С‚РёРї РёРєРѕРЅРѕРє, С‚Р°Рє Р¶Рµ РµСЃС‚СЊ thin, regular, light Рё duotone
 	font = {B = {}}
 	for i = 15, 25 do
 		font['B'][i] = imgui.GetIO().Fonts:AddFontFromFileTTF(getFontsPath(), i * MONET_DPI_SCALE, font_config, defGlyph)
@@ -497,32 +497,32 @@ function imgui.CenterTextColoredRGB(text)
 end
 
 
--- ПРО/ППЭ/Устав
+-- РџР Рћ/РџРџР­/РЈСЃС‚Р°РІ
 
-pro_vopr_text = {u8'Куплю тт за 10кк', u8'Куплю дом. Бюджет: 5кк', u8'Ищу друга с именем Кирилл Нерон', u8'Идет набор в баллас на 7 ранг', 
-				 u8'Продам читаху с 3к пробега за 4кк', u8'Куплю кешу на плечо', u8'Куплю мигалку за 10кк', u8'Куплю дом в лс. Срочно', 
-				 u8'Подселю в хату, звоните', u8'Продам ковш. 120кк', u8'Как сокращается слово "мотоцикл" в объявлениях?', u8'Продам дом',
-				 u8'Куплю видюхи 1 лвла по 1.5кк', u8'Продам симку 636', u8'Проходит набор в фулл семью SMIPLALKEO', u8'Продам сж за 90кк'}
+pro_vopr_text = {u8'РљСѓРїР»СЋ С‚С‚ Р·Р° 10РєРє', u8'РљСѓРїР»СЋ РґРѕРј. Р‘СЋРґР¶РµС‚: 5РєРє', u8'РС‰Сѓ РґСЂСѓРіР° СЃ РёРјРµРЅРµРј РљРёСЂРёР»Р» РќРµСЂРѕРЅ', u8'РРґРµС‚ РЅР°Р±РѕСЂ РІ Р±Р°Р»Р»Р°СЃ РЅР° 7 СЂР°РЅРі', 
+				 u8'РџСЂРѕРґР°Рј С‡РёС‚Р°С…Сѓ СЃ 3Рє РїСЂРѕР±РµРіР° Р·Р° 4РєРє', u8'РљСѓРїР»СЋ РєРµС€Сѓ РЅР° РїР»РµС‡Рѕ', u8'РљСѓРїР»СЋ РјРёРіР°Р»РєСѓ Р·Р° 10РєРє', u8'РљСѓРїР»СЋ РґРѕРј РІ Р»СЃ. РЎСЂРѕС‡РЅРѕ', 
+				 u8'РџРѕРґСЃРµР»СЋ РІ С…Р°С‚Сѓ, Р·РІРѕРЅРёС‚Рµ', u8'РџСЂРѕРґР°Рј РєРѕРІС€. 120РєРє', u8'РљР°Рє СЃРѕРєСЂР°С‰Р°РµС‚СЃСЏ СЃР»РѕРІРѕ "РјРѕС‚РѕС†РёРєР»" РІ РѕР±СЉСЏРІР»РµРЅРёСЏС…?', u8'РџСЂРѕРґР°Рј РґРѕРј',
+				 u8'РљСѓРїР»СЋ РІРёРґСЋС…Рё 1 Р»РІР»Р° РїРѕ 1.5РєРє', u8'РџСЂРѕРґР°Рј СЃРёРјРєСѓ 636', u8'РџСЂРѕС…РѕРґРёС‚ РЅР°Р±РѕСЂ РІ С„СѓР»Р» СЃРµРјСЊСЋ SMIPLALKEO', u8'РџСЂРѕРґР°Рј СЃР¶ Р·Р° 90РєРє'}
 
-ystav_vopr_text = {u8'Рабочий день СМИ в будни?', u8'С какой должности доступен Фургон СМИ?', u8'Можно ли редактировать свои объявления?', 
-				   u8'Можно ли драться с сотрудниками?', u8'Можно ли рекламировать что-либо в рации?', u8'На каком языке происходит общение в рации?', 
-				   u8'Время обеденного перерыва?', u8'График рабочего дня на выходных?', u8'С какой должности можно брать вертолёт?', 
-				   u8'С какой должности можно брать легковые машины?'}
+ystav_vopr_text = {u8'Р Р°Р±РѕС‡РёР№ РґРµРЅСЊ РЎРњР РІ Р±СѓРґРЅРё?', u8'РЎ РєР°РєРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё РґРѕСЃС‚СѓРїРµРЅ Р¤СѓСЂРіРѕРЅ РЎРњР?', u8'РњРѕР¶РЅРѕ Р»Рё СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃРІРѕРё РѕР±СЉСЏРІР»РµРЅРёСЏ?', 
+				   u8'РњРѕР¶РЅРѕ Р»Рё РґСЂР°С‚СЊСЃСЏ СЃ СЃРѕС‚СЂСѓРґРЅРёРєР°РјРё?', u8'РњРѕР¶РЅРѕ Р»Рё СЂРµРєР»Р°РјРёСЂРѕРІР°С‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РІ СЂР°С†РёРё?', u8'РќР° РєР°РєРѕРј СЏР·С‹РєРµ РїСЂРѕРёСЃС…РѕРґРёС‚ РѕР±С‰РµРЅРёРµ РІ СЂР°С†РёРё?', 
+				   u8'Р’СЂРµРјСЏ РѕР±РµРґРµРЅРЅРѕРіРѕ РїРµСЂРµСЂС‹РІР°?', u8'Р“СЂР°С„РёРє СЂР°Р±РѕС‡РµРіРѕ РґРЅСЏ РЅР° РІС‹С…РѕРґРЅС‹С…?', u8'РЎ РєР°РєРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё РјРѕР¶РЅРѕ Р±СЂР°С‚СЊ РІРµСЂС‚РѕР»С‘С‚?', 
+				   u8'РЎ РєР°РєРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё РјРѕР¶РЅРѕ Р±СЂР°С‚СЊ Р»РµРіРєРѕРІС‹Рµ РјР°С€РёРЅС‹?'}
 
-ppe_vopr_text = {u8'С какой должности можно проводить эфиры?', u8'С какой должности можно проводить голосовые эфиры?',
-				 u8'Какой эфир не засчитывается в системе повышений?', u8'Какой максимальный и минимальный призы?',
-				 u8'На какие минуты каждого часа можно занимать эфир?', u8'Можно ли брать интервью у своих сотрудников?',
-				 u8'Сколько должно быть победителей в эфире?', u8'Какого рода эфиры запрещены?', u8'Что запрещено в интервью?', 
-				 u8'Можно ли занимать новостную волну в личных целях?'}
+ppe_vopr_text = {u8'РЎ РєР°РєРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё РјРѕР¶РЅРѕ РїСЂРѕРІРѕРґРёС‚СЊ СЌС„РёСЂС‹?', u8'РЎ РєР°РєРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё РјРѕР¶РЅРѕ РїСЂРѕРІРѕРґРёС‚СЊ РіРѕР»РѕСЃРѕРІС‹Рµ СЌС„РёСЂС‹?',
+				 u8'РљР°РєРѕР№ СЌС„РёСЂ РЅРµ Р·Р°СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ РІ СЃРёСЃС‚РµРјРµ РїРѕРІС‹С€РµРЅРёР№?', u8'РљР°РєРѕР№ РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ Рё РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РїСЂРёР·С‹?',
+				 u8'РќР° РєР°РєРёРµ РјРёРЅСѓС‚С‹ РєР°Р¶РґРѕРіРѕ С‡Р°СЃР° РјРѕР¶РЅРѕ Р·Р°РЅРёРјР°С‚СЊ СЌС„РёСЂ?', u8'РњРѕР¶РЅРѕ Р»Рё Р±СЂР°С‚СЊ РёРЅС‚РµСЂРІСЊСЋ Сѓ СЃРІРѕРёС… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ?',
+				 u8'РЎРєРѕР»СЊРєРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР±РµРґРёС‚РµР»РµР№ РІ СЌС„РёСЂРµ?', u8'РљР°РєРѕРіРѕ СЂРѕРґР° СЌС„РёСЂС‹ Р·Р°РїСЂРµС‰РµРЅС‹?', u8'Р§С‚Рѕ Р·Р°РїСЂРµС‰РµРЅРѕ РІ РёРЅС‚РµСЂРІСЊСЋ?', 
+				 u8'РњРѕР¶РЅРѕ Р»Рё Р·Р°РЅРёРјР°С‚СЊ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ РІ Р»РёС‡РЅС‹С… С†РµР»СЏС…?'}
 
-interv_quest = {u8'Как ваше настроение?', u8'Расскажите о себе.', u8'Есть ли у вас жена, дети?',
-				u8'Есть ли у вас дом, автомобиль?', u8'Хотели бы вы передать кому-нибудь приветы?', u8'Сколько вы стоите на данной должности?',
-				u8'Сегодня я хочу взять у вас интервью на тему "Вопрос = ответ". Вы согласны?', u8'Расскажите о себе.',
-				u8'Давайте поговорим о вас?', u8'Хотели бы вы передать кому-нибудь приветы?', u8'Любите ли вы животных?',
-				u8'Как вы относитесь к алкогольным напиткам?', u8'Как вы относитесь к казино и азартным играм?'}				 
+interv_quest = {u8'РљР°Рє РІР°С€Рµ РЅР°СЃС‚СЂРѕРµРЅРёРµ?', u8'Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ.', u8'Р•СЃС‚СЊ Р»Рё Сѓ РІР°СЃ Р¶РµРЅР°, РґРµС‚Рё?',
+				u8'Р•СЃС‚СЊ Р»Рё Сѓ РІР°СЃ РґРѕРј, Р°РІС‚РѕРјРѕР±РёР»СЊ?', u8'РҐРѕС‚РµР»Рё Р±С‹ РІС‹ РїРµСЂРµРґР°С‚СЊ РєРѕРјСѓ-РЅРёР±СѓРґСЊ РїСЂРёРІРµС‚С‹?', u8'РЎРєРѕР»СЊРєРѕ РІС‹ СЃС‚РѕРёС‚Рµ РЅР° РґР°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё?',
+				u8'РЎРµРіРѕРґРЅСЏ СЏ С…РѕС‡Сѓ РІР·СЏС‚СЊ Сѓ РІР°СЃ РёРЅС‚РµСЂРІСЊСЋ РЅР° С‚РµРјСѓ "Р’РѕРїСЂРѕСЃ = РѕС‚РІРµС‚". Р’С‹ СЃРѕРіР»Р°СЃРЅС‹?', u8'Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ.',
+				u8'Р”Р°РІР°Р№С‚Рµ РїРѕРіРѕРІРѕСЂРёРј Рѕ РІР°СЃ?', u8'РҐРѕС‚РµР»Рё Р±С‹ РІС‹ РїРµСЂРµРґР°С‚СЊ РєРѕРјСѓ-РЅРёР±СѓРґСЊ РїСЂРёРІРµС‚С‹?', u8'Р›СЋР±РёС‚Рµ Р»Рё РІС‹ Р¶РёРІРѕС‚РЅС‹С…?',
+				u8'РљР°Рє РІС‹ РѕС‚РЅРѕСЃРёС‚РµСЃСЊ Рє Р°Р»РєРѕРіРѕР»СЊРЅС‹Рј РЅР°РїРёС‚РєР°Рј?', u8'РљР°Рє РІС‹ РѕС‚РЅРѕСЃРёС‚РµСЃСЊ Рє РєР°Р·РёРЅРѕ Рё Р°Р·Р°СЂС‚РЅС‹Рј РёРіСЂР°Рј?'}				 
 
 
--- КОНЕЦ
+-- РљРћРќР•Р¦
 
 local function has_value(tab, val)
 	for index, value in ipairs(tab) do
@@ -562,11 +562,11 @@ ae = {
 }
 
 accent = {
-	imgui.new.bool(mainIni.accent['accent']), -- Состояние акцента
-	new.char[256](mainIni.accent['text']), -- Акцент
-	imgui.new.bool(mainIni.accent['def']), -- Обычный чат
-	imgui.new.bool(mainIni.accent['s']), -- Крик
-	imgui.new.bool(mainIni.accent['r']) -- Рация
+	imgui.new.bool(mainIni.accent['accent']), -- РЎРѕСЃС‚РѕСЏРЅРёРµ Р°РєС†РµРЅС‚Р°
+	new.char[256](mainIni.accent['text']), -- РђРєС†РµРЅС‚
+	imgui.new.bool(mainIni.accent['def']), -- РћР±С‹С‡РЅС‹Р№ С‡Р°С‚
+	imgui.new.bool(mainIni.accent['s']), -- РљСЂРёРє
+	imgui.new.bool(mainIni.accent['r']) -- Р Р°С†РёСЏ
 }
 
 expel_rp = imgui.new.bool(mainIni.rpbind['expel'])
@@ -589,42 +589,42 @@ select_id = imgui.new.int(-1)
 
 selected_theme = imgui.new.int(mainIni.theme['selected'])
 
-city = {u8'г. Лос-Сантос', u8'г. Сан-Фиерро', u8'г. Лас-Вентурас', u8'любой точке штата', u8'опасном районе', u8'д. Паломино Крик', u8'д. Ред Каунтри', u8'д. Лас Баранкас', u8'д. Ангел Пейн', u8'д. Эль Кебрадос', u8'д. Лас Пайсадас', u8'д. Тьерра Робада', u8'д. БлуБерри', u8'д. Монтгомери', u8'г. Вайн-Вуд'}
+city = {u8'Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ', u8'Рі. РЎР°РЅ-Р¤РёРµСЂСЂРѕ', u8'Рі. Р›Р°СЃ-Р’РµРЅС‚СѓСЂР°СЃ', u8'Р»СЋР±РѕР№ С‚РѕС‡РєРµ С€С‚Р°С‚Р°', u8'РѕРїР°СЃРЅРѕРј СЂР°Р№РѕРЅРµ', u8'Рґ. РџР°Р»РѕРјРёРЅРѕ РљСЂРёРє', u8'Рґ. Р РµРґ РљР°СѓРЅС‚СЂРё', u8'Рґ. Р›Р°СЃ Р‘Р°СЂР°РЅРєР°СЃ', u8'Рґ. РђРЅРіРµР» РџРµР№РЅ', u8'Рґ. Р­Р»СЊ РљРµР±СЂР°РґРѕСЃ', u8'Рґ. Р›Р°СЃ РџР°Р№СЃР°РґР°СЃ', u8'Рґ. РўСЊРµСЂСЂР° Р РѕР±Р°РґР°', u8'Рґ. Р‘Р»СѓР‘РµСЂСЂРё', u8'Рґ. РњРѕРЅС‚РіРѕРјРµСЂРё', u8'Рі. Р’Р°Р№РЅ-Р’СѓРґ'}
 city_items = imgui.new['const char*'][#city](city)
 selected_city = imgui.new.int(0)
 
-biz = {u8'АЗС', u8'Бар', u8'Отель', u8'Закусочная', u8'Ларек с едой', u8'Магазин 24 на 7', u8'Амуниция', u8'Автомастерская', u8'Магазин тюнинга', u8'Аренда транспорта', u8'Магазин аксессуаров', u8'Магазин одежды', u8'Станция Технического Обслуживания', u8'Предприятие "Ферма"', u8'Предприятие "Авторынок"', u8'Предприятие "Телефонная компания"', u8'Предприятие "Рекламные баннеры"', u8'Предприятие "Телефонные будки"', u8'Школа танцев', u8'Спортзал Лас-Вентурас', u8'Нефтевышка'}
+biz = {u8'РђР—РЎ', u8'Р‘Р°СЂ', u8'РћС‚РµР»СЊ', u8'Р—Р°РєСѓСЃРѕС‡РЅР°СЏ', u8'Р›Р°СЂРµРє СЃ РµРґРѕР№', u8'РњР°РіР°Р·РёРЅ 24 РЅР° 7', u8'РђРјСѓРЅРёС†РёСЏ', u8'РђРІС‚РѕРјР°СЃС‚РµСЂСЃРєР°СЏ', u8'РњР°РіР°Р·РёРЅ С‚СЋРЅРёРЅРіР°', u8'РђСЂРµРЅРґР° С‚СЂР°РЅСЃРїРѕСЂС‚Р°', u8'РњР°РіР°Р·РёРЅ Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ', u8'РњР°РіР°Р·РёРЅ РѕРґРµР¶РґС‹', u8'РЎС‚Р°РЅС†РёСЏ РўРµС…РЅРёС‡РµСЃРєРѕРіРѕ РћР±СЃР»СѓР¶РёРІР°РЅРёСЏ', u8'РџСЂРµРґРїСЂРёСЏС‚РёРµ "Р¤РµСЂРјР°"', u8'РџСЂРµРґРїСЂРёСЏС‚РёРµ "РђРІС‚РѕСЂС‹РЅРѕРє"', u8'РџСЂРµРґРїСЂРёСЏС‚РёРµ "РўРµР»РµС„РѕРЅРЅР°СЏ РєРѕРјРїР°РЅРёСЏ"', u8'РџСЂРµРґРїСЂРёСЏС‚РёРµ "Р РµРєР»Р°РјРЅС‹Рµ Р±Р°РЅРЅРµСЂС‹"', u8'РџСЂРµРґРїСЂРёСЏС‚РёРµ "РўРµР»РµС„РѕРЅРЅС‹Рµ Р±СѓРґРєРё"', u8'РЁРєРѕР»Р° С‚Р°РЅС†РµРІ', u8'РЎРїРѕСЂС‚Р·Р°Р» Р›Р°СЃ-Р’РµРЅС‚СѓСЂР°СЃ', u8'РќРµС„С‚РµРІС‹С€РєР°'}
 biz_items = imgui.new['const char*'][#biz](biz)
 selected_biz = imgui.new.int(0)
 
-house_dop = {'', u8'с подвалом', u8'с гаражом', u8'с гаражом и подвалом'}
+house_dop = {'', u8'СЃ РїРѕРґРІР°Р»РѕРј', u8'СЃ РіР°СЂР°Р¶РѕРј', u8'СЃ РіР°СЂР°Р¶РѕРј Рё РїРѕРґРІР°Р»РѕРј'}
 house_dop_items = imgui.new['const char*'][#house_dop](house_dop)
 selected_house_dop = imgui.new.int(0)
 
 types = {
-	{u8'в.с', u8'а.м', u8'р.с', u8'м.ц', u8'а.с', u8'в.т', u8'с.о', u8'л.д', u8'д.т'},
+	{u8'РІ.СЃ', u8'Р°.Рј', u8'СЂ.СЃ', u8'Рј.С†', u8'Р°.СЃ', u8'РІ.С‚', u8'СЃ.Рѕ', u8'Р».Рґ', u8'Рґ.С‚'},
 	nil,
 	imgui.new.int(0)
 }
 types[2] = imgui.new['const char*'][#types[1]](types[1])
 types2 = {
-	{u8'в/с', u8'а/м', u8'р/с', u8'м/ц', u8'а/с', u8'в/т', u8'с/о', u8'л/д', u8'д/т'},
+	{u8'РІ/СЃ', u8'Р°/Рј', u8'СЂ/СЃ', u8'Рј/С†', u8'Р°/СЃ', u8'РІ/С‚', u8'СЃ/Рѕ', u8'Р»/Рґ', u8'Рґ/С‚'},
 	nil,
 	imgui.new.int(0)
 }
 types2[2] = imgui.new['const char*'][#types2[1]](types2[1])
 
-orgs = {u8'МЮ', u8'ЛСПД', u8'СФПД', u8'ЛВПД', u8'РКШД', u8'ФБР', u8'МО', u8'ТСР', u8'ЛСа', u8'ВМС', u8'Пра-во', u8'ЦБ', u8'ГЦЛ', u8'СТК', u8'МЗ', u8'ЛСМЦ', u8'СФМЦ', u8'ЛВМЦ', u8'СМИ', u8'СМИ ЛС', u8'СМИ СФ', u8'СМИ ЛВ'}
+orgs = {u8'РњР®', u8'Р›РЎРџР”', u8'РЎР¤РџР”', u8'Р›Р’РџР”', u8'Р РљРЁР”', u8'Р¤Р‘Р ', u8'РњРћ', u8'РўРЎР ', u8'Р›РЎР°', u8'Р’РњРЎ', u8'РџСЂР°-РІРѕ', u8'Р¦Р‘', u8'Р“Р¦Р›', u8'РЎРўРљ', u8'РњР—', u8'Р›РЎРњР¦', u8'РЎР¤РњР¦', u8'Р›Р’РњР¦', u8'РЎРњР', u8'РЎРњР Р›РЎ', u8'РЎРњР РЎР¤', u8'РЎРњР Р›Р’'}
 
-theme_a = {u8'Синяя', u8'Красная', u8'Фиолетовая', u8'Чёрная', 'MoonMonet'}
+theme_a = {u8'РЎРёРЅСЏСЏ', u8'РљСЂР°СЃРЅР°СЏ', u8'Р¤РёРѕР»РµС‚РѕРІР°СЏ', u8'Р§С‘СЂРЅР°СЏ', 'MoonMonet'}
 theme_t = {u8'blue', u8'red', u8'purple', u8'black', 'monet'}
 local items = imgui.new['const char*'][#theme_a](theme_a)
 
-list_another = {u8'наклейку "Твин Турбо"'}
+list_another = {u8'РЅР°РєР»РµР№РєСѓ "РўРІРёРЅ РўСѓСЂР±Рѕ"'}
 
 
 function car(car)
-	return 'марки "' .. car .. '"'
+	return 'РјР°СЂРєРё "' .. car .. '"'
 end
 
 local white_color = 0xFFFFFF
@@ -654,7 +654,7 @@ local await = {
 }
 local members = {}
 local orga = {
-	name = 'Организация',
+	name = 'РћСЂРіР°РЅРёР·Р°С†РёСЏ',
 	online = 0,
 	afk = 0
 }
@@ -684,9 +684,9 @@ local sobes_i = {
 }
 
 local sobes_info = {
-	pass = u8'Не проверено',
-	mc = u8'Не проверено',
-	lic = u8'Не проверено'
+	pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+	mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+	lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 }
 
 local smi_t = imgui.new.bool(false)
@@ -977,8 +977,8 @@ function apply_monet()
 	colors[clr.ModalWindowDimBg]		= ColorAccentsAdapter(generated_color.accent1.color_200):apply_alpha(0x26):as_vec4()
 end
 
--- // Для тех кто читает: Темы взяты из https://www.blast.hk/threads/25442/
--- // MoonMonet тема взята из: https://www.blast.hk/threads/87533/
+-- // Р”Р»СЏ С‚РµС… РєС‚Рѕ С‡РёС‚Р°РµС‚: РўРµРјС‹ РІР·СЏС‚С‹ РёР· https://www.blast.hk/threads/25442/
+-- // MoonMonet С‚РµРјР° РІР·СЏС‚Р° РёР·: https://www.blast.hk/threads/87533/
 
 function apply_n_t()
 	if mainIni.theme['theme'] == 'blue' then
@@ -1036,10 +1036,10 @@ end
 
 function check_rank(arg)
 	if mainIni.config['c_rang_n'] == "nil" then
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Данный хелпер предназначен для СМИ, учтите это.", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р”Р°РЅРЅС‹Р№ С…РµР»РїРµСЂ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РЎРњР, СѓС‡С‚РёС‚Рµ СЌС‚Рѕ.", curcolor1)
 		return true
 	elseif mainIni.config['c_rang_n'] < arg then
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}С " .. arg .. " ранга.", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЎ " .. arg .. " СЂР°РЅРіР°.", curcolor1)
 		return false
 	else
 		return true
@@ -1067,7 +1067,7 @@ local lmenu_frame = imgui.OnFrame(
 		imgui.SetNextWindowSize(imgui.ImVec2(sizeX, sizeY), imgui.Cond.Always)
 		imgui.Begin('##LMENU1', custom_lmenu, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoTitleBar)
 		imgui.PushFont(font['B'][16])
-		addons.AlignedText(u8'Меню лидера', 2)
+		addons.AlignedText(u8'РњРµРЅСЋ Р»РёРґРµСЂР°', 2)
 		imgui.SameLine()
 		imgui.SetCursorPos(imgui.ImVec2(560 * MONET_DPI_SCALE, 5 * MONET_DPI_SCALE))
 		if imgui.Button('X', imgui.ImVec2(30 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then
@@ -1075,28 +1075,28 @@ local lmenu_frame = imgui.OnFrame(
 			sampSendDialogResponse(1214, 0, 0, "")
 		end
 		imgui.Separator()
-		addons.AlignedText(u8'Банк: '..lmenu_info['bank'], 2)
-		if imgui.Button(u8'Пригласить в организацию', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 0, "") end
+		addons.AlignedText(u8'Р‘Р°РЅРє: '..lmenu_info['bank'], 2)
+		if imgui.Button(u8'РџСЂРёРіР»Р°СЃРёС‚СЊ РІ РѕСЂРіР°РЅРёР·Р°С†РёСЋ', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 0, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Управление членами организации', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 1, "") end
-		if imgui.Button(u8'Посмотреть свободные вакансии', imgui.ImVec2(240 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 2, "") end
+		if imgui.Button(u8'РЈРїСЂР°РІР»РµРЅРёРµ С‡Р»РµРЅР°РјРё РѕСЂРіР°РЅРёР·Р°С†РёРё', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 1, "") end
+		if imgui.Button(u8'РџРѕСЃРјРѕС‚СЂРµС‚СЊ СЃРІРѕР±РѕРґРЅС‹Рµ РІР°РєР°РЅСЃРёРё', imgui.ImVec2(240 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 2, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Спавн транспорта', imgui.ImVec2(158 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 3, "") end
+		if imgui.Button(u8'РЎРїР°РІРЅ С‚СЂР°РЅСЃРїРѕСЂС‚Р°', imgui.ImVec2(158 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 3, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Изменить зарплаты', imgui.ImVec2(170 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 4, "") end
-		if imgui.Button(u8'Управление рангами', imgui.ImVec2(200 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 5, "") end
+		if imgui.Button(u8'РР·РјРµРЅРёС‚СЊ Р·Р°СЂРїР»Р°С‚С‹', imgui.ImVec2(170 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 4, "") end
+		if imgui.Button(u8'РЈРїСЂР°РІР»РµРЅРёРµ СЂР°РЅРіР°РјРё', imgui.ImVec2(200 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 5, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Ранг доступа к еде ['..lmenu_info['eat']..u8' ранг]', imgui.ImVec2(208 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 6, "") end
+		if imgui.Button(u8'Р Р°РЅРі РґРѕСЃС‚СѓРїР° Рє РµРґРµ ['..lmenu_info['eat']..u8' СЂР°РЅРі]', imgui.ImVec2(208 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 6, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Собеседования', imgui.ImVec2(160 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 7, "") end
-		if imgui.Button(u8'Командировки Vice City', imgui.ImVec2(180 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 8, "") end
+		if imgui.Button(u8'РЎРѕР±РµСЃРµРґРѕРІР°РЅРёСЏ', imgui.ImVec2(160 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 7, "") end
+		if imgui.Button(u8'РљРѕРјР°РЅРґРёСЂРѕРІРєРё Vice City', imgui.ImVec2(180 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 8, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Настройки', imgui.ImVec2(88 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 9, "") end
+		if imgui.Button(u8'РќР°СЃС‚СЂРѕР№РєРё', imgui.ImVec2(88 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 9, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Настройки автоматических объявлений', imgui.ImVec2(300 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 10, "") end
-		if imgui.Button(u8'ЧС Организации', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 11, "") end
+		if imgui.Button(u8'РќР°СЃС‚СЂРѕР№РєРё Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёС… РѕР±СЉСЏРІР»РµРЅРёР№', imgui.ImVec2(300 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 10, "") end
+		if imgui.Button(u8'Р§РЎ РћСЂРіР°РЅРёР·Р°С†РёРё', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 11, "") end
 		imgui.SameLine()
-		if imgui.Button(u8'Ранг доступа к /d ['..lmenu_info['d']..u8' ранг]', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 12, "") end
+		if imgui.Button(u8'Р Р°РЅРі РґРѕСЃС‚СѓРїР° Рє /d ['..lmenu_info['d']..u8' СЂР°РЅРі]', imgui.ImVec2(288 * MONET_DPI_SCALE, sizeYB)) then custom_lmenu[0] = false; sampSendDialogResponse(1214, 1, 12, "") end
 		imgui.PopFont()
 		imgui.End()
 	end
@@ -1112,7 +1112,7 @@ local newJobProgress = imgui.OnFrame(
 		imgui.SetNextWindowSize(imgui.ImVec2(sizeX, sizeY), imgui.Cond.Always)
 		imgui.Begin('##JobProgress', jobprogress, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoTitleBar)
 		imgui.PushFont(font['B'][16])
-		addons.AlignedText(u8'Успеваемость', 2)
+		addons.AlignedText(u8'РЈСЃРїРµРІР°РµРјРѕСЃС‚СЊ', 2)
 		imgui.SameLine()
 		imgui.SetCursorPos(imgui.ImVec2(460 * MONET_DPI_SCALE, 10 * MONET_DPI_SCALE))
 		if imgui.Button('X', imgui.ImVec2(30 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then
@@ -1123,24 +1123,24 @@ local newJobProgress = imgui.OnFrame(
 		addons.AlignedText(u8:encode(jp_info['org']).. ' | '..jp_info['name'], 2)
 		imgui.Separator()
 		
-		addons.AlignedText(u8'За все время', 2)
+		addons.AlignedText(u8'Р—Р° РІСЃРµ РІСЂРµРјСЏ', 2)
 		imgui.BeginChild('##za all time', imgui.ImVec2(-1, 110 * MONET_DPI_SCALE))
 		imgui.SetCursorPosY(5)
-		imgui.CenterTextColoredRGB('Объявлений отредактировано: '..curcolor..jp_info['ads']['all'])
-		imgui.CenterTextColoredRGB('VIP-Объявлений отредактировано: '..curcolor..jp_info['ads']['all_vip'])
-		imgui.CenterTextColoredRGB('Объявлений в сумме: '..curcolor..jp_info['ads']['all_vip']+jp_info['ads']['all'])
-		imgui.CenterTextColoredRGB('Создано газет: '..curcolor..jp_info['newspaper']['all_created'])
-		imgui.CenterTextColoredRGB('Продано газет: '..curcolor..jp_info['newspaper']['all_sell'])
+		imgui.CenterTextColoredRGB('РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: '..curcolor..jp_info['ads']['all'])
+		imgui.CenterTextColoredRGB('VIP-РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: '..curcolor..jp_info['ads']['all_vip'])
+		imgui.CenterTextColoredRGB('РћР±СЉСЏРІР»РµРЅРёР№ РІ СЃСѓРјРјРµ: '..curcolor..jp_info['ads']['all_vip']+jp_info['ads']['all'])
+		imgui.CenterTextColoredRGB('РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: '..curcolor..jp_info['newspaper']['all_created'])
+		imgui.CenterTextColoredRGB('РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: '..curcolor..jp_info['newspaper']['all_sell'])
 		imgui.EndChild()
 		
-		addons.AlignedText(u8'За сегодня', 2)
+		addons.AlignedText(u8'Р—Р° СЃРµРіРѕРґРЅСЏ', 2)
 		imgui.BeginChild('##za today', imgui.ImVec2(-1, 110 * MONET_DPI_SCALE))
 		imgui.SetCursorPosY(5)
-		imgui.CenterTextColoredRGB('Объявлений отредактировано: '..curcolor..jp_info['ads']['today'])
-		imgui.CenterTextColoredRGB('VIP-Объявлений отредактировано: '..curcolor..jp_info['ads']['today_vip'])
-		imgui.CenterTextColoredRGB('Объявлений в сумме: '..curcolor..jp_info['ads']['today_vip']+jp_info['ads']['today'])
-		imgui.CenterTextColoredRGB('Создано газет: '..curcolor..jp_info['newspaper']['today_created'])
-		imgui.CenterTextColoredRGB('Продано газет: '..curcolor..jp_info['newspaper']['today_sell'])
+		imgui.CenterTextColoredRGB('РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: '..curcolor..jp_info['ads']['today'])
+		imgui.CenterTextColoredRGB('VIP-РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: '..curcolor..jp_info['ads']['today_vip'])
+		imgui.CenterTextColoredRGB('РћР±СЉСЏРІР»РµРЅРёР№ РІ СЃСѓРјРјРµ: '..curcolor..jp_info['ads']['today_vip']+jp_info['ads']['today'])
+		imgui.CenterTextColoredRGB('РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: '..curcolor..jp_info['newspaper']['today_created'])
+		imgui.CenterTextColoredRGB('РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: '..curcolor..jp_info['newspaper']['today_sell'])
 		imgui.EndChild()
 
 		imgui.PopFont()
@@ -1154,18 +1154,18 @@ stop = false
 parama = ''
 
 function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
-	if dialogId == 2015 and title:find('Организация') then
+	if dialogId == 2015 and title:find('РћСЂРіР°РЅРёР·Р°С†РёСЏ') then
 		if mem then
 			local lineIndex = -2
 			cur_slot = 0
 			for line in text:gmatch("[^\n]+") do
 				lineIndex = lineIndex + 1
 				line = line:gsub(' | MUTED', '')
-				if line:match('([a-zA-z]+)_([a-zA-z]+)%((%d+)%)	(.+)%((%d+)%)	(%d+) %((%d+)%)	(%d+) шт') then
-					name, surname, id, rank, rank_id, warn, afk, quest = line:match('([a-zA-z]+)_([a-zA-z]+)%((%d+)%)	(.+)%((%d+)%)	(%d+) %((%d+)%)	(%d+) шт')
+				if line:match('([a-zA-z]+)_([a-zA-z]+)%((%d+)%)	(.+)%((%d+)%)	(%d+) %((%d+)%)	(%d+) С€С‚') then
+					name, surname, id, rank, rank_id, warn, afk, quest = line:match('([a-zA-z]+)_([a-zA-z]+)%((%d+)%)	(.+)%((%d+)%)	(%d+) %((%d+)%)	(%d+) С€С‚')
 					table.insert(users, {name..'_'..surname, id, rank, rank_id, warn, afk, quest})
 				end
-				if line:find('Следующая страница') then
+				if line:find('РЎР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂР°РЅРёС†Р°') then
 					cur_slot = lineIndex
 					sampSendDialogResponse(dialogId, 1, cur_slot, "")
 					return false
@@ -1181,27 +1181,25 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 							if check_rank(9) then
 								if mainIni.rpbind['uninvite'] then
 									lua_thread.create(function()
-										sampSendChat("/do Планшет с базой данных сотрудников в руках.")
+										sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ СЂСѓРєР°С….")
 										wait(2500)
-										sampSendChat("/me зашел в раздел \"Увольнение\"")
+										sampSendChat("/me Р·Р°С€РµР» РІ СЂР°Р·РґРµР» \"РЈРІРѕР»СЊРЅРµРЅРёРµ\"")
 										wait(2000)
-										sampSendChat("/do Раздел открыт.")
+										sampSendChat("/do Р Р°Р·РґРµР» РѕС‚РєСЂС‹С‚.")
 										wait(2000)
-										sampSendChat("/me внес сотрудника в раздел \"Увольнение\"")
+										sampSendChat("/me РІРЅРµСЃ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ СЂР°Р·РґРµР» \"РЈРІРѕР»СЊРЅРµРЅРёРµ\"")
 										wait(1000)
 										sampSendChat("/uninvite ".. id .. " " .. arg)
 									end)
 								else
 									sampSendChat("/uninvite ".. id .. " " .. arg)
-								    end
-								else
-									sampSendChat("/r Сотрудник с бейджом ".. id .. " был уволен. Причина: " .. arg)
+								end
 							end
 						else
-							sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /uninvite [id] [причина]", curcolor1)
+							sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /uninvite [id] [РїСЂРёС‡РёРЅР°]", curcolor1)
 						end
 					else
-						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Данный игрок имеет выговор. Его нельзя уволить командой.", curcolor1)
+						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р”Р°РЅРЅС‹Р№ РёРіСЂРѕРє РёРјРµРµС‚ РІС‹РіРѕРІРѕСЂ. Р•РіРѕ РЅРµР»СЊР·СЏ СѓРІРѕР»РёС‚СЊ РєРѕРјР°РЅРґРѕР№.", curcolor1)
 					end
 				end
 			end
@@ -1209,28 +1207,28 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			return false
 		end
 	end
-	-- if dialogId == 1214 and title:find("Банк") then
+	-- if dialogId == 1214 and title:find("Р‘Р°РЅРє") then
 	-- 	lmenu_info = {
 	-- 		bank = '',
 	-- 		eat = '',
 	-- 		d = '',
 	-- 	}
-	-- 	lmenu_info['bank'] = string.match(title, '{BFBBBA}{FFFFFF}Банк: {E1E948}(.+)')
-	-- 	lmenu_info['eat'] = string.match(text, '%{ff6666%}%[7%] %{FFFFFF%}Ранг доступа к еде: %{407930%}(%d+) %((.+)%)%{AFAFAF%} ранга\n')
-	-- 	lmenu_info['d'] = string.match(text, '%{ff6666%}%[13%] %{FFFFFF%}Ранг доступа к %/d: %{407930%}(%d+) %((.+)%)%{AFAFAF%} ранга\n')
+	-- 	lmenu_info['bank'] = string.match(title, '{BFBBBA}{FFFFFF}Р‘Р°РЅРє: {E1E948}(.+)')
+	-- 	lmenu_info['eat'] = string.match(text, '%{ff6666%}%[7%] %{FFFFFF%}Р Р°РЅРі РґРѕСЃС‚СѓРїР° Рє РµРґРµ: %{407930%}(%d+) %((.+)%)%{AFAFAF%} СЂР°РЅРіР°\n')
+	-- 	lmenu_info['d'] = string.match(text, '%{ff6666%}%[13%] %{FFFFFF%}Р Р°РЅРі РґРѕСЃС‚СѓРїР° Рє %/d: %{407930%}(%d+) %((.+)%)%{AFAFAF%} СЂР°РЅРіР°\n')
 	-- 	custom_lmenu[0] = true
 	-- 	return false
 	-- end
-	if dialogId == 235 and title == "{BFBBBA}Основная статистика" and st_s then
+	if dialogId == 235 and title == "{BFBBBA}РћСЃРЅРѕРІРЅР°СЏ СЃС‚Р°С‚РёСЃС‚РёРєР°" and st_s then
 		st_s = false
-		if string.match(text, "Организация: {B83434}%[(%D+)%]") == "TV студия" or string.match(text, "Организация: {B83434}%[(%D+)%]") == "TV студия SF" or string.match(text, "Организация: {B83434}%[(%D+)%]") == "TV студия LV" then
-			org = string.match(text, "Организация: {B83434}%[(%D+)%]")
-			dol, _ = string.match(text, "Должность: {B83434}(.-)%(%d+%)")
+		if string.match(text, "РћСЂРіР°РЅРёР·Р°С†РёСЏ: {B83434}%[(%D+)%]") == "TV СЃС‚СѓРґРёСЏ" or string.match(text, "РћСЂРіР°РЅРёР·Р°С†РёСЏ: {B83434}%[(%D+)%]") == "TV СЃС‚СѓРґРёСЏ SF" or string.match(text, "РћСЂРіР°РЅРёР·Р°С†РёСЏ: {B83434}%[(%D+)%]") == "TV СЃС‚СѓРґРёСЏ LV" then
+			org = string.match(text, "РћСЂРіР°РЅРёР·Р°С†РёСЏ: {B83434}%[(%D+)%]")
+			dol, _ = string.match(text, "Р”РѕР»Р¶РЅРѕСЃС‚СЊ: {B83434}(.-)%(%d+%)")
 			dl = u8:encode(dol)
-			if org == 'TV студия' then org_g = u8'СМИ-ЛС'; ccity = u8'Лос-Сантос'; org_tag = 'R-LS' end
-			if org == 'TV студия SF' then org_g = u8'СМИ-СФ'; ccity = u8'Сан-Фиерро'; org_tag = 'R-SF' end
-			if org == 'TV студия LV' then org_g = u8'СМИ-ЛВ'; ccity = u8'Лас-Вентурас'; org_tag = 'R-LV' end
-			rang_n = tonumber(string.match(text, "Должность: {B83434}.-%((%d+)%)"))
+			if org == 'TV СЃС‚СѓРґРёСЏ' then org_g = u8'РЎРњР-Р›РЎ'; ccity = u8'Р›РѕСЃ-РЎР°РЅС‚РѕСЃ'; org_tag = 'R-LS' end
+			if org == 'TV СЃС‚СѓРґРёСЏ SF' then org_g = u8'РЎРњР-РЎР¤'; ccity = u8'РЎР°РЅ-Р¤РёРµСЂСЂРѕ'; org_tag = 'R-SF' end
+			if org == 'TV СЃС‚СѓРґРёСЏ LV' then org_g = u8'РЎРњР-Р›Р’'; ccity = u8'Р›Р°СЃ-Р’РµРЅС‚СѓСЂР°СЃ'; org_tag = 'R-LV' end
+			rang_n = tonumber(string.match(text, "Р”РѕР»Р¶РЅРѕСЃС‚СЊ: {B83434}.-%((%d+)%)"))
 		else
 			org = 'nil'
 			dl = 'nil'
@@ -1250,19 +1248,19 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 	end
 	if dialogId == 1234 and selected_user ~= nil then
 		if (selected_user >= 0 and selected_user <= 1000) and (sampIsPlayerConnected(selected_user)) then
-			if sobes_i[1] and title == "{BFBBBA}Паспорт" and string.find(text, sampGetPlayerNickname(selected_user)) then
-				let = string.match(text, "Лет в штате: {FFD700}(%d+)")
-				zakon = string.match(text, "Законопослушность: {FFD700}(%d+)/100")
+			if sobes_i[1] and title == "{BFBBBA}РџР°СЃРїРѕСЂС‚" and string.find(text, sampGetPlayerNickname(selected_user)) then
+				let = string.match(text, "Р›РµС‚ РІ С€С‚Р°С‚Рµ: {FFD700}(%d+)")
+				zakon = string.match(text, "Р—Р°РєРѕРЅРѕРїРѕСЃР»СѓС€РЅРѕСЃС‚СЊ: {FFD700}(%d+)/100")
 				if tonumber(let) < 3 then
 					lua_thread.create(function ()
-						sampSendChat("/me взял паспорт человека напротив и начал проверять его")
+						sampSendChat("/me РІР·СЏР» РїР°СЃРїРѕСЂС‚ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµРіРѕ")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("Вы должны проживать в штате минимум 3 года.")
+						sampSendChat("Р’С‹ РґРѕР»Р¶РЅС‹ РїСЂРѕР¶РёРІР°С‚СЊ РІ С€С‚Р°С‚Рµ РјРёРЅРёРјСѓРј 3 РіРѕРґР°.")
 						wait(2000)
-						sampSendChat("/b Нужен 3 уровень.")
-						sobes_info['pass'] = u8'Нет 3 уровня'
+						sampSendChat("/b РќСѓР¶РµРЅ 3 СѓСЂРѕРІРµРЅСЊ.")
+						sobes_info['pass'] = u8'РќРµС‚ 3 СѓСЂРѕРІРЅСЏ'
 						sobes_i = {
 							false,
 							false,
@@ -1274,14 +1272,14 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 				end
 				if tonumber(zakon) < 35 then
 					lua_thread.create(function ()
-						sampSendChat("/me взял паспорт человека напротив и начал проверять его")
+						sampSendChat("/me РІР·СЏР» РїР°СЃРїРѕСЂС‚ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµРіРѕ")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("Вы незаконопослушны.")
+						sampSendChat("Р’С‹ РЅРµР·Р°РєРѕРЅРѕРїРѕСЃР»СѓС€РЅС‹.")
 						wait(2000)
-						sampSendChat("/b Нужно 35 законопослушности.")
-						sobes_info['pass'] = u8'Нет 35 законопослушности'
+						sampSendChat("/b РќСѓР¶РЅРѕ 35 Р·Р°РєРѕРЅРѕРїРѕСЃР»СѓС€РЅРѕСЃС‚Рё.")
+						sobes_info['pass'] = u8'РќРµС‚ 35 Р·Р°РєРѕРЅРѕРїРѕСЃР»СѓС€РЅРѕСЃС‚Рё'
 						sobes_i = {
 							false,
 							false,
@@ -1291,16 +1289,16 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 					sampSendDialogResponse(dialogId, 1, 0, "")
 					return false
 				end
-				if string.find(text, "Организация:", 1, true) then
+				if string.find(text, "РћСЂРіР°РЅРёР·Р°С†РёСЏ:", 1, true) then
 					lua_thread.create(function ()
-						sampSendChat("/me взял паспорт человека напротив и начал проверять его")
+						sampSendChat("/me РІР·СЏР» РїР°СЃРїРѕСЂС‚ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµРіРѕ")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("Вы уже состоите в другой организации.")
+						sampSendChat("Р’С‹ СѓР¶Рµ СЃРѕСЃС‚РѕРёС‚Рµ РІ РґСЂСѓРіРѕР№ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
 						wait(2000)
-						sampSendChat("/b Увольтесь из вашей организации.")
-						sobes_info['pass'] = u8'Состоит в организации'
+						sampSendChat("/b РЈРІРѕР»СЊС‚РµСЃСЊ РёР· РІР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
+						sobes_info['pass'] = u8'РЎРѕСЃС‚РѕРёС‚ РІ РѕСЂРіР°РЅРёР·Р°С†РёРё'
 						sobes_i = {
 							false,
 							false,
@@ -1310,16 +1308,16 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 					sampSendDialogResponse(dialogId, 1, 0, "")
 					return false
 				end
-				if string.find(text, "Необходимо обновить мед. карту") then
+				if string.find(text, "РќРµРѕР±С…РѕРґРёРјРѕ РѕР±РЅРѕРІРёС‚СЊ РјРµРґ. РєР°СЂС‚Сѓ") then
 					lua_thread.create(function ()
-						sampSendChat("/me взял паспорт человека напротив и начал проверять его")
+						sampSendChat("/me РІР·СЏР» РїР°СЃРїРѕСЂС‚ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµРіРѕ")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("Вы лечились в психиатрической больнице.")
+						sampSendChat("Р’С‹ Р»РµС‡РёР»РёСЃСЊ РІ РїСЃРёС…РёР°С‚СЂРёС‡РµСЃРєРѕР№ Р±РѕР»СЊРЅРёС†Рµ.")
 						wait(2000)
-						sampSendChat("/b Обновите мед. карту.")
-						sobes_info['pass'] = u8'Сидел в деморгане'
+						sampSendChat("/b РћР±РЅРѕРІРёС‚Рµ РјРµРґ. РєР°СЂС‚Сѓ.")
+						sobes_info['pass'] = u8'РЎРёРґРµР» РІ РґРµРјРѕСЂРіР°РЅРµ'
 						sobes_i = {
 							false,
 							false,
@@ -1329,18 +1327,18 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 					sampSendDialogResponse(dialogId, 1, 0, "")
 					return false
 				end
-				if u8:decode(mainIni.config.c_cnn) == "СМИ-ЛС" and string.find(text, "Состоит в ЧС {FF6200}TV студия", 1, true) or u8:decode(mainIni.config.c_cnn) == "СМИ-СФ" and string.find(text, "Состоит в ЧС {FF6200}TV студия SF", 1, true) or u8:decode(mainIni.config.c_cnn) == "СМИ ЛВ" and string.find(text, "Состоит в ЧС {FF6200}TV студия LV", 1, true) then
+				if u8:decode(mainIni.config.c_cnn) == "РЎРњР-Р›РЎ" and string.find(text, "РЎРѕСЃС‚РѕРёС‚ РІ Р§РЎ {FF6200}TV СЃС‚СѓРґРёСЏ", 1, true) or u8:decode(mainIni.config.c_cnn) == "РЎРњР-РЎР¤" and string.find(text, "РЎРѕСЃС‚РѕРёС‚ РІ Р§РЎ {FF6200}TV СЃС‚СѓРґРёСЏ SF", 1, true) or u8:decode(mainIni.config.c_cnn) == "РЎРњР Р›Р’" and string.find(text, "РЎРѕСЃС‚РѕРёС‚ РІ Р§РЎ {FF6200}TV СЃС‚СѓРґРёСЏ LV", 1, true) then
 					lua_thread.create(function ()
-						sampSendChat("/do Планшет с базой данных в руках.")
+						sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… РІ СЂСѓРєР°С….")
 						wait(2000)
-						sampSendChat("/me нашел в базе человека напротив")
+						sampSendChat("/me РЅР°С€РµР» РІ Р±Р°Р·Рµ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("У вас имеется ЧС СМИ г. " .. u8:decode(ccity) .. ".")
+						sampSendChat("РЈ РІР°СЃ РёРјРµРµС‚СЃСЏ Р§РЎ РЎРњР Рі. " .. u8:decode(ccity) .. ".")
 						wait(2000)
-						sampSendChat("/b Запишите заявление на форум или выйдите из ЧС за az в донате.")
-						sobes_info['pass'] = u8'Имеет ЧС СМИ'
+						sampSendChat("/b Р—Р°РїРёС€РёС‚Рµ Р·Р°СЏРІР»РµРЅРёРµ РЅР° С„РѕСЂСѓРј РёР»Рё РІС‹Р№РґРёС‚Рµ РёР· Р§РЎ Р·Р° az РІ РґРѕРЅР°С‚Рµ.")
+						sobes_info['pass'] = u8'РРјРµРµС‚ Р§РЎ РЎРњР'
 						sobes_i = {
 							false,
 							false,
@@ -1351,31 +1349,31 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 					return false
 				end
 				lua_thread.create(function ()
-					sampSendChat("/me взял паспорт человека напротив и начал проверять его")
+					sampSendChat("/me РІР·СЏР» РїР°СЃРїРѕСЂС‚ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµРіРѕ")
 					wait(1500)
-					sampSendChat("/do Паспорт в норме.")
+					sampSendChat("/do РџР°СЃРїРѕСЂС‚ РІ РЅРѕСЂРјРµ.")
 					wait(1500)
-					sampSendChat("/todo Всё в порядке.*отдавая паспорт обратно")
+					sampSendChat("/todo Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ.*РѕС‚РґР°РІР°СЏ РїР°СЃРїРѕСЂС‚ РѕР±СЂР°С‚РЅРѕ")
 				end)
-				sobes_info['pass'] = u8'Всё в порядке'
+				sobes_info['pass'] = u8'Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ'
 				sobes_i[1] = false
 				sampSendDialogResponse(dialogId, 1, 0, "")
 				return false
 			end
-			if sobes_i[2] and title == "{BFBBBA}Мед. карта" and string.find(text, sampGetPlayerNickname(selected_user)) then
-				narko = string.match(text, 'Наркозависимость: (%d+)')
+			if sobes_i[2] and title == "{BFBBBA}РњРµРґ. РєР°СЂС‚Р°" and string.find(text, sampGetPlayerNickname(selected_user)) then
+				narko = string.match(text, 'РќР°СЂРєРѕР·Р°РІРёСЃРёРјРѕСЃС‚СЊ: (%d+)')
 				if tonumber(narko) > 19 then
-					sobes_info['mc'] = u8'Наркозависимость больше 19'
+					sobes_info['mc'] = u8'РќР°СЂРєРѕР·Р°РІРёСЃРёРјРѕСЃС‚СЊ Р±РѕР»СЊС€Рµ 19'
 					lua_thread.create(function ()
-						sampSendChat("/me взял мед. карту у человека напротив")
+						sampSendChat("/me РІР·СЏР» РјРµРґ. РєР°СЂС‚Сѓ Сѓ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ")
 						wait(2000)
-						sampSendChat("/me начал проверять документ")
+						sampSendChat("/me РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РґРѕРєСѓРјРµРЅС‚")
 						wait(2000)
-						sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+						sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 						wait(2000)
-						sampSendChat("У вас в мед. карте написано что вы имеете наркозависимость.")
+						sampSendChat("РЈ РІР°СЃ РІ РјРµРґ. РєР°СЂС‚Рµ РЅР°РїРёСЃР°РЅРѕ С‡С‚Рѕ РІС‹ РёРјРµРµС‚Рµ РЅР°СЂРєРѕР·Р°РІРёСЃРёРјРѕСЃС‚СЊ.")
 						wait(2000)
-						sampSendChat("/b Вылечитесь у нарколога в больнице.")
+						sampSendChat("/b Р’С‹Р»РµС‡РёС‚РµСЃСЊ Сѓ РЅР°СЂРєРѕР»РѕРіР° РІ Р±РѕР»СЊРЅРёС†Рµ.")
 						sobes_i = {
 							false,
 							false,
@@ -1386,24 +1384,24 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 					return false
 				end
 				lua_thread.create(function ()
-					sampSendChat("/me взял мед. карту человека напротив и начал проверять её")
+					sampSendChat("/me РІР·СЏР» РјРµРґ. РєР°СЂС‚Сѓ С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РµС‘")
 					wait(1500)
-					sampSendChat("/do Мед-карта в норме.")
+					sampSendChat("/do РњРµРґ-РєР°СЂС‚Р° РІ РЅРѕСЂРјРµ.")
 					wait(1500)
-					sampSendChat("/todo Всё в порядке.*отдавая мед. карту обратно")
+					sampSendChat("/todo Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ.*РѕС‚РґР°РІР°СЏ РјРµРґ. РєР°СЂС‚Сѓ РѕР±СЂР°С‚РЅРѕ")
 				end)
-				sobes_info['mc'] = u8'Всё в порядке'
+				sobes_info['mc'] = u8'Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ'
 				sobes_i[2] = false
 				return false
 			end
-			if sobes_i[3] and title == "{BFBBBA}Лицензии" and string.find(title, sampGetPlayerNickname(selected_user)) then
+			if sobes_i[3] and title == "{BFBBBA}Р›РёС†РµРЅР·РёРё" and string.find(title, sampGetPlayerNickname(selected_user)) then
 				lua_thread.create(function ()
-					sobes_info['lic'] = u8'Всё в порядке'
-					sampSendChat("/me взял лицензии человека напротив и начал проверять их")
+					sobes_info['lic'] = u8'Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ'
+					sampSendChat("/me РІР·СЏР» Р»РёС†РµРЅР·РёРё С‡РµР»РѕРІРµРєР° РЅР°РїСЂРѕС‚РёРІ Рё РЅР°С‡Р°Р» РїСЂРѕРІРµСЂСЏС‚СЊ РёС…")
 					wait(1500)
-					sampSendChat("/do Лицензии в норме.")
+					sampSendChat("/do Р›РёС†РµРЅР·РёРё РІ РЅРѕСЂРјРµ.")
 					wait(1500)
-					sampSendChat("/todo Всё в порядке.*отдавая лицензии обратно")
+					sampSendChat("/todo Р’СЃС‘ РІ РїРѕСЂСЏРґРєРµ.*РѕС‚РґР°РІР°СЏ Р»РёС†РµРЅР·РёРё РѕР±СЂР°С‚РЅРѕ")
 					sobes_i[3] = false
 				end)
 				sampSendDialogResponse(dialogId, 1, 0, "")
@@ -1411,12 +1409,12 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			end
 		end
 	end
-	if dialogId == 25693 and title:find("Активные предложения") and selected_user ~= nil then
+	if dialogId == 25693 and title:find("РђРєС‚РёРІРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ") and selected_user ~= nil then
 		if sobes_i[1] then 
 			local lineIndex = -2
 			for line in text:gmatch("[^\n]+") do
 				lineIndex = lineIndex + 1
-				if string.find(line, 'паспорт') and string.find(line, sampGetPlayerNickname(selected_user))  then
+				if string.find(line, 'РїР°СЃРїРѕСЂС‚') and string.find(line, sampGetPlayerNickname(selected_user))  then
 					cur_slot = lineIndex
 					break
 				end
@@ -1428,7 +1426,7 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			local lineIndex = -2
 			for line in text:gmatch("[^\n]+") do
 				lineIndex = lineIndex + 1
-				if string.find(line, 'медицинскую карту') and string.find(line, sampGetPlayerNickname(selected_user)) then
+				if string.find(line, 'РјРµРґРёС†РёРЅСЃРєСѓСЋ РєР°СЂС‚Сѓ') and string.find(line, sampGetPlayerNickname(selected_user)) then
 					cur_slot = lineIndex
 					break
 				end
@@ -1440,7 +1438,7 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			local lineIndex = -2
 			for line in text:gmatch("[^\n]+") do
 				lineIndex = lineIndex + 1
-				if string.find(line, 'лицензии') and string.find(line, sampGetPlayerNickname(selected_user)) then
+				if string.find(line, 'Р»РёС†РµРЅР·РёРё') and string.find(line, sampGetPlayerNickname(selected_user)) then
 					cur_slot = lineIndex
 					break
 				end
@@ -1449,12 +1447,12 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			return false
 		end
 	end
-	if dialogId == 25694 and title:find("Активные предложения") and selected_user ~= nil then
+	if dialogId == 25694 and title:find("РђРєС‚РёРІРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ") and selected_user ~= nil then
 		if sobes_i[1] or sobes_i[2] or sobes_i[3] then 
 			local lineIndex = -1
 			for line in text:gmatch("[^\n]+") do
 				lineIndex = lineIndex + 1
-				if string.find(line, 'Принять предложение') then
+				if string.find(line, 'РџСЂРёРЅСЏС‚СЊ РїСЂРµРґР»РѕР¶РµРЅРёРµ') then
 					cur_slot = lineIndex
 					break
 				end
@@ -1463,19 +1461,19 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 			return false
 		end
 	end
-	if title:find("Редактирование") and dialogId == 557 then
+	if title:find("Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ") and dialogId == 557 then
         for line in text:gmatch("[^\n]+") do
-            if line:find('{FFFFFF}Объявление от%s+{FFD700}(.+),') then
-                author = line:match('{FFFFFF}Объявление от%s+{FFD700}(.+),')
+            if line:find('{FFFFFF}РћР±СЉСЏРІР»РµРЅРёРµ РѕС‚%s+{FFD700}(.+),') then
+                author = line:match('{FFFFFF}РћР±СЉСЏРІР»РµРЅРёРµ РѕС‚%s+{FFD700}(.+),')
             end
         end
-		msga = string.match(text, "{FFFFFF}Сообщение:\t{33AA33}(.+)\n\n{FFFFFF}")
+		msga = string.match(text, "{FFFFFF}РЎРѕРѕР±С‰РµРЅРёРµ:\t{33AA33}(.+)\n\n{FFFFFF}")
 		msga = msga:gsub('=','rv')
 		msga = string.gsub(msga, "^%s*(.-)%s*$", "%1")
 		test_1 = tonumber(msga)
 		if test_1 then msga = msga .. 'a' end
-		dialog_text[1] = '{FFFFFF}Сообщение:\t{33AA33}'..msga
-		dialog_text[2] = '{FFFFFF}Объявление от {FFD700}'..author
+		dialog_text[1] = '{FFFFFF}РЎРѕРѕР±С‰РµРЅРёРµ:\t{33AA33}'..msga
+		dialog_text[2] = '{FFFFFF}РћР±СЉСЏРІР»РµРЅРёРµ РѕС‚ {FFD700}'..author
 		dialog_text[3] = msga
 		dialog_title = title
 		dialog_btn1 = button1
@@ -1503,7 +1501,7 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 		end
 		return false
 	end
--- 	if title:find('Успеваемость') and dialogId == 0 then 
+-- 	if title:find('РЈСЃРїРµРІР°РµРјРѕСЃС‚СЊ') and dialogId == 0 then 
 -- 		jp_info = {
 -- 			org = '',
 -- 			name = '',
@@ -1532,50 +1530,50 @@ function sampev.onShowDialog(dialogId, style, title, button1, button2, text)
 -- 		jp_info['org'], jp_info['name'], jp_info['ads']['all'], jp_info['ads']['all_vip'], jp_info['newspaper']['all_created'], jp_info['newspaper']['all_sell'],
 -- 		jp_info['ads']['today'], jp_info['ads']['today_vip'], jp_info['newspaper']['today_created'], jp_info['newspaper']['today_sell'],
 -- 		jp_info['ads']['week'], jp_info['ads']['week_vip'], jp_info['newspaper']['week_created'], jp_info['newspaper']['week_sell'],
--- 		jp_info['rang']['first'], jp_info['rang']['last'] = string.match(text, [[{FFFFFF}Статистика успеваемости сотрудника {66FF6C}(.+){FFFFFF}: ([A-Za-z_]+)
--- 	1%) Объявлений отредактировано: {FFB323}(%d+){FFFFFF}
--- 	2%) VIP-объявлений отредактировано: {FFB323}(%d+){FFFFFF}
--- 	3%) Создано газет: {FFB323}(%d+){FFFFFF}
--- 	4%) Продано газет: {FFB323}(%d+){FFFFFF}
+-- 		jp_info['rang']['first'], jp_info['rang']['last'] = string.match(text, [[{FFFFFF}РЎС‚Р°С‚РёСЃС‚РёРєР° СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё СЃРѕС‚СЂСѓРґРЅРёРєР° {66FF6C}(.+){FFFFFF}: ([A-Za-z_]+)
+-- 	1%) РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {FFB323}(%d+){FFFFFF}
+-- 	2%) VIP-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {FFB323}(%d+){FFFFFF}
+-- 	3%) РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: {FFB323}(%d+){FFFFFF}
+-- 	4%) РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: {FFB323}(%d+){FFFFFF}
 -- 	5%) : {FFB323}0{FFFFFF}
 -- 	6%) : {FFB323}0{FFFFFF}
 -- 	7%) : {FFB323}0{FFFFFF}
 
--- Статистика успеваемости за неделю:
+-- РЎС‚Р°С‚РёСЃС‚РёРєР° СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё Р·Р° РЅРµРґРµР»СЋ:
 
--- 	1%) Объявлений отредактировано: {F9FF23}(%d+){FFFFFF}
--- 	2%) VIP-объявлений отредактировано: {F9FF23}(%d+){FFFFFF}
--- 	3%) Создано газет: {F9FF23}(%d+){FFFFFF}
--- 	4%) Продано газет: {F9FF23}(%d+){FFFFFF}
+-- 	1%) РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {F9FF23}(%d+){FFFFFF}
+-- 	2%) VIP-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {F9FF23}(%d+){FFFFFF}
+-- 	3%) РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: {F9FF23}(%d+){FFFFFF}
+-- 	4%) РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: {F9FF23}(%d+){FFFFFF}
 -- 	5%) : {F9FF23}%d+{FFFFFF}
 -- 	6%) : {F9FF23}%d+{FFFFFF}
 -- 	7%) : {F9FF23}%d+{FFFFFF}
 
--- Статистика успеваемости за сегодня:
+-- РЎС‚Р°С‚РёСЃС‚РёРєР° СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё Р·Р° СЃРµРіРѕРґРЅСЏ:
 
--- 	1%) Объявлений отредактировано: {F9FF23}(%d+){FFFFFF}
--- 	2%) VIP-объявлений отредактировано: {F9FF23}(%d+){FFFFFF}
--- 	3%) Создано газет: {F9FF23}(%d+){FFFFFF}
--- 	4%) Продано газет: {F9FF23}(%d+){FFFFFF}
+-- 	1%) РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {F9FF23}(%d+){FFFFFF}
+-- 	2%) VIP-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: {F9FF23}(%d+){FFFFFF}
+-- 	3%) РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: {F9FF23}(%d+){FFFFFF}
+-- 	4%) РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: {F9FF23}(%d+){FFFFFF}
 -- 	5%) : {F9FF23}%d+{FFFFFF}
 -- 	6%) : {F9FF23}%d+{FFFFFF}
 -- 	7%) : {F9FF23}%d+{FFFFFF}
 
--- Дата вступления в организацию:
+-- Р”Р°С‚Р° РІСЃС‚СѓРїР»РµРЅРёСЏ РІ РѕСЂРіР°РЅРёР·Р°С†РёСЋ:
 -- {cccccc}(.+){FFFFFF}
--- Последнее повышение:
+-- РџРѕСЃР»РµРґРЅРµРµ РїРѕРІС‹С€РµРЅРёРµ:
 -- 	{cccccc}(.+)]])
--- 		-- jp_info['org'], jp_info['name'] = 											string.match(text, '{FFFFFF}Статистика успеваемости сотрудника %{66FF6C%}(.+){FFFFFF}: ([A-Za-z_]+)\n')
--- 		-- jp_info['ads']['all'], jp_info['ads']['all_vip'] = 							string.match(text, 'Объявлений отредактировано: %{FFB323%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-объявлений отредактировано: %{FFB323%}(%d+)%{FFFFFF%}\n')
--- 		-- jp_info['ads']['today'], jp_info['ads']['today_vip'] = 						string.match(text, 'Объявлений отредактировано за сегодня %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-объявлений отредактировано за сегодня %{F9FF23%}(%d+)%{FFFFFF%}\n')
--- 		-- jp_info['ads']['week'], jp_info['ads']['week_vip'] = 						string.match(text, 'Объявлений отредактировано за сегодня %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-объявлений отредактировано за сегодня %{F9FF23%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['org'], jp_info['name'] = 											string.match(text, '{FFFFFF}РЎС‚Р°С‚РёСЃС‚РёРєР° СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё СЃРѕС‚СЂСѓРґРЅРёРєР° %{66FF6C%}(.+){FFFFFF}: ([A-Za-z_]+)\n')
+-- 		-- jp_info['ads']['all'], jp_info['ads']['all_vip'] = 							string.match(text, 'РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: %{FFB323%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ: %{FFB323%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['ads']['today'], jp_info['ads']['today_vip'] = 						string.match(text, 'РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ Р·Р° СЃРµРіРѕРґРЅСЏ %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ Р·Р° СЃРµРіРѕРґРЅСЏ %{F9FF23%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['ads']['week'], jp_info['ads']['week_vip'] = 						string.match(text, 'РћР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ Р·Р° СЃРµРіРѕРґРЅСЏ %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'VIP%-РѕР±СЉСЏРІР»РµРЅРёР№ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРѕ Р·Р° СЃРµРіРѕРґРЅСЏ %{F9FF23%}(%d+)%{FFFFFF%}\n')
 		
 		
 
--- 		-- jp_info['newspaper']['all_created'], jp_info['newspaper']['all_sell'] = 		string.match(text, 'Создано газет: %{FFB323%}(%d+)%{FFFFFF%}\n'), string.match(text, 'Продано газет: %{FFB323%}(%d+)%{FFFFFF%}\n')
--- 		-- jp_info['newspaper']['today_created'], jp_info['newspaper']['today_sell'] = 	string.match(text, 'Создано газет за сегодня: %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'Продано газет за сегодня: %{F9FF23%}(%d+)%{FFFFFF%}\n')
--- 		-- jp_info['newspaper']['week_created'], jp_info['newspaper']['week_sell'] = 		string.match(text, 'Создано газет за сегодня: %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'Продано газет за сегодня: %{F9FF23%}(%d+)%{FFFFFF%}\n')
--- 		-- jp_info['rang']['first'], jp_info['rang']['last'] = 							string.match(text, 'Дата вступления в организацию:\n%{cccccc%}(.+)%{FFFFFF%}\nПоследнее повышение:\n%{cccccc%}(.+)')
+-- 		-- jp_info['newspaper']['all_created'], jp_info['newspaper']['all_sell'] = 		string.match(text, 'РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚: %{FFB323%}(%d+)%{FFFFFF%}\n'), string.match(text, 'РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚: %{FFB323%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['newspaper']['today_created'], jp_info['newspaper']['today_sell'] = 	string.match(text, 'РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚ Р·Р° СЃРµРіРѕРґРЅСЏ: %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚ Р·Р° СЃРµРіРѕРґРЅСЏ: %{F9FF23%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['newspaper']['week_created'], jp_info['newspaper']['week_sell'] = 		string.match(text, 'РЎРѕР·РґР°РЅРѕ РіР°Р·РµС‚ Р·Р° СЃРµРіРѕРґРЅСЏ: %{F9FF23%}(%d+)%{FFFFFF%}\n'), string.match(text, 'РџСЂРѕРґР°РЅРѕ РіР°Р·РµС‚ Р·Р° СЃРµРіРѕРґРЅСЏ: %{F9FF23%}(%d+)%{FFFFFF%}\n')
+-- 		-- jp_info['rang']['first'], jp_info['rang']['last'] = 							string.match(text, 'Р”Р°С‚Р° РІСЃС‚СѓРїР»РµРЅРёСЏ РІ РѕСЂРіР°РЅРёР·Р°С†РёСЋ:\n%{cccccc%}(.+)%{FFFFFF%}\nРџРѕСЃР»РµРґРЅРµРµ РїРѕРІС‹С€РµРЅРёРµ:\n%{cccccc%}(.+)')
 -- 		jobprogress[0] = true
 -- 		return false
 -- 	end
@@ -1618,7 +1616,7 @@ function checkAds(text)
 	t2 = text:sub(1,12)
 	t3 = text:sub(1,5)
 	t4 = text:sub(1,6)
-	if text:match("[Кк]уплю") or text:match("[Пп]родам") or text:match("[Цц]ена") or text:match("[Бб]юджет") then 
+	if text:match("[РљРє]СѓРїР»СЋ") or text:match("[РџРї]СЂРѕРґР°Рј") or text:match("[Р¦С†]РµРЅР°") or text:match("[Р‘Р±]СЋРґР¶РµС‚") then 
 		return false
 	else
 		return true
@@ -1661,11 +1659,11 @@ function send_ad()
 			imgui.StrCopy(ad_d, '')
 		else
 			focus = true
-			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Максимальная длина объявления - " .. curcolor.. "80", curcolor1)
+			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° РѕР±СЉСЏРІР»РµРЅРёСЏ - " .. curcolor.. "80", curcolor1)
 		end
 	else
 		focus = true
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Минимальная длина объявления - " .. curcolor.. "6", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РњРёРЅРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° РѕР±СЉСЏРІР»РµРЅРёСЏ - " .. curcolor.. "6", curcolor1)
 	end
 end
 
@@ -1685,10 +1683,10 @@ function cancel_ad()
 			imgui.StrCopy(ad_d, '')
 		else
 			focus = true
-			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Минимальная длина объявления - " .. curcolor.. "6", curcolor1)
+			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РњРёРЅРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° РѕР±СЉСЏРІР»РµРЅРёСЏ - " .. curcolor.. "6", curcolor1)
 		end
 	else
-		addWithTag('Данное объявление содержит "Куплю" или "Продам" и оно не может быть отклонено.')
+		addWithTag('Р”Р°РЅРЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ СЃРѕРґРµСЂР¶РёС‚ "РљСѓРїР»СЋ" РёР»Рё "РџСЂРѕРґР°Рј" Рё РѕРЅРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚РєР»РѕРЅРµРЅРѕ.')
 	end
 end
 
@@ -1711,52 +1709,52 @@ function colored_button_main(r, g, b)
 	local sizeX, sizeY = 200 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE
 	if smi_menu == 'default' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('BARS') .. u8' Основное', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'default' end
+		if imgui.Button(faicons('BARS') .. u8' РћСЃРЅРѕРІРЅРѕРµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'default' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('BARS') .. u8' Основное', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'default' end
+		if imgui.Button(faicons('BARS') .. u8' РћСЃРЅРѕРІРЅРѕРµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'default' end
 	end
 	if smi_menu == 'sobes' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('ID_CARD') .. u8' Собеседование', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'sobes' end
+		if imgui.Button(faicons('ID_CARD') .. u8' РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'sobes' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('ID_CARD') .. u8' Собеседование', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'sobes' end
+		if imgui.Button(faicons('ID_CARD') .. u8' РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'sobes' end
 	end
 	if smi_menu == 'efir' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('MICROPHONE') .. u8' Эфиры', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'efir' end
+		if imgui.Button(faicons('MICROPHONE') .. u8' Р­С„РёСЂС‹', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'efir' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('MICROPHONE') .. u8' Эфиры', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'efir' end
+		if imgui.Button(faicons('MICROPHONE') .. u8' Р­С„РёСЂС‹', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'efir' end
 	end
 	if smi_menu == 'settings' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('GEAR') ..u8' Настройки', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'settings' end
+		if imgui.Button(faicons('GEAR') ..u8' РќР°СЃС‚СЂРѕР№РєРё', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'settings' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('GEAR') ..u8' Настройки', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'settings' end
+		if imgui.Button(faicons('GEAR') ..u8' РќР°СЃС‚СЂРѕР№РєРё', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'settings' end
 	end
 	if smi_menu == 'dopka' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('SLIDERS') .. u8' Доп. функции', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'dopka' end
+		if imgui.Button(faicons('SLIDERS') .. u8' Р”РѕРї. С„СѓРЅРєС†РёРё', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'dopka' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('SLIDERS') .. u8' Доп. функции', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'dopka' end
+		if imgui.Button(faicons('SLIDERS') .. u8' Р”РѕРї. С„СѓРЅРєС†РёРё', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'dopka' end
 	end
 	if smi_menu == 'pro' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('FILE_SIGNATURE') .. u8' ПРО/ППЭ/Устав', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'pro' end
+		if imgui.Button(faicons('FILE_SIGNATURE') .. u8' РџР Рћ/РџРџР­/РЈСЃС‚Р°РІ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'pro' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('FILE_SIGNATURE') .. u8' ПРО/ППЭ/Устав', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'pro' end
+		if imgui.Button(faicons('FILE_SIGNATURE') .. u8' РџР Рћ/РџРџР­/РЈСЃС‚Р°РІ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'pro' end
 	end
 	if smi_menu == 'about' then
 		imgui.PushStyleColor(imgui.Col.Button, imgui.ImVec4(r / 255, g / 255, b / 255, 0.86))
-		if imgui.Button(faicons('INFO') .. u8' О скрипте', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'about' end
+		if imgui.Button(faicons('INFO') .. u8' Рћ СЃРєСЂРёРїС‚Рµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'about' end
 		imgui.PopStyleColor(1)
 	else
-		if imgui.Button(faicons('INFO') .. u8' О скрипте', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'about' end
+		if imgui.Button(faicons('INFO') .. u8' Рћ СЃРєСЂРёРїС‚Рµ', (imgui.ImVec2(sizeX, sizeY))) then smi_menu = 'about' end
 	end
 end
 
@@ -1788,9 +1786,9 @@ local edit_h = imgui.OnFrame(
 	function(self)
 		imgui.SetNextWindowPos(imgui.ImVec2(iScreenWidth / 2, iScreenHeight / 2), imgui.Cond.Always, imgui.ImVec2(0.5, 0.5))
 		imgui.SetNextWindowSize(imgui.ImVec2(790 * MONET_DPI_SCALE, 290 * MONET_DPI_SCALE)) -- 200
-		imgui.Begin(u8'Объявление', edit_helper, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoTitleBar + imgui.WindowFlags.NoMove + imgui.WindowFlags.NoSavedSettings)
+		imgui.Begin(u8'РћР±СЉСЏРІР»РµРЅРёРµ', edit_helper, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoTitleBar + imgui.WindowFlags.NoMove + imgui.WindowFlags.NoSavedSettings)
 		imgui.BeginChild('##text##12a3123', imgui.ImVec2(-1, 150 * MONET_DPI_SCALE), true)
-		imgui.CenterTextColoredRGB('Объявление')
+		imgui.CenterTextColoredRGB('РћР±СЉСЏРІР»РµРЅРёРµ')
 		imgui.TextColoredRGB(dialog_text[2])
 		imgui.TextColoredRGB(dialog_text[1])
 		imgui.PushItemWidth(700 * MONET_DPI_SCALE)
@@ -1798,7 +1796,7 @@ local edit_h = imgui.OnFrame(
 			imgui.SetKeyboardFocusHere(0)
 			focus = false
 		end
-		if imgui.Button(u8"Переписать объявление") then 
+		if imgui.Button(u8"РџРµСЂРµРїРёСЃР°С‚СЊ РѕР±СЉСЏРІР»РµРЅРёРµ") then 
 			imgui.StrCopy(ad_d, u8(dialog_text[3]))
 		end
 		imgui.InputText("##MGDKJGNJKSDGNJKDSJGNKS", ad_d, ffi.sizeof(ad_d))
@@ -1818,12 +1816,12 @@ local edit_h = imgui.OnFrame(
 		imgui.EndChild()
 
 		imgui.BeginChild("##M", imgui.ImVec2(330 * MONET_DPI_SCALE, 120 * MONET_DPI_SCALE), true)
-		if imgui.Button(u8'Куплю', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, u8"Куплю ")
+		if imgui.Button(u8'РљСѓРїР»СЋ', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, u8"РљСѓРїР»СЋ ")
 		end
 		imgui.SameLine(75 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Продам', imgui.ImVec2(70 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, u8"Продам ")
+		if imgui.Button(u8'РџСЂРѕРґР°Рј', imgui.ImVec2(70 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, u8"РџСЂРѕРґР°Рј ")
 		end
 		imgui.SameLine()
 		imgui.PushItemWidth(50 * MONET_DPI_SCALE)
@@ -1832,22 +1830,22 @@ local edit_h = imgui.OnFrame(
 		end
 		imgui.PopItemWidth()
 		imgui.SameLine()
-		imgui.Ques('в.с - велосипед\nа.м - автомобиль\nр.с - ресурс\nм.ц - мотоцикл\nа.с - аксессуар\nв.т - вертолет\nс.о - серъезные отношения\nл.д - лодка\nд.т - деталь тюнинга')
+		imgui.Ques('РІ.СЃ - РІРµР»РѕСЃРёРїРµРґ\nР°.Рј - Р°РІС‚РѕРјРѕР±РёР»СЊ\nСЂ.СЃ - СЂРµСЃСѓСЂСЃ\nРј.С† - РјРѕС‚РѕС†РёРєР»\nР°.СЃ - Р°РєСЃРµСЃСЃСѓР°СЂ\nРІ.С‚ - РІРµСЂС‚РѕР»РµС‚\nСЃ.Рѕ - СЃРµСЂСЉРµР·РЅС‹Рµ РѕС‚РЅРѕС€РµРЅРёСЏ\nР».Рґ - Р»РѕРґРєР°\nРґ.С‚ - РґРµС‚Р°Р»СЊ С‚СЋРЅРёРЅРіР°')
 		imgui.PushItemWidth(75 * MONET_DPI_SCALE)
 		if imgui.InputInt(u8"##GRAVIROVKA", grav) then 
 			grav[0] = grav[0] < 0 and 0 or grav[0] > 12 and 12 or grav[0]
 		end
 		imgui.PopItemWidth()
 		imgui.SameLine()
-		if imgui.Button(u8'Гравировка', imgui.ImVec2(90 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8' с гравировкой "+'..grav[0]..'"')
+		if imgui.Button(u8'Р“СЂР°РІРёСЂРѕРІРєР°', imgui.ImVec2(90 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8' СЃ РіСЂР°РІРёСЂРѕРІРєРѕР№ "+'..grav[0]..'"')
 		end
-		if imgui.Button(u8'Дом', imgui.ImVec2(40 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8'дом в '..city[selected_city[0]+1]..' '..house_dop[selected_house_dop[0]+1])
+		if imgui.Button(u8'Р”РѕРј', imgui.ImVec2(40 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8'РґРѕРј РІ '..city[selected_city[0]+1]..' '..house_dop[selected_house_dop[0]+1])
 		end
 		imgui.SameLine(55 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Бизнес', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8'б.з "'..biz[selected_biz[0]+1]..'"')
+		if imgui.Button(u8'Р‘РёР·РЅРµСЃ', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8'Р±.Р· "'..biz[selected_biz[0]+1]..'"')
 		end
 		imgui.SameLine(120 * MONET_DPI_SCALE)
 		imgui.PushItemWidth(173 * MONET_DPI_SCALE)
@@ -1868,41 +1866,41 @@ local edit_h = imgui.OnFrame(
 
 		---
 		imgui.BeginChild("##ASDASDM", imgui.ImVec2(-1, 120 * MONET_DPI_SCALE), true)
-		if imgui.Button(u8'Бюджет: свободный', imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Бюджет: свободный")
+		if imgui.Button(u8'Р‘СЋРґР¶РµС‚: СЃРІРѕР±РѕРґРЅС‹Р№', imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р‘СЋРґР¶РµС‚: СЃРІРѕР±РѕРґРЅС‹Р№")
 		end
 		imgui.SameLine(155 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Цена: договорная', imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Цена: договорная")
+		if imgui.Button(u8'Р¦РµРЅР°: РґРѕРіРѕРІРѕСЂРЅР°СЏ', imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р¦РµРЅР°: РґРѕРіРѕРІРѕСЂРЅР°СЏ")
 		end
 		imgui.PushItemWidth(100 * MONET_DPI_SCALE)
 		imgui.InputText("##PRICE", price, ffi.sizeof(price))
 		imgui.PopItemWidth()
 		imgui.SameLine(115 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Цена', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Цена: "..str(price):gsub(u8'ккк',u8'млрд'):gsub(u8"кк",u8'млн'):gsub(u8'к',u8'тыс'))
+		if imgui.Button(u8'Р¦РµРЅР°', imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р¦РµРЅР°: "..str(price):gsub(u8'РєРєРє',u8'РјР»СЂРґ'):gsub(u8"РєРє",u8'РјР»РЅ'):gsub(u8'Рє',u8'С‚С‹СЃ'))
 		end
 		imgui.SameLine(180 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Бюджет', imgui.ImVec2(70 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Бюджет: "..str(price):gsub(u8'ккк',u8'млрд'):gsub(u8"кк",u8'млн'):gsub(u8'к',u8'тыс'))
+		if imgui.Button(u8'Р‘СЋРґР¶РµС‚', imgui.ImVec2(70 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р‘СЋРґР¶РµС‚: "..str(price):gsub(u8'РєРєРє',u8'РјР»СЂРґ'):gsub(u8"РєРє",u8'РјР»РЅ'):gsub(u8'Рє',u8'С‚С‹СЃ'))
 		end
-		if imgui.Button(u8'Бюджет за шт: свободный', imgui.ImVec2(175 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Бюджет за шт: свободный")
+		if imgui.Button(u8'Р‘СЋРґР¶РµС‚ Р·Р° С€С‚: СЃРІРѕР±РѕРґРЅС‹Р№', imgui.ImVec2(175 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р‘СЋРґР¶РµС‚ Р·Р° С€С‚: СЃРІРѕР±РѕРґРЅС‹Р№")
 		end
 		imgui.SameLine(190 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Цена за шт: договорная', imgui.ImVec2(160 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Цена за шт: договорная")
+		if imgui.Button(u8'Р¦РµРЅР° Р·Р° С€С‚: РґРѕРіРѕРІРѕСЂРЅР°СЏ', imgui.ImVec2(160 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р¦РµРЅР° Р·Р° С€С‚: РґРѕРіРѕРІРѕСЂРЅР°СЏ")
 		end
 		imgui.PushItemWidth(100 * MONET_DPI_SCALE)
 		imgui.InputText("##PRICE", price, ffi.sizeof(price))
 		imgui.PopItemWidth()
 		imgui.SameLine(115 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Цена за шт', imgui.ImVec2(80 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Цена за шт: "..str(price):gsub(u8'ккк',u8'млрд'):gsub(u8"кк",u8'млн'):gsub(u8'к',u8'тыс'))
+		if imgui.Button(u8'Р¦РµРЅР° Р·Р° С€С‚', imgui.ImVec2(80 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р¦РµРЅР° Р·Р° С€С‚: "..str(price):gsub(u8'РєРєРє',u8'РјР»СЂРґ'):gsub(u8"РєРє",u8'РјР»РЅ'):gsub(u8'Рє',u8'С‚С‹СЃ'))
 		end
 		imgui.SameLine(200 * MONET_DPI_SCALE)
-		if imgui.Button(u8'Бюджет за шт', imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
-			imgui.StrCopy(ad_d, str(ad_d)..u8". Бюджет за шт: "..str(price):gsub(u8'ккк',u8'млрд'):gsub(u8"кк",u8'млн'):gsub(u8'к',u8'тыс'))
+		if imgui.Button(u8'Р‘СЋРґР¶РµС‚ Р·Р° С€С‚', imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE)) then
+			imgui.StrCopy(ad_d, str(ad_d)..u8". Р‘СЋРґР¶РµС‚ Р·Р° С€С‚: "..str(price):gsub(u8'РєРєРє',u8'РјР»СЂРґ'):gsub(u8"РєРє",u8'РјР»РЅ'):gsub(u8'Рє',u8'С‚С‹СЃ'))
 		end		
 		imgui.EndChild()
 		---
@@ -1943,7 +1941,7 @@ end
 
 function string.rlower(s)
 	local russian_characters = {
-		[155] = '[', [168] = 'Ё', [184] = 'ё', [192] = 'А', [193] = 'Б', [194] = 'В', [195] = 'Г', [196] = 'Д', [197] = 'Е', [198] = 'Ж', [199] = 'З', [200] = 'И', [201] = 'Й', [202] = 'К', [203] = 'Л', [204] = 'М', [205] = 'Н', [206] = 'О', [207] = 'П', [208] = 'Р', [209] = 'С', [210] = 'Т', [211] = 'У', [212] = 'Ф', [213] = 'Х', [214] = 'Ц', [215] = 'Ч', [216] = 'Ш', [217] = 'Щ', [218] = 'Ъ', [219] = 'Ы', [220] = 'Ь', [221] = 'Э', [222] = 'Ю', [223] = 'Я', [224] = 'а', [225] = 'б', [226] = 'в', [227] = 'г', [228] = 'д', [229] = 'е', [230] = 'ж', [231] = 'з', [232] = 'и', [233] = 'й', [234] = 'к', [235] = 'л', [236] = 'м', [237] = 'н', [238] = 'о', [239] = 'п', [240] = 'р', [241] = 'с', [242] = 'т', [243] = 'у', [244] = 'ф', [245] = 'х', [246] = 'ц', [247] = 'ч', [248] = 'ш', [249] = 'щ', [250] = 'ъ', [251] = 'ы', [252] = 'ь', [253] = 'э', [254] = 'ю', [255] = 'я',
+		[155] = '[', [168] = 'РЃ', [184] = 'С‘', [192] = 'Рђ', [193] = 'Р‘', [194] = 'Р’', [195] = 'Р“', [196] = 'Р”', [197] = 'Р•', [198] = 'Р–', [199] = 'Р—', [200] = 'Р', [201] = 'Р™', [202] = 'Рљ', [203] = 'Р›', [204] = 'Рњ', [205] = 'Рќ', [206] = 'Рћ', [207] = 'Рџ', [208] = 'Р ', [209] = 'РЎ', [210] = 'Рў', [211] = 'РЈ', [212] = 'Р¤', [213] = 'РҐ', [214] = 'Р¦', [215] = 'Р§', [216] = 'РЁ', [217] = 'Р©', [218] = 'РЄ', [219] = 'Р«', [220] = 'Р¬', [221] = 'Р­', [222] = 'Р®', [223] = 'РЇ', [224] = 'Р°', [225] = 'Р±', [226] = 'РІ', [227] = 'Рі', [228] = 'Рґ', [229] = 'Рµ', [230] = 'Р¶', [231] = 'Р·', [232] = 'Рё', [233] = 'Р№', [234] = 'Рє', [235] = 'Р»', [236] = 'Рј', [237] = 'РЅ', [238] = 'Рѕ', [239] = 'Рї', [240] = 'СЂ', [241] = 'СЃ', [242] = 'С‚', [243] = 'Сѓ', [244] = 'С„', [245] = 'С…', [246] = 'С†', [247] = 'С‡', [248] = 'С€', [249] = 'С‰', [250] = 'СЉ', [251] = 'С‹', [252] = 'СЊ', [253] = 'СЌ', [254] = 'СЋ', [255] = 'СЏ',
 	}
 	s = lower(s)
 	local strlen = len(s)
@@ -2093,7 +2091,7 @@ function imgui.HotKey(name, path, pointer, defaultKey, width)
 	imgui.PushStyleColor(imgui.Col.Button, imgui.GetStyle().Colors[imgui.Col.FrameBg])
 	imgui.PushStyleColor(imgui.Col.ButtonHovered, imgui.GetStyle().Colors[imgui.Col.FrameBgHovered])
 	imgui.PushStyleColor(imgui.Col.ButtonActive, imgui.GetStyle().Colors[imgui.Col.FrameBgActive])
-	if imgui.Button((sKeys ~= '' and sKeys or u8'Свободно') .. '## '..name, imgui.ImVec2(width, 0)) then
+	if imgui.Button((sKeys ~= '' and sKeys or u8'РЎРІРѕР±РѕРґРЅРѕ') .. '## '..name, imgui.ImVec2(width, 0)) then
 		tHotKeyData.edit = name
 	end
 	imgui.PopStyleColor(3)
@@ -2110,9 +2108,9 @@ function clear_sobes()
 	}
 
 	sobes_info = {
-		pass = u8'Не проверено',
-		mc = u8'Не проверено',
-		lic = u8'Не проверено'
+		pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+		mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+		lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 	}
 end
 
@@ -2121,31 +2119,31 @@ end
 function get_org(color)
 	clr = '{'..("%06X"):format(bit.band(color, 0xFFFFFF))..'}'
 	orgs = {
-		[2164228096] = 'СМИ',
-		[23486046] = 'Неизвестно [В маске]',
-		[4294967295] = 'Гражданский [Без формы]',
-		[2164260863] = 'Гражданский [Без формы]',
-		[368966908] = 'Гражданский [Без формы]',
-		[2149720609] = 'Хитман',
-		[2147503871] = 'Полиция СФ',
-		[2147502591] = 'Полиция',
-		[2164227710] = 'Больница',
-		[2159918525] = 'ТСР',
-		[2157536819] = 'Армия',
-		[2580667164] = 'Вагос',
-		[2152104628] = 'СТК',
-		[2566951719] = 'Грув Стрит',
-		[2157523814] = 'ЛКН',
-		[2580283596] = 'Баллас',
-		[2158524536] = 'Ночные волки',
-		[2161094470] = 'Байкеры',
-		[2566979554] = 'Ацтек',
-		[2164221491] = 'Автошкола',
-		[2150206647] = 'Центральный банк',
-		[2573625087] = 'Рифа',
-		[2150852249] = 'Русская мафия',
-		[2160918272] = 'Правительство',
-		[2157314562] = 'Якудза',
+		[2164228096] = 'РЎРњР',
+		[23486046] = 'РќРµРёР·РІРµСЃС‚РЅРѕ [Р’ РјР°СЃРєРµ]',
+		[4294967295] = 'Р“СЂР°Р¶РґР°РЅСЃРєРёР№ [Р‘РµР· С„РѕСЂРјС‹]',
+		[2164260863] = 'Р“СЂР°Р¶РґР°РЅСЃРєРёР№ [Р‘РµР· С„РѕСЂРјС‹]',
+		[368966908] = 'Р“СЂР°Р¶РґР°РЅСЃРєРёР№ [Р‘РµР· С„РѕСЂРјС‹]',
+		[2149720609] = 'РҐРёС‚РјР°РЅ',
+		[2147503871] = 'РџРѕР»РёС†РёСЏ РЎР¤',
+		[2147502591] = 'РџРѕР»РёС†РёСЏ',
+		[2164227710] = 'Р‘РѕР»СЊРЅРёС†Р°',
+		[2159918525] = 'РўРЎР ',
+		[2157536819] = 'РђСЂРјРёСЏ',
+		[2580667164] = 'Р’Р°РіРѕСЃ',
+		[2152104628] = 'РЎРўРљ',
+		[2566951719] = 'Р“СЂСѓРІ РЎС‚СЂРёС‚',
+		[2157523814] = 'Р›РљРќ',
+		[2580283596] = 'Р‘Р°Р»Р»Р°СЃ',
+		[2158524536] = 'РќРѕС‡РЅС‹Рµ РІРѕР»РєРё',
+		[2161094470] = 'Р‘Р°Р№РєРµСЂС‹',
+		[2566979554] = 'РђС†С‚РµРє',
+		[2164221491] = 'РђРІС‚РѕС€РєРѕР»Р°',
+		[2150206647] = 'Р¦РµРЅС‚СЂР°Р»СЊРЅС‹Р№ Р±Р°РЅРє',
+		[2573625087] = 'Р РёС„Р°',
+		[2150852249] = 'Р СѓСЃСЃРєР°СЏ РјР°С„РёСЏ',
+		[2160918272] = 'РџСЂР°РІРёС‚РµР»СЊСЃС‚РІРѕ',
+		[2157314562] = 'РЇРєСѓРґР·Р°',
 	}
 	if color == 2149720609 or color == 23486046 then clr = '{FDFCFC}' end
 	return {clr, orgs[color]}
@@ -2160,19 +2158,19 @@ local newFrame = imgui.OnFrame(
 		imgui.SetNextWindowSize(imgui.ImVec2(sizeX, sizeY), imgui.Cond.Always)
 		imgui.Begin('Main Window', renderWindow, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoTitleBar)
 
-		imgui.CenterTextColoredRGB('Меню взаимодействия', 2)
+		imgui.CenterTextColoredRGB('РњРµРЅСЋ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ', 2)
 
 		imgui.BeginChild('##LEFT COLONKA', imgui.ImVec2(200 * MONET_DPI_SCALE, -1))
 		imgui.BeginChild('##FFMK', imgui.ImVec2(200 * MONET_DPI_SCALE, 85 * MONET_DPI_SCALE), true)
-		imgui.CenterTextColoredRGB('Выбран игрок:', 2)
+		imgui.CenterTextColoredRGB('Р’С‹Р±СЂР°РЅ РёРіСЂРѕРє:', 2)
 		imgui.CenterTextColoredRGB(curcolor..''..sampGetPlayerNickname(fastmenuID)..'{FFFFFF} ['..fastmenuID..']', 2)
-		imgui.CenterTextColoredRGB('Лет в штате: '..sampGetPlayerScore(fastmenuID), 2)
+		imgui.CenterTextColoredRGB('Р›РµС‚ РІ С€С‚Р°С‚Рµ: '..sampGetPlayerScore(fastmenuID), 2)
 		local orgaf = get_org(sampGetPlayerColor(fastmenuID))
 		imgui.CenterTextColoredRGB(orgaf[1]..orgaf[2], 2)
 		imgui.EndChild()
 		imgui.BeginChild('##FFMKa', imgui.ImVec2(200 * MONET_DPI_SCALE, 80 * MONET_DPI_SCALE))
-		if imgui.Button(faicons('BARS') .. u8' Основные действия', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'own' end
-		if imgui.Button(faicons('ID_CARD') .. u8' Собеседование', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'sobes' end
+		if imgui.Button(faicons('BARS') .. u8' РћСЃРЅРѕРІРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'own' end
+		if imgui.Button(faicons('ID_CARD') .. u8' РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'sobes' end
 		imgui.EndChild()
 		imgui.EndChild()
 		imgui.SameLine()
@@ -2180,81 +2178,81 @@ local newFrame = imgui.OnFrame(
 		if fast_menu == 'sobes' then
 			imgui.BeginChild('sobesvverh', imgui.ImVec2(-1, -1))
 			imgui.BeginChild('sobes', imgui.ImVec2(120 * MONET_DPI_SCALE, 160 * MONET_DPI_SCALE), true)
-			imgui.Text(faicons('USER_XMARK') .. u8(" Отказы"))
+			imgui.Text(faicons('USER_XMARK') .. u8(" РћС‚РєР°Р·С‹"))
 			imgui.Separator()
-			if imgui.Selectable(u8("Нет паспорта")) then
+			if imgui.Selectable(u8("РќРµС‚ РїР°СЃРїРѕСЂС‚Р°")) then
 				clear_sobes()
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас нет паспорта.")
+					sampSendChat("РЈ РІР°СЃ РЅРµС‚ РїР°СЃРїРѕСЂС‚Р°.")
 					wait(2000)
-					sampSendChat("/b Получите паспорт в мэрии.")
+					sampSendChat("/b РџРѕР»СѓС‡РёС‚Рµ РїР°СЃРїРѕСЂС‚ РІ РјСЌСЂРёРё.")
 				end)
 			end
-			if imgui.Selectable(u8("Нет мед. карты")) then
+			if imgui.Selectable(u8("РќРµС‚ РјРµРґ. РєР°СЂС‚С‹")) then
 				clear_sobes()
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас нет мед. карты.")
+					sampSendChat("РЈ РІР°СЃ РЅРµС‚ РјРµРґ. РєР°СЂС‚С‹.")
 					wait(2000)
-					sampSendChat("/b Получите мед. карту в больнице.")
+					sampSendChat("/b РџРѕР»СѓС‡РёС‚Рµ РјРµРґ. РєР°СЂС‚Сѓ РІ Р±РѕР»СЊРЅРёС†Рµ.")
 				end)
 			end
-			if imgui.Selectable(u8("Состоит в орг.")) then
+			if imgui.Selectable(u8("РЎРѕСЃС‚РѕРёС‚ РІ РѕСЂРі.")) then
 				clear_sobes()
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("Вы уже состоите в организации.")
+					sampSendChat("Р’С‹ СѓР¶Рµ СЃРѕСЃС‚РѕРёС‚Рµ РІ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
 					wait(2000)
-					sampSendChat("/b Увольтесь из вашей организации.")
+					sampSendChat("/b РЈРІРѕР»СЊС‚РµСЃСЊ РёР· РІР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
 				end)
 			end
-			if imgui.Selectable(u8("НонРП ник")) then
+			if imgui.Selectable(u8("РќРѕРЅР Рџ РЅРёРє")) then
 				clear_sobes()
 				lua_thread.create(function ()
-					sampSendChat("/do Планшет с базой данных в руках.")
+					sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… РІ СЂСѓРєР°С….")
 					wait(2000)
-					sampSendChat("/me нашел человека в базе данных")
+					sampSendChat("/me РЅР°С€РµР» С‡РµР»РѕРІРµРєР° РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…")
 					wait(2000)
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас странное имя, возможно тут опечатка.")
+					sampSendChat("РЈ РІР°СЃ СЃС‚СЂР°РЅРЅРѕРµ РёРјСЏ, РІРѕР·РјРѕР¶РЅРѕ С‚СѓС‚ РѕРїРµС‡Р°С‚РєР°.")
 					wait(2000)
-					sampSendChat("/b Смените ваш НонРП ник.")
+					sampSendChat("/b РЎРјРµРЅРёС‚Рµ РІР°С€ РќРѕРЅР Рџ РЅРёРє.")
 				end)
 			end
-			if imgui.Selectable(u8("Нет РП")) then
+			if imgui.Selectable(u8("РќРµС‚ Р Рџ")) then
 				clear_sobes()
 				lua_thread.create(function ()
-					sampSendChat("/do Планшет с базой данных в руках.")
+					sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… РІ СЂСѓРєР°С….")
 					wait(2000)
-					sampSendChat("/me нашел человека в базе данных")
+					sampSendChat("/me РЅР°С€РµР» С‡РµР»РѕРІРµРєР° РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…")
 					wait(2000)
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("Вы проф. не пригодны для нашей работы.")
+					sampSendChat("Р’С‹ РїСЂРѕС„. РЅРµ РїСЂРёРіРѕРґРЅС‹ РґР»СЏ РЅР°С€РµР№ СЂР°Р±РѕС‚С‹.")
 					wait(2000)
-					sampSendChat("/b Вы плохо отыграли РП.")
+					sampSendChat("/b Р’С‹ РїР»РѕС…Рѕ РѕС‚С‹РіСЂР°Р»Рё Р Рџ.")
 				end)
 			end
 			imgui.EndChild()
 			imgui.SameLine()
 			imgui.BeginChild('sobes2', imgui.ImVec2(-1, 160 * MONET_DPI_SCALE), true)
-			if imgui.Button(faicons("PLAY") .. u8" Начать собеседование", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons("PLAY") .. u8" РќР°С‡Р°С‚СЊ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if mainIni.config.c_nick ~= '' then
-					sampSendChat("Здравствуйте, меня зовут " .. u8:decode(mainIni.config.c_nick) .. ". Вы пришли на собеседование?")
+					sampSendChat("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РјРµРЅСЏ Р·РѕРІСѓС‚ " .. u8:decode(mainIni.config.c_nick) .. ". Р’С‹ РїСЂРёС€Р»Рё РЅР° СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ?")
 				else
 					lua_thread.create(function ()
-						sampSendChat("Здравствуйте, меня зовут " .. mainIni.config.c_nicken .. ". Вы пришли на собеседование?")
+						sampSendChat("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РјРµРЅСЏ Р·РѕРІСѓС‚ " .. mainIni.config.c_nicken .. ". Р’С‹ РїСЂРёС€Р»Рё РЅР° СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ?")
 						wait(300)
-						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Советуем указать свой русский никнейм. "..curcolor.."/smi {FFFFFF} - "..curcolor.." Профиль", curcolor1)
+						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЎРѕРІРµС‚СѓРµРј СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ СЂСѓСЃСЃРєРёР№ РЅРёРєРЅРµР№Рј. "..curcolor.."/smi {FFFFFF} - "..curcolor.." РџСЂРѕС„РёР»СЊ", curcolor1)
 					end)
 				end
 			end
-			if imgui.Button(faicons('FILE_ALT') .. u8" Попросить документы", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons('FILE_ALT') .. u8" РџРѕРїСЂРѕСЃРёС‚СЊ РґРѕРєСѓРјРµРЅС‚С‹", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if fastmenuID > -1 and fastmenuID <= 1000 and sampIsPlayerConnected(fastmenuID) then
 					sobes_i = {
 						true,
@@ -2262,30 +2260,30 @@ local newFrame = imgui.OnFrame(
 						true
 					}
 					lua_thread.create(function ()
-						sampSendChat("Отлично, можно ли вашу документацию? Паспорт, мед. карту и лицензии.")
+						sampSendChat("РћС‚Р»РёС‡РЅРѕ, РјРѕР¶РЅРѕ Р»Рё РІР°С€Сѓ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ? РџР°СЃРїРѕСЂС‚, РјРµРґ. РєР°СЂС‚Сѓ Рё Р»РёС†РµРЅР·РёРё.")
 						wait(1000)
-						sampSendChat("/b Чтобы показать документацию введите: /showpass " .. u_id .. ", /showmc " .. u_id .. ", /showlic " .. u_id)
+						sampSendChat("/b Р§С‚РѕР±С‹ РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ РІРІРµРґРёС‚Рµ: /showpass " .. u_id .. ", /showmc " .. u_id .. ", /showlic " .. u_id)
 						wait(2000)
-						sampSendChat("/b РП должно быть обязательно!")
+						sampSendChat("/b Р Рџ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!")
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Игрок вышел.", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РРіСЂРѕРє РІС‹С€РµР».", curcolor1)
 				end
 			end
-			if imgui.Button(faicons('QUESTION') .. u8" Расскажите о себе", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons('QUESTION') .. u8" Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				lua_thread.create(function ()
-					sampSendChat("Хорошо, теперь я задам пару вопросов.")
+					sampSendChat("РҐРѕСЂРѕС€Рѕ, С‚РµРїРµСЂСЊ СЏ Р·Р°РґР°Рј РїР°СЂСѓ РІРѕРїСЂРѕСЃРѕРІ.")
 					wait(2000)
-					sampSendChat("Расскажите о себе.")
+					sampSendChat("Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ.")
 				end)
 			end
-			if imgui.Button(faicons('QUESTION') .. u8" Почему именно мы?", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
-				sampSendChat("Почему вы выбрали именно наш радиоцентр?")
+			if imgui.Button(faicons('QUESTION') .. u8" РџРѕС‡РµРјСѓ РёРјРµРЅРЅРѕ РјС‹?", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+				sampSendChat("РџРѕС‡РµРјСѓ РІС‹ РІС‹Р±СЂР°Р»Рё РёРјРµРЅРЅРѕ РЅР°С€ СЂР°РґРёРѕС†РµРЅС‚СЂ?")
 			end
-			if imgui.Button(faicons('USER_CHECK') .. u8" Собеседование пройдено", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons('USER_CHECK') .. u8" РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ РїСЂРѕР№РґРµРЅРѕ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if fastmenuID > -1 and fastmenuID <= 1000 and sampIsPlayerConnected(fastmenuID) then
 					lua_thread.create(function ()
-						sampSendChat("/todo Поздравляю! Вы прошли собеседование!* с улыбкой на лице")
+						sampSendChat("/todo РџРѕР·РґСЂР°РІР»СЏСЋ! Р’С‹ РїСЂРѕС€Р»Рё СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ!* СЃ СѓР»С‹Р±РєРѕР№ РЅР° Р»РёС†Рµ")
 						sobes_i = {
 							false,
 							false,
@@ -2293,25 +2291,25 @@ local newFrame = imgui.OnFrame(
 						}
 		
 						sobes_info = {
-							pass = u8'Не проверено',
-							mc = u8'Не проверено',
-							lic = u8'Не проверено'
+							pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+							mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+							lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 						}
 						wait(2000)
 						invite(fastmenuID)
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Игрок вышел.", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РРіСЂРѕРє РІС‹С€РµР».", curcolor1)
 				end
 			end
 			imgui.EndChild()
 			imgui.BeginChild('sobes3', imgui.ImVec2(-1, -1), true)
 			
-			imgui.Text(u8'Паспорт: '..sobes_info['pass'])
-			imgui.Text(u8'Мед. карта: '..sobes_info['mc'])
-			imgui.Text(u8'Лицензии: '..sobes_info['lic'])
+			imgui.Text(u8'РџР°СЃРїРѕСЂС‚: '..sobes_info['pass'])
+			imgui.Text(u8'РњРµРґ. РєР°СЂС‚Р°: '..sobes_info['mc'])
+			imgui.Text(u8'Р›РёС†РµРЅР·РёРё: '..sobes_info['lic'])
 			imgui.Separator()
-			if imgui.Selectable(u8'Очистить информацию') then
+			if imgui.Selectable(u8'РћС‡РёСЃС‚РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ') then
 				select_id[0] = -1
 				sobes_i = {
 					false,
@@ -2320,9 +2318,9 @@ local newFrame = imgui.OnFrame(
 				}
 
 				sobes_info = {
-					pass = u8'Не проверено',
-					mc = u8'Не проверено',
-					lic = u8'Не проверено'
+					pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+					mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+					lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 				}
 			end
 			imgui.EndChild()
@@ -2330,16 +2328,16 @@ local newFrame = imgui.OnFrame(
 		end
 		if fast_menu == 'own' then 
 			imgui.BeginChild('##123 leviy', imgui.ImVec2(-1, 135 * MONET_DPI_SCALE), true)
-			imgui.CenterTextColoredRGB('Для граждан')
-			if imgui.Button(faicons('USER')..u8' Провести собеседование', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'sobes' end
-			if imgui.Button(faicons('USER_PLUS')..u8' Пригласить в организацию', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSendChat('/invite '..fastmenuID); renderWindow[0] = false end
-			if imgui.Button(faicons('ARROW_TURN_DOWN_LEFT')..u8' Выгнать из здания', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSendChat('/expel '..fastmenuID..' Н.П.П'); renderWindow[0] = false end
+			imgui.CenterTextColoredRGB('Р”Р»СЏ РіСЂР°Р¶РґР°РЅ')
+			if imgui.Button(faicons('USER')..u8' РџСЂРѕРІРµСЃС‚Рё СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then fast_menu = 'sobes' end
+			if imgui.Button(faicons('USER_PLUS')..u8' РџСЂРёРіР»Р°СЃРёС‚СЊ РІ РѕСЂРіР°РЅРёР·Р°С†РёСЋ', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSendChat('/invite '..fastmenuID); renderWindow[0] = false end
+			if imgui.Button(faicons('ARROW_TURN_DOWN_LEFT')..u8' Р’С‹РіРЅР°С‚СЊ РёР· Р·РґР°РЅРёСЏ', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSendChat('/expel '..fastmenuID..' Рќ.Рџ.Рџ'); renderWindow[0] = false end
 			imgui.EndChild()
 			imgui.BeginChild('##123 in org', imgui.ImVec2(-1, -1), true)
-			imgui.CenterTextColoredRGB('Для сотрудников')
-			if imgui.Button(faicons('ARROW_UP')..u8' Повысить сотрудника', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/giverank '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
-			if imgui.Button(faicons('ARROW_DOWN')..u8' Понизить сотрудника', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/giverank '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
-			if imgui.Button(faicons('USER_MINUS')..u8' Уволить сотрудника', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/uninvite '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
+			imgui.CenterTextColoredRGB('Р”Р»СЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ')
+			if imgui.Button(faicons('ARROW_UP')..u8' РџРѕРІС‹СЃРёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/giverank '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
+			if imgui.Button(faicons('ARROW_DOWN')..u8' РџРѕРЅРёР·РёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/giverank '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
+			if imgui.Button(faicons('USER_MINUS')..u8' РЈРІРѕР»РёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°', imgui.ImVec2(-1, 30 * MONET_DPI_SCALE)) then sampSetChatInputText('/uninvite '..fastmenuID..' '); sampSetChatInputEnabled(true); renderWindow[0] = false end
 			imgui.EndChild()
 		end
 		imgui.EndChild()
@@ -2385,29 +2383,29 @@ local main_menu = imgui.OnFrame(
 		imgui.SameLine()
 		if smi_menu == 'pro' then 
 			imgui.BeginChild('text##123', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-				if imgui.Button(u8'ПРО', (imgui.ImVec2(40 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'pro' end
+				if imgui.Button(u8'РџР Рћ', (imgui.ImVec2(40 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'pro' end
 				imgui.SameLine()
-				if imgui.Button(u8'ППЭ', (imgui.ImVec2(40 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'ppe' end
+				if imgui.Button(u8'РџРџР­', (imgui.ImVec2(40 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'ppe' end
 				imgui.SameLine()
-				if imgui.Button(u8'Устав', (imgui.ImVec2(60 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'ystav' end
+				if imgui.Button(u8'РЈСЃС‚Р°РІ', (imgui.ImVec2(60 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then ppy = 'ystav' end
 				imgui.Separator()
 				if ppy == 'pro' then
-					if imgui.Button(faicons('QUESTION') .. u8' Предложить сдать ПРО', (imgui.ImVec2(170 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('Здравствуйте, вы хотите сдать ПРО?')
+					if imgui.Button(faicons('QUESTION') .. u8' РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРґР°С‚СЊ РџР Рћ', (imgui.ImVec2(170 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РІС‹ С…РѕС‚РёС‚Рµ СЃРґР°С‚СЊ РџР Рћ?')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_CHECK') .. u8' Сдал экзамен', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('/todo Поздравляю, вы сдали ПРО!*с улыбкой на лице')
+					if imgui.Button(faicons('USER_CHECK') .. u8' РЎРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('/todo РџРѕР·РґСЂР°РІР»СЏСЋ, РІС‹ СЃРґР°Р»Рё РџР Рћ!*СЃ СѓР»С‹Р±РєРѕР№ РЅР° Р»РёС†Рµ')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_XMARK') .. u8' Не сдал экзамен', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+					if imgui.Button(faicons('USER_XMARK') .. u8' РќРµ СЃРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 						lua_thread.create(function()
-						sampSendChat('/todo К сожалению вы не сдали ПРО.*с разочарованием на лице')
+						sampSendChat('/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ РІС‹ РЅРµ СЃРґР°Р»Рё РџР Рћ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ')
 						wait(2000)
-						sampSendChat('Советую вам подучить ПРО и прийти на пересдачу через 10 минут.')
+						sampSendChat('РЎРѕРІРµС‚СѓСЋ РІР°Рј РїРѕРґСѓС‡РёС‚СЊ РџР Рћ Рё РїСЂРёР№С‚Рё РЅР° РїРµСЂРµСЃРґР°С‡Сѓ С‡РµСЂРµР· 10 РјРёРЅСѓС‚.')
 						end)
 					end
-					imgui.Text(u8'Вопросы:')
+					imgui.Text(u8'Р’РѕРїСЂРѕСЃС‹:')
 					imgui.BeginChild('   ', imgui.ImVec2(-1, -1), true)
 					for i, v in ipairs(pro_vopr_text) do
 						if imgui.Selectable(v) then
@@ -2417,22 +2415,22 @@ local main_menu = imgui.OnFrame(
 					imgui.EndChild()
 				end
 				if ppy == 'ppe' then
-					if imgui.Button(faicons('QUESTION') .. u8' Предложить сдать ППЭ', (imgui.ImVec2(180 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('Здравствуйте, вы хотите сдать ППЭ?')
+					if imgui.Button(faicons('QUESTION') .. u8' РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРґР°С‚СЊ РџРџР­', (imgui.ImVec2(180 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РІС‹ С…РѕС‚РёС‚Рµ СЃРґР°С‚СЊ РџРџР­?')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_CHECK') .. u8' Сдал экзамен', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('/todo Поздравляю, вы сдали ППЭ!*с улыбкой на лице')
+					if imgui.Button(faicons('USER_CHECK') .. u8' РЎРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('/todo РџРѕР·РґСЂР°РІР»СЏСЋ, РІС‹ СЃРґР°Р»Рё РџРџР­!*СЃ СѓР»С‹Р±РєРѕР№ РЅР° Р»РёС†Рµ')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_XMARK') .. u8' Не сдал экзамен', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+					if imgui.Button(faicons('USER_XMARK') .. u8' РќРµ СЃРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 						lua_thread.create(function()
-						sampSendChat('/todo К сожалению вы не сдали ППЭ.*с разочарованием на лице')
+						sampSendChat('/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ РІС‹ РЅРµ СЃРґР°Р»Рё РџРџР­.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ')
 						wait(2000)
-						sampSendChat('Советую вам подучить ППЭ и прийти на пересдачу через 10 минут.')
+						sampSendChat('РЎРѕРІРµС‚СѓСЋ РІР°Рј РїРѕРґСѓС‡РёС‚СЊ РџРџР­ Рё РїСЂРёР№С‚Рё РЅР° РїРµСЂРµСЃРґР°С‡Сѓ С‡РµСЂРµР· 10 РјРёРЅСѓС‚.')
 						end)
 					end
-					imgui.Text(u8'Вопросы:')
+					imgui.Text(u8'Р’РѕРїСЂРѕСЃС‹:')
 					imgui.BeginChild('   ', imgui.ImVec2(-1, -1), true)
 					for i, v in ipairs(ppe_vopr_text) do
 						if imgui.Selectable(v) then
@@ -2442,22 +2440,22 @@ local main_menu = imgui.OnFrame(
 					imgui.EndChild()
 				end
 				if ppy == 'ystav' then
-					if imgui.Button(faicons('QUESTION') .. u8' Предложить сдать устав', (imgui.ImVec2(180 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('Здравствуйте, вы хотите сдать устав?')
+					if imgui.Button(faicons('QUESTION') .. u8' РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРґР°С‚СЊ СѓСЃС‚Р°РІ', (imgui.ImVec2(180 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РІС‹ С…РѕС‚РёС‚Рµ СЃРґР°С‚СЊ СѓСЃС‚Р°РІ?')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_CHECK') .. u8' Сдал экзамен', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-						sampSendChat('/todo Поздравляю, вы сдали устав!*с улыбкой на лице')
+					if imgui.Button(faicons('USER_CHECK') .. u8' РЎРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(130 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+						sampSendChat('/todo РџРѕР·РґСЂР°РІР»СЏСЋ, РІС‹ СЃРґР°Р»Рё СѓСЃС‚Р°РІ!*СЃ СѓР»С‹Р±РєРѕР№ РЅР° Р»РёС†Рµ')
 					end
 					imgui.SameLine()
-					if imgui.Button(faicons('USER_XMARK') .. u8' Не сдал экзамен', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+					if imgui.Button(faicons('USER_XMARK') .. u8' РќРµ СЃРґР°Р» СЌРєР·Р°РјРµРЅ', (imgui.ImVec2(140 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 						lua_thread.create(function()
-						sampSendChat('/todo К сожалению вы не сдали устав.*с разочарованием на лице')
+						sampSendChat('/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ РІС‹ РЅРµ СЃРґР°Р»Рё СѓСЃС‚Р°РІ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ')
 						wait(2000)
-						sampSendChat('Советую вам подучить устав и прийти на пересдачу через 10 минут.')
+						sampSendChat('РЎРѕРІРµС‚СѓСЋ РІР°Рј РїРѕРґСѓС‡РёС‚СЊ СѓСЃС‚Р°РІ Рё РїСЂРёР№С‚Рё РЅР° РїРµСЂРµСЃРґР°С‡Сѓ С‡РµСЂРµР· 10 РјРёРЅСѓС‚.')
 						end)
 					end
-					imgui.Text(u8'Вопросы:')
+					imgui.Text(u8'Р’РѕРїСЂРѕСЃС‹:')
 					imgui.BeginChild('   ', imgui.ImVec2(-1, -1), true)
 					for i, v in ipairs(ystav_vopr_text) do
 						if imgui.Selectable(v) then
@@ -2470,13 +2468,13 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'dopka' then 
 			imgui.BeginChild('tt', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-				if imgui.Button(u8'Биндер', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'binder' end
+				if imgui.Button(u8'Р‘РёРЅРґРµСЂ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'binder' end
 				imgui.SameLine()
-				if imgui.Button(u8'Акцент', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'akcent' end
+				if imgui.Button(u8'РђРєС†РµРЅС‚', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'akcent' end
 				imgui.SameLine()
-				if imgui.Button(u8'РП отыгровки', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'rp_play' end
+				if imgui.Button(u8'Р Рџ РѕС‚С‹РіСЂРѕРІРєРё', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'rp_play' end
 				imgui.SameLine()
-				if imgui.Button(u8'Чат', (imgui.ImVec2(50 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'chat' end
+				if imgui.Button(u8'Р§Р°С‚', (imgui.ImVec2(50 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then dop_f_t = 'chat' end
 				imgui.Separator()
 			if dop_f_t == 'binder' then
 				imgui.BeginChild("", imgui.ImVec2(115 * MONET_DPI_SCALE, -1), true)
@@ -2484,7 +2482,7 @@ local main_menu = imgui.OnFrame(
 					if mainIni.binder[number..'_cmd'] ~= nil and mainIni.binder[number..'_cmd'] ~= '' then 
 						title_binder_test = '/'..mainIni.binder[number..'_cmd']
 					else 
-						title_binder_test = u8'Слот №' .. number
+						title_binder_test = u8'РЎР»РѕС‚ в„–' .. number
 					end
 					if imgui.Selectable(title_binder_test) then
 						for bind_n = 1, 50, 1 do
@@ -2513,9 +2511,9 @@ local main_menu = imgui.OnFrame(
 				end
 				imgui.EndChild()
 				imgui.SameLine()
-				imgui.BeginChild("##фы", imgui.ImVec2(-1, -1), true)
+				imgui.BeginChild("##С„С‹", imgui.ImVec2(-1, -1), true)
 					if bnd[1] == 1 then
-						imgui.Text(u8("Введите команду: /"))
+						imgui.Text(u8("Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ: /"))
 						imgui.SameLine()
 						imgui.PushItemWidth(100 * MONET_DPI_SCALE)
 						if imgui.InputText("", cmd_text, ffi.sizeof(cmd_text)) then
@@ -2523,15 +2521,15 @@ local main_menu = imgui.OnFrame(
 							inicfg.save(mainIni,'smi.ini')
 						end
 						imgui.PopItemWidth()
-						imgui.Text(u8("Задержка"))
+						imgui.Text(u8("Р—Р°РґРµСЂР¶РєР°"))
 						imgui.SameLine()
 						imgui.PushItemWidth(70 * MONET_DPI_SCALE)
-						if imgui.InputText(u8'секунд(а)',bind_time, ffi.sizeof(bind_time)) then
+						if imgui.InputText(u8'СЃРµРєСѓРЅРґ(Р°)',bind_time, ffi.sizeof(bind_time)) then
 							mainIni.binder[ttax .. "_time"] = str(bind_time)
 							inicfg.save(mainIni, 'smi.ini')
 						end
 						imgui.PopItemWidth()
-						imgui.Text(u8("Введите текст:"))
+						imgui.Text(u8("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚:"))
 						if imgui.InputTextMultiline("	 ", bind_text, ffi.sizeof(bind_text),imgui.ImVec2(-1, -1)) then
 							mainIni.binder[ttax .. "_text"] = string.gsub(str(bind_text), "\n", "&")
 		
@@ -2541,7 +2539,7 @@ local main_menu = imgui.OnFrame(
 				imgui.EndChild()
 			end
 			if dop_f_t == 'akcent' then
-				imgui.Text(u8"Акцент")
+				imgui.Text(u8"РђРєС†РµРЅС‚")
 				imgui.SameLine()
 				if addons.ToggleButton("####acc##1", accent[1]) then
 					mainIni.accent['accent'] = accent[1][0]
@@ -2620,20 +2618,20 @@ local main_menu = imgui.OnFrame(
 				end
 			end
 			if dop_f_t == 'chat' then
-				imgui.Text(u8'Отключение сообщений в чат:')
-				imgui.Text(u8"VIP чат (/vr)")
+				imgui.Text(u8'РћС‚РєР»СЋС‡РµРЅРёРµ СЃРѕРѕР±С‰РµРЅРёР№ РІ С‡Р°С‚:')
+				imgui.Text(u8"VIP С‡Р°С‚ (/vr)")
 				imgui.SameLine(120 * MONET_DPI_SCALE)
 				if addons.ToggleButton("##chat##1", vr_c) then
 					mainIni.chat['vr'] = vr_c[0]
 					inicfg.save(mainIni, 'smi.ini')
 				end
-				imgui.Text(u8"Рабочий чат (/j)")
+				imgui.Text(u8"Р Р°Р±РѕС‡РёР№ С‡Р°С‚ (/j)")
 				imgui.SameLine(120 * MONET_DPI_SCALE)
 				if addons.ToggleButton("##chat##2", job_c) then
 					mainIni.chat['job'] = job_c[0]
 					inicfg.save(mainIni, 'smi.ini')
 				end
-				imgui.Text(u8"Объявления")
+				imgui.Text(u8"РћР±СЉСЏРІР»РµРЅРёСЏ")
 				imgui.SameLine(120 * MONET_DPI_SCALE)
 				if addons.ToggleButton("##chat##3", ad_c) then
 					mainIni.chat['ad'] = ad_c[0]
@@ -2645,127 +2643,127 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'default' then
 			imgui.BeginChild('a', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-				imgui.Text(u8"Авторедактирование объявлений")
+				imgui.Text(u8"РђРІС‚РѕСЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РѕР±СЉСЏРІР»РµРЅРёР№")
 				imgui.SameLine()
 				if addons.ToggleButton("##Test##3", auto_edit) then
 					mainIni.config['auto_edit'] = auto_edit[0]
 					inicfg.save(mainIni, 'smi.ini')
 				end
 				imgui.SameLine()
-				imgui.Ques('Как это работает?\nКогда вы отправляете объявление скрипт запоминает объявление и\nкак вы его отредактировали. Когда вы берёте объявление на\nредактирование скрипт ищет в базе данных отредактировали ли вы\nкогда-либо это объявление. Если скрипт находит объявление в базе\nданных он может вставить его в поле для ввода и отправить.')
-				if imgui.Button(u8'Изменить', (imgui.ImVec2(200 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE))) then
+				imgui.Ques('РљР°Рє СЌС‚Рѕ СЂР°Р±РѕС‚Р°РµС‚?\nРљРѕРіРґР° РІС‹ РѕС‚РїСЂР°РІР»СЏРµС‚Рµ РѕР±СЉСЏРІР»РµРЅРёРµ СЃРєСЂРёРїС‚ Р·Р°РїРѕРјРёРЅР°РµС‚ РѕР±СЉСЏРІР»РµРЅРёРµ Рё\nРєР°Рє РІС‹ РµРіРѕ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°Р»Рё. РљРѕРіРґР° РІС‹ Р±РµСЂС‘С‚Рµ РѕР±СЉСЏРІР»РµРЅРёРµ РЅР°\nСЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃРєСЂРёРїС‚ РёС‰РµС‚ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С… РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°Р»Рё Р»Рё РІС‹\nРєРѕРіРґР°-Р»РёР±Рѕ СЌС‚Рѕ РѕР±СЉСЏРІР»РµРЅРёРµ. Р•СЃР»Рё СЃРєСЂРёРїС‚ РЅР°С…РѕРґРёС‚ РѕР±СЉСЏРІР»РµРЅРёРµ РІ Р±Р°Р·Рµ\nРґР°РЅРЅС‹С… РѕРЅ РјРѕР¶РµС‚ РІСЃС‚Р°РІРёС‚СЊ РµРіРѕ РІ РїРѕР»Рµ РґР»СЏ РІРІРѕРґР° Рё РѕС‚РїСЂР°РІРёС‚СЊ.')
+				if imgui.Button(u8'РР·РјРµРЅРёС‚СЊ', (imgui.ImVec2(200 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE))) then
 					mainIni = inicfg.load({}, 'smi.ini')
 					autoedit_slots[0] = not autoedit_slots[0]
 				end
-				imgui.Text(u8'Имя: '..mainIni.config['c_nick'])
-				imgui.Text(u8'Должность: '..mainIni.config['c_rang'])
-				imgui.Text(u8'СМИ: '..mainIni.config['c_city'] .. ' ['.. mainIni.config['c_cnn'] ..']')
+				imgui.Text(u8'РРјСЏ: '..mainIni.config['c_nick'])
+				imgui.Text(u8'Р”РѕР»Р¶РЅРѕСЃС‚СЊ: '..mainIni.config['c_rang'])
+				imgui.Text(u8'РЎРњР: '..mainIni.config['c_city'] .. ' ['.. mainIni.config['c_cnn'] ..']')
 			imgui.EndChild()
 		end
 		
 		if smi_menu == 'sobes' then
 			imgui.BeginChild('sobes', imgui.ImVec2(120 * MONET_DPI_SCALE, -1), true)
-			imgui.Text(faicons('USER_TIMES') .. u8" Отказы")
+			imgui.Text(faicons('USER_TIMES') .. u8" РћС‚РєР°Р·С‹")
 			imgui.Separator()
-			if imgui.Selectable(u8"Нет паспорта") then
+			if imgui.Selectable(u8"РќРµС‚ РїР°СЃРїРѕСЂС‚Р°") then
 				sobes_i = {
 					false,
 					false,
 					false
 				}
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас нет паспорта.")
+					sampSendChat("РЈ РІР°СЃ РЅРµС‚ РїР°СЃРїРѕСЂС‚Р°.")
 					wait(2000)
-					sampSendChat("/b Получите паспорт в мэрии.")
+					sampSendChat("/b РџРѕР»СѓС‡РёС‚Рµ РїР°СЃРїРѕСЂС‚ РІ РјСЌСЂРёРё.")
 				end)
 			end
-			if imgui.Selectable(u8"Нет мед. карты") then
+			if imgui.Selectable(u8"РќРµС‚ РјРµРґ. РєР°СЂС‚С‹") then
 				sobes_i = {
 					false,
 					false,
 					false
 				}
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас нет мед. карты.")
+					sampSendChat("РЈ РІР°СЃ РЅРµС‚ РјРµРґ. РєР°СЂС‚С‹.")
 					wait(2000)
-					sampSendChat("/b Получите мед. карту в больнице.")
+					sampSendChat("/b РџРѕР»СѓС‡РёС‚Рµ РјРµРґ. РєР°СЂС‚Сѓ РІ Р±РѕР»СЊРЅРёС†Рµ.")
 				end)
 			end
-			if imgui.Selectable(u8"Состоит в орг.") then
+			if imgui.Selectable(u8"РЎРѕСЃС‚РѕРёС‚ РІ РѕСЂРі.") then
 				sobes_i = {
 					false,
 					false,
 					false
 				}
 				lua_thread.create(function ()
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("Вы уже состоите в организации.")
+					sampSendChat("Р’С‹ СѓР¶Рµ СЃРѕСЃС‚РѕРёС‚Рµ РІ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
 					wait(2000)
-					sampSendChat("/b Увольтесь из вашей организации.")
+					sampSendChat("/b РЈРІРѕР»СЊС‚РµСЃСЊ РёР· РІР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё.")
 				end)
 			end
-			if imgui.Selectable(u8"НонРП ник") then
+			if imgui.Selectable(u8"РќРѕРЅР Рџ РЅРёРє") then
 				sobes_i = {
 					false,
 					false,
 					false
 				}
 				lua_thread.create(function ()
-					sampSendChat("/do Планшет с базой данных в руках.")
+					sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… РІ СЂСѓРєР°С….")
 					wait(2000)
-					sampSendChat("/me нашел человека в базе данных")
+					sampSendChat("/me РЅР°С€РµР» С‡РµР»РѕРІРµРєР° РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…")
 					wait(2000)
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("У вас странное имя, возможно тут опечатка.")
+					sampSendChat("РЈ РІР°СЃ СЃС‚СЂР°РЅРЅРѕРµ РёРјСЏ, РІРѕР·РјРѕР¶РЅРѕ С‚СѓС‚ РѕРїРµС‡Р°С‚РєР°.")
 					wait(2000)
-					sampSendChat("/b Смените ваш НонРП ник.")
+					sampSendChat("/b РЎРјРµРЅРёС‚Рµ РІР°С€ РќРѕРЅР Рџ РЅРёРє.")
 				end)
 			end
-			if imgui.Selectable(u8"Нет РП") then
+			if imgui.Selectable(u8"РќРµС‚ Р Рџ") then
 				sobes_i = {
 					false,
 					false,
 					false
 				}
 				lua_thread.create(function ()
-					sampSendChat("/do Планшет с базой данных в руках.")
+					sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… РІ СЂСѓРєР°С….")
 					wait(2000)
-					sampSendChat("/me нашел человека в базе данных")
+					sampSendChat("/me РЅР°С€РµР» С‡РµР»РѕРІРµРєР° РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…")
 					wait(2000)
-					sampSendChat("/todo К сожалению, вы нам не подходите.*с разочарованием на лице")
+					sampSendChat("/todo Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІС‹ РЅР°Рј РЅРµ РїРѕРґС…РѕРґРёС‚Рµ.*СЃ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµРј РЅР° Р»РёС†Рµ")
 					wait(2000)
-					sampSendChat("Вы проф. не пригодны для нашей работы.")
+					sampSendChat("Р’С‹ РїСЂРѕС„. РЅРµ РїСЂРёРіРѕРґРЅС‹ РґР»СЏ РЅР°С€РµР№ СЂР°Р±РѕС‚С‹.")
 					wait(2000)
-					sampSendChat("/b Вы плохо отыграли РП.")
+					sampSendChat("/b Р’С‹ РїР»РѕС…Рѕ РѕС‚С‹РіСЂР°Р»Рё Р Рџ.")
 				end)
 			end
 			imgui.EndChild()
 			imgui.SameLine()
 			imgui.BeginChild("sobes2", imgui.ImVec2(250 * MONET_DPI_SCALE, -1), true)
-			imgui.Text(u8("Введите id игрока:"))
+			imgui.Text(u8("Р’РІРµРґРёС‚Рµ id РёРіСЂРѕРєР°:"))
 			imgui.SameLine()
 			imgui.PushItemWidth(85 * MONET_DPI_SCALE)
 			imgui.InputInt("                ##select id for sobes", select_id)
 			selected_user = select_id[0]
 			imgui.PopItemWidth()
-			if imgui.Button(faicons("PLAY") .. u8" Начать собеседование", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons("PLAY") .. u8" РќР°С‡Р°С‚СЊ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if mainIni.config.c_nick ~= '' then
-					sampSendChat("Здравствуйте, меня зовут " .. u8:decode(mainIni.config.c_nick) .. ". Вы пришли на собеседование?")
+					sampSendChat("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РјРµРЅСЏ Р·РѕРІСѓС‚ " .. u8:decode(mainIni.config.c_nick) .. ". Р’С‹ РїСЂРёС€Р»Рё РЅР° СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ?")
 				else
 					lua_thread.create(function ()
-						sampSendChat("Здравствуйте, меня зовут " .. mainIni.config.c_nicken .. ". Вы пришли на собеседование?")
+						sampSendChat("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, РјРµРЅСЏ Р·РѕРІСѓС‚ " .. mainIni.config.c_nicken .. ". Р’С‹ РїСЂРёС€Р»Рё РЅР° СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ?")
 						wait(300)
-						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Советуем указать свой русский никнейм. "..curcolor.."/smi {FFFFFF} - "..curcolor.." Профиль", curcolor1)
+						sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЎРѕРІРµС‚СѓРµРј СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ СЂСѓСЃСЃРєРёР№ РЅРёРєРЅРµР№Рј. "..curcolor.."/smi {FFFFFF} - "..curcolor.." РџСЂРѕС„РёР»СЊ", curcolor1)
 					end)
 				end
 			end
-			if imgui.Button(faicons("QUESTION") .. u8" Попросить документы", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons("QUESTION") .. u8" РџРѕРїСЂРѕСЃРёС‚СЊ РґРѕРєСѓРјРµРЅС‚С‹", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if select_id[0] > -1 and select_id[0] < 1000 and sampIsPlayerConnected(select_id[0]) then
 					sobes_i = {
 						true,
@@ -2773,30 +2771,30 @@ local main_menu = imgui.OnFrame(
 						true
 					}
 					lua_thread.create(function ()
-						sampSendChat("Отлично, можно ли вашу документацию? Паспорт, мед. карту и лицензии.")
+						sampSendChat("РћС‚Р»РёС‡РЅРѕ, РјРѕР¶РЅРѕ Р»Рё РІР°С€Сѓ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ? РџР°СЃРїРѕСЂС‚, РјРµРґ. РєР°СЂС‚Сѓ Рё Р»РёС†РµРЅР·РёРё.")
 						wait(1000)
-						sampSendChat("/b Чтобы показать документацию введите: /showpass " .. u_id .. ", /showmc " .. u_id .. ", /showlic " .. u_id)
+						sampSendChat("/b Р§С‚РѕР±С‹ РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ РІРІРµРґРёС‚Рµ: /showpass " .. u_id .. ", /showmc " .. u_id .. ", /showlic " .. u_id)
 						wait(2000)
-						sampSendChat("/b РП должно быть обязательно!")
+						sampSendChat("/b Р Рџ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!")
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите id игрока.", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ id РёРіСЂРѕРєР°.", curcolor1)
 				end
 			end
-			if imgui.Button(faicons('QUESTION') .. u8" Расскажите о себе", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons('QUESTION') .. u8" Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				lua_thread.create(function ()
-					sampSendChat("Хорошо, теперь я задам пару вопросов.")
+					sampSendChat("РҐРѕСЂРѕС€Рѕ, С‚РµРїРµСЂСЊ СЏ Р·Р°РґР°Рј РїР°СЂСѓ РІРѕРїСЂРѕСЃРѕРІ.")
 					wait(2000)
-					sampSendChat("Расскажите о себе.")
+					sampSendChat("Р Р°СЃСЃРєР°Р¶РёС‚Рµ Рѕ СЃРµР±Рµ.")
 				end)
 			end
-			if imgui.Button(faicons('QUESTION') .. u8" Почему именно мы?", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
-				sampSendChat("Почему вы выбрали именно наш радиоцентр?")
+			if imgui.Button(faicons('QUESTION') .. u8" РџРѕС‡РµРјСѓ РёРјРµРЅРЅРѕ РјС‹?", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+				sampSendChat("РџРѕС‡РµРјСѓ РІС‹ РІС‹Р±СЂР°Р»Рё РёРјРµРЅРЅРѕ РЅР°С€ СЂР°РґРёРѕС†РµРЅС‚СЂ?")
 			end
-			if imgui.Button(faicons("CHECK") .. u8" Собеседование пройдено", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
+			if imgui.Button(faicons("CHECK") .. u8" РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ РїСЂРѕР№РґРµРЅРѕ", imgui.ImVec2(-1, 25 * MONET_DPI_SCALE)) then
 				if select_id[0] > -1 and select_id[0] < 1000 and sampIsPlayerConnected(select_id[0]) then
 					lua_thread.create(function ()
-						sampSendChat("/todo Поздравляю! Вы прошли собеседование!* с улыбкой на лице")
+						sampSendChat("/todo РџРѕР·РґСЂР°РІР»СЏСЋ! Р’С‹ РїСЂРѕС€Р»Рё СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ!* СЃ СѓР»С‹Р±РєРѕР№ РЅР° Р»РёС†Рµ")
 						wait(2000)
 						invite(select_id[0])
 						select_id[0] = -1
@@ -2807,13 +2805,13 @@ local main_menu = imgui.OnFrame(
 						}
 		
 						sobes_info = {
-							pass = u8'Не проверено',
-							mc = u8'Не проверено',
-							lic = u8'Не проверено'
+							pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+							mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+							lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 						}
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите id игрока.", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ id РёРіСЂРѕРєР°.", curcolor1)
 				end
 			end
 			imgui.EndChild()
@@ -2823,16 +2821,16 @@ local main_menu = imgui.OnFrame(
 				if sampIsPlayerConnected(select_id[0]) then
 					imgui.Text(sampGetPlayerNickname(select_id[0]))
 				else
-					imgui.Text(u8'Игрок не выбран')
+					imgui.Text(u8'РРіСЂРѕРє РЅРµ РІС‹Р±СЂР°РЅ')
 				end
 			else
-				imgui.Text(u8'Игрок не выбран')
+				imgui.Text(u8'РРіСЂРѕРє РЅРµ РІС‹Р±СЂР°РЅ')
 			end
-			imgui.Text(u8'Паспорт: '..sobes_info['pass'])
-			imgui.Text(u8'Мед. карта: '..sobes_info['mc'])
-			imgui.Text(u8'Лицензии: '..sobes_info['lic'])
+			imgui.Text(u8'РџР°СЃРїРѕСЂС‚: '..sobes_info['pass'])
+			imgui.Text(u8'РњРµРґ. РєР°СЂС‚Р°: '..sobes_info['mc'])
+			imgui.Text(u8'Р›РёС†РµРЅР·РёРё: '..sobes_info['lic'])
 			imgui.Separator()
-			if imgui.Selectable(u8'Очистить информацию') then
+			if imgui.Selectable(u8'РћС‡РёСЃС‚РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ') then
 				select_id[0] = -1
 				sobes_i = {
 					false,
@@ -2841,9 +2839,9 @@ local main_menu = imgui.OnFrame(
 				}
 
 				sobes_info = {
-					pass = u8'Не проверено',
-					mc = u8'Не проверено',
-					lic = u8'Не проверено'
+					pass = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+					mc = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ',
+					lic = u8'РќРµ РїСЂРѕРІРµСЂРµРЅРѕ'
 				}
 			end
 			imgui.EndChild()
@@ -2851,76 +2849,76 @@ local main_menu = imgui.OnFrame(
 		if smi_menu == 'efir' then --- IT'S NEW
 			imgui.BeginChild('## EFIRS ##', imgui.ImVec2(-1, -1))
 			imgui.BeginChild('a##Efir', imgui.ImVec2(-1, 205 * MONET_DPI_SCALE), true)
-			if imgui.Button(u8'Математика', (imgui.ImVec2(110 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'math_efir' end
+			if imgui.Button(u8'РњР°С‚РµРјР°С‚РёРєР°', (imgui.ImVec2(110 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'math_efir' end
 			imgui.SameLine()
-			if imgui.Button(u8'Столицы', (imgui.ImVec2(90 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'country_efir' end
+			if imgui.Button(u8'РЎС‚РѕР»РёС†С‹', (imgui.ImVec2(90 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'country_efir' end
 			imgui.SameLine()
-			if imgui.Button(u8'Собеседование', (imgui.ImVec2(130 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'sobes_efir' end
+			if imgui.Button(u8'РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ', (imgui.ImVec2(130 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'sobes_efir' end
 			imgui.SameLine()
-			if imgui.Button(u8'Реклама', (imgui.ImVec2(90 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'reklama_efir' end
+			if imgui.Button(u8'Р РµРєР»Р°РјР°', (imgui.ImVec2(90 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'reklama_efir' end
 			imgui.SameLine()
-			if imgui.Button(u8'Интервью', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'inter_efir' end
-			if imgui.Button(u8'Химия', (imgui.ImVec2(110 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'himia_efir' end
+			if imgui.Button(u8'РРЅС‚РµСЂРІСЊСЋ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'inter_efir' end
+			if imgui.Button(u8'РҐРёРјРёСЏ', (imgui.ImVec2(110 * MONET_DPI_SCALE, 30 * MONET_DPI_SCALE))) then smi_menu = 'himia_efir' end
 			imgui.EndChild()
 			imgui.BeginChild('##Efir_Settings', imgui.ImVec2(-1, 25 * MONET_DPI_SCALE))
-			if imgui.Button(faicons("GEAR")..u8' Настройки эфиров', imgui.ImVec2(200 * MONET_DPI_SCALE, -1)) then smi_menu = 'settings_efir' end
+			if imgui.Button(faicons("GEAR")..u8' РќР°СЃС‚СЂРѕР№РєРё СЌС„РёСЂРѕРІ', imgui.ImVec2(200 * MONET_DPI_SCALE, -1)) then smi_menu = 'settings_efir' end
 			imgui.EndChild()
 			imgui.EndChild()
 		end
 
 		if smi_menu == 'settings_efir' then 
 			imgui.BeginChild('## EFIRS SETTINGS ##', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-			imgui.Text(u8"Объявление в рацию депортамента (/d)")
+			imgui.Text(u8"РћР±СЉСЏРІР»РµРЅРёРµ РІ СЂР°С†РёСЋ РґРµРїРѕСЂС‚Р°РјРµРЅС‚Р° (/d)")
 			imgui.SameLine()
 			if addons.ToggleButton("##dEfirs##1", dep) then
 				mainIni.efir['dep'] = dep[0]
 				inicfg.save(mainIni, 'smi.ini')
 			end
 			imgui.SameLine()
-			imgui.Ques('Данная настройка отвечает за то, будет ли скрипт объявлять в /d о начале/завершении эфира')
+			imgui.Ques('Р”Р°РЅРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РѕС‚РІРµС‡Р°РµС‚ Р·Р° С‚Рѕ, Р±СѓРґРµС‚ Р»Рё СЃРєСЂРёРїС‚ РѕР±СЉСЏРІР»СЏС‚СЊ РІ /d Рѕ РЅР°С‡Р°Р»Рµ/Р·Р°РІРµСЂС€РµРЅРёРё СЌС„РёСЂР°')
 			imgui.SameLine(420 * MONET_DPI_SCALE)
 
-			if imgui.Button(faicons('FLOPPY_DISK')..u8' Сохранить', imgui.ImVec2(150 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then 
+			if imgui.Button(faicons('FLOPPY_DISK')..u8' РЎРѕС…СЂР°РЅРёС‚СЊ', imgui.ImVec2(150 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then 
 				save()
 			end
 
-			imgui.Text(u8'Тэг математики - ')
+			imgui.Text(u8'РўСЌРі РјР°С‚РµРјР°С‚РёРєРё - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##math_tag', math_tag, ffi.sizeof(math_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг столиц - ')
+			imgui.Text(u8'РўСЌРі СЃС‚РѕР»РёС† - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##country_tag', country_tag, ffi.sizeof(country_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг переводчиков - ')
+			imgui.Text(u8'РўСЌРі РїРµСЂРµРІРѕРґС‡РёРєРѕРІ - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##translate_tag', translate_tag, ffi.sizeof(translate_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг химии - ')
+			imgui.Text(u8'РўСЌРі С…РёРјРёРё - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##himia_tag', himia_tag, ffi.sizeof(himia_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг интервью - ')
+			imgui.Text(u8'РўСЌРі РёРЅС‚РµСЂРІСЊСЋ - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##inter_tag', inter_tag, ffi.sizeof(inter_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг собеседования - ')
+			imgui.Text(u8'РўСЌРі СЃРѕР±РµСЃРµРґРѕРІР°РЅРёСЏ - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##sobes_tag', sobes_tag, ffi.sizeof(sobes_tag))
 			imgui.PopItemWidth()
 
-			imgui.Text(u8'Тэг рекламы - ')
+			imgui.Text(u8'РўСЌРі СЂРµРєР»Р°РјС‹ - ')
 			imgui.SameLine(160 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(130 * MONET_DPI_SCALE)
 			imgui.InputText(u8'##reklama_tag', reklama_tag, ffi.sizeof(reklama_tag))
@@ -2931,76 +2929,76 @@ local main_menu = imgui.OnFrame(
 
 		if smi_menu == 'math_efir' then 
 			imgui.BeginChild('##EFIR MATH', imgui.ImVec2(340 * MONET_DPI_SCALE, -1))--, true)
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
-			imgui.CenterTextColoredRGB('Эфир математика')
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			imgui.CenterTextColoredRGB('Р­С„РёСЂ РјР°С‚РµРјР°С‚РёРєР°')
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'Денежный приз(без $)', money_math, ffi.sizeof(money_math))
+			imgui.InputText(u8'Р”РµРЅРµР¶РЅС‹Р№ РїСЂРёР·(Р±РµР· $)', money_math, ffi.sizeof(money_math))
 			imgui.PopItemWidth()
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/todo Начнем..*включив микрофон')
+						sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Занимаю новостную волну 114.6 ФМ! Просьба не перебивать') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] Р—Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 114.6 Р¤Рњ! РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ') end
 						wait(2000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Добрый день, уважаемые радиослушатели! У микрофона..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, СѓРІР°Р¶Р°РµРјС‹Рµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё! РЈ РјРёРєСЂРѕС„РѕРЅР°..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Сегодня я проведу мероприятие "Математика"..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РЎРµРіРѕРґРЅСЏ СЏ РїСЂРѕРІРµРґСѓ РјРµСЂРѕРїСЂРёСЏС‚РёРµ "РњР°С‚РµРјР°С‚РёРєР°"..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' ..я называю пример - Вы в СМС на студию его ответ!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' ..СЏ РЅР°Р·С‹РІР°СЋ РїСЂРёРјРµСЂ - Р’С‹ РІ РЎРњРЎ РЅР° СЃС‚СѓРґРёСЋ РµРіРѕ РѕС‚РІРµС‚!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Правила просты, а приз большой..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџСЂР°РІРёР»Р° РїСЂРѕСЃС‚С‹, Р° РїСЂРёР· Р±РѕР»СЊС€РѕР№..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Призовой фонд составляет целых ' .. str(money_math) ..'$!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџСЂРёР·РѕРІРѕР№ С„РѕРЅРґ СЃРѕСЃС‚Р°РІР»СЏРµС‚ С†РµР»С‹С… ' .. str(money_math) ..'$!')
 						wait(6000)
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Закончить эфир', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р—Р°РєРѕРЅС‡РёС‚СЊ СЌС„РёСЂ', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' На этом наш эфир подходит к концу.')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РќР° СЌС‚РѕРј РЅР°С€ СЌС„РёСЂ РїРѕРґС…РѕРґРёС‚ Рє РєРѕРЅС†Сѓ.')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' До свидания, штат. Оставайтесь на волне 114.6 ФМ!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 114.6 Р¤Рњ!')
 						wait(6000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Освободил новостную волну 95.5 ФМ!') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] РћСЃРІРѕР±РѕРґРёР» РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 95.5 Р¤Рњ!') end
 						wait(2000)
-						sampSendChat('/todo Вот и всё..*выключив микрофон')
+						sampSendChat('/todo Р’РѕС‚ Рё РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Пример', primer, ffi.sizeof(primer))
+			imgui.InputText(u8'##РџСЂРёРјРµСЂ', primer, ffi.sizeof(primer))
 			imgui.PopItemWidth()
 			imgui.SameLine()
-			if imgui.Button(u8'Назвать пример', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°Р·РІР°С‚СЊ РїСЂРёРјРµСЂ', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
-					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Следующий пример..')
+					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РЎР»РµРґСѓСЋС‰РёР№ РїСЂРёРјРµСЂ..')
 					wait(6020)
 					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' '.. u8:decode(str(primer)))
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Сказать стоп', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-				sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Стоп!')
+			if imgui.Button(u8'РЎРєР°Р·Р°С‚СЊ СЃС‚РѕРї', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+				sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РЎС‚РѕРї!')
 			end
 			imgui.Text("ID: ")
 			imgui.SameLine()
 			imgui.PushItemWidth(40 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Введите id', chel_ball_c, ffi.sizeof(chel_ball_c))
+			imgui.InputText(u8'##Р’РІРµРґРёС‚Рµ id', chel_ball_c, ffi.sizeof(chel_ball_c))
 			imgui.PopItemWidth()
 			if str(chel_ball_c) ~= "" then
 				if sampIsPlayerConnected(str(chel_ball_c)) then
@@ -3011,44 +3009,44 @@ local main_menu = imgui.OnFrame(
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Добавить балл', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р”РѕР±Р°РІРёС‚СЊ Р±Р°Р»Р»', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if u_name ~= '' then
 					addball(u_name)
 					if tostring(efir_counter[u_name]) == '1' then
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балл!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»!')
 					end
 					if tostring(efir_counter[u_name]) == '2' then
-						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балла!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»Р°!')
 					end
 					if tostring(efir_counter[u_name]) == '3' then 
 						lua_thread.create(function()
 							efir_counter = {}
-							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' И у нас есть победитель!')
+							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 							wait(6000)
-							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 							wait(6000)
-							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-							addWithTag("Не забудьте завершить эфир.")
+							sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+							addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 						end)
 					end
 				end
 			end
-			imgui.Text(u8'Балл получит: '..u_name)
-			if imgui.Button(u8'Победитель', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			imgui.Text(u8'Р‘Р°Р»Р» РїРѕР»СѓС‡РёС‚: '..u_name)
+			if imgui.Button(u8'РџРѕР±РµРґРёС‚РµР»СЊ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
 					efir_counter = {}
-					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' И у нас есть победитель!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-					addWithTag("Не забудьте завершить эфир.")
+					sampSendChat('/news '..u8:decode(mainIni.tags['math'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+					addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 				end)
 			end
 			imgui.EndChild()
 			imgui.SameLine()
 			imgui.BeginChild('a##Math1', imgui.ImVec2(-1, -1), false)
-			imgui.CenterTextColoredRGB("Баллы")
+			imgui.CenterTextColoredRGB("Р‘Р°Р»Р»С‹")
 			imgui.Separator()
 			lua_thread.create(function()
 				for i in pairs(efir_counter) do
@@ -3059,76 +3057,76 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'country_efir' then 
 			imgui.BeginChild('##EFIR COUNTRY', imgui.ImVec2(340 * MONET_DPI_SCALE, -1))--, true)
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
-			imgui.CenterTextColoredRGB('Эфир столицы')
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			imgui.CenterTextColoredRGB('Р­С„РёСЂ СЃС‚РѕР»РёС†С‹')
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'Денежный приз(без $)', money_math, ffi.sizeof(money_math))
+			imgui.InputText(u8'Р”РµРЅРµР¶РЅС‹Р№ РїСЂРёР·(Р±РµР· $)', money_math, ffi.sizeof(money_math))
 			imgui.PopItemWidth()
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/todo Начнем..*включив микрофон')
+						sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Занимаю новостную волну 114.6 ФМ! Просьба не перебивать') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] Р—Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 114.6 Р¤Рњ! РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ') end
 						wait(2000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Добрый день, уважаемые радиослушатели! У микрофона..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, СѓРІР°Р¶Р°РµРјС‹Рµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё! РЈ РјРёРєСЂРѕС„РѕРЅР°..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Сегодня я проведу мероприятие "Столицы"..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РЎРµРіРѕРґРЅСЏ СЏ РїСЂРѕРІРµРґСѓ РјРµСЂРѕРїСЂРёСЏС‚РёРµ "РЎС‚РѕР»РёС†С‹"..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' ..я называю страну - Вы в СМС на студию её столицу!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' ..СЏ РЅР°Р·С‹РІР°СЋ СЃС‚СЂР°РЅСѓ - Р’С‹ РІ РЎРњРЎ РЅР° СЃС‚СѓРґРёСЋ РµС‘ СЃС‚РѕР»РёС†Сѓ!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Правила просты, а приз большой..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџСЂР°РІРёР»Р° РїСЂРѕСЃС‚С‹, Р° РїСЂРёР· Р±РѕР»СЊС€РѕР№..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Призовой фонд составляет целых ' .. str(money_math) ..'$!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџСЂРёР·РѕРІРѕР№ С„РѕРЅРґ СЃРѕСЃС‚Р°РІР»СЏРµС‚ С†РµР»С‹С… ' .. str(money_math) ..'$!')
 						wait(6000)
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Закончить эфир', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р—Р°РєРѕРЅС‡РёС‚СЊ СЌС„РёСЂ', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' На этом наш эфир подходит к концу.')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РќР° СЌС‚РѕРј РЅР°С€ СЌС„РёСЂ РїРѕРґС…РѕРґРёС‚ Рє РєРѕРЅС†Сѓ.')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' До свидания, штат. Оставайтесь на волне 114.6 ФМ!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 114.6 Р¤Рњ!')
 						wait(6000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Освободил новостную волну 114.6 ФМ!') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] РћСЃРІРѕР±РѕРґРёР» РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 114.6 Р¤Рњ!') end
 						wait(2000)
-						sampSendChat('/todo Вот и всё..*выключив микрофон')
+						sampSendChat('/todo Р’РѕС‚ Рё РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Пример', primer, ffi.sizeof(primer))
+			imgui.InputText(u8'##РџСЂРёРјРµСЂ', primer, ffi.sizeof(primer))
 			imgui.PopItemWidth()
 			imgui.SameLine()
-			if imgui.Button(u8'Назвать страну', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°Р·РІР°С‚СЊ СЃС‚СЂР°РЅСѓ', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Следующая страна..')
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РЎР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂР°РЅР°..')
 					wait(6020)
 					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' '.. u8:decode(str(primer)))
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Сказать стоп', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-				sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Стоп!')
+			if imgui.Button(u8'РЎРєР°Р·Р°С‚СЊ СЃС‚РѕРї', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+				sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РЎС‚РѕРї!')
 			end
 			imgui.Text("ID: ")
 			imgui.SameLine()
 			imgui.PushItemWidth(40 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Введите id', chel_ball_c, ffi.sizeof(chel_ball_c))
+			imgui.InputText(u8'##Р’РІРµРґРёС‚Рµ id', chel_ball_c, ffi.sizeof(chel_ball_c))
 			imgui.PopItemWidth()
 			if str(chel_ball_c) ~= "" then
 				if sampIsPlayerConnected(str(chel_ball_c)) then
@@ -3139,42 +3137,42 @@ local main_menu = imgui.OnFrame(
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Добавить балл', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р”РѕР±Р°РІРёС‚СЊ Р±Р°Р»Р»', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				addball(u_name)
 				if tostring(efir_counter[u_name]) == '1' then
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балл!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»!')
 				end
 				if tostring(efir_counter[u_name]) == '2' then
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балла!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»Р°!')
 				end
 				if tostring(efir_counter[u_name]) == '3' then 
 					lua_thread.create(function()
 						efir_counter = {}
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' И у нас есть победитель!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-						addWithTag("Не забудьте завершить эфир.")
+						sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+						addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 					end)
 				end
 			end
-			imgui.Text(u8'Балл получит: '..u_name)
-			if imgui.Button(u8'Победитель', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			imgui.Text(u8'Р‘Р°Р»Р» РїРѕР»СѓС‡РёС‚: '..u_name)
+			if imgui.Button(u8'РџРѕР±РµРґРёС‚РµР»СЊ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
 					efir_counter = {}
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' И у нас есть победитель!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-					addWithTag("Не забудьте завершить эфир.")
+					sampSendChat('/news '..u8:decode(mainIni.tags['country'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+					addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 				end)
 			end
 			imgui.EndChild()
 			imgui.SameLine()
 			imgui.BeginChild('a##country1', imgui.ImVec2(-1, -1), false)
-			imgui.CenterTextColoredRGB("Баллы")
+			imgui.CenterTextColoredRGB("Р‘Р°Р»Р»С‹")
 			imgui.Separator()
 			lua_thread.create(function()
 				for i in pairs(efir_counter) do
@@ -3185,80 +3183,82 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'sobes_efir' then
 			imgui.BeginChild('##EFIR SOBES', imgui.ImVec2(-1, -1), true)
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
-			imgui.Text(u8'Эфир собеседование')
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			imgui.Text(u8'Р­С„РёСЂ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ')
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/todo Начнем..*включив микрофон')
+						sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 						wait(2000)
-						sampSendChat('/d [CNN LS] - [MM] занимаю новостную волну 98.6 ФМ. Просьба не перебивать')
+						sampSendChat('/d [CNN LS] - [MM] Р·Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 98.6 Р¤Рњ. РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ')
 						wait(2000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. Лос-Сантос » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Доброе время суток, дорогие радиослушатели штата Юма.')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] Р”РѕР±СЂРѕРµ РІСЂРµРјСЏ СЃСѓС‚РѕРє, РґРѕСЂРѕРіРёРµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё С€С‚Р°С‚Р° Р®РјР°.')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' Меня зовут ' .. u8:decode(mainIni.config.c_nick)  ..' '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..'')
+						sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' РњРµРЅСЏ Р·РѕРІСѓС‚ ' .. u8:decode(mainIni.config.c_nick)  ..' '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..'')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Вы находитесь на волне 98.6 ФМ, и я хочу уведомить вас о том.')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] Р’С‹ РЅР°С…РѕРґРёС‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 98.6 Р¤Рњ, Рё СЏ С…РѕС‡Сѓ СѓРІРµРґРѕРјРёС‚СЊ РІР°СЃ Рѕ С‚РѕРј.')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Что сейчас в СМИ г. Лос-Сантос проходит собеседование!')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] Р§С‚Рѕ СЃРµР№С‡Р°СЃ РІ РЎРњР Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ РїСЂРѕС…РѕРґРёС‚ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёРµ!')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Для успешного прохождения собеседования вам нужно иметь при себе...')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] Р”Р»СЏ СѓСЃРїРµС€РЅРѕРіРѕ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёСЏ РІР°Рј РЅСѓР¶РЅРѕ РёРјРµС‚СЊ РїСЂРё СЃРµР±Рµ...')
 						wait(6000)
-						sampSendChat('/news [Собеседование] ..паспорт, мед.карту, а так-же быть законопослушным гражданином!')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] ..РїР°СЃРїРѕСЂС‚, РјРµРґ.РєР°СЂС‚Сѓ, Р° С‚Р°Рє-Р¶Рµ Р±С‹С‚СЊ Р·Р°РєРѕРЅРѕРїРѕСЃР»СѓС€РЅС‹Рј РіСЂР°Р¶РґР°РЅРёРЅРѕРј!')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Так-же, на Офф. Портале штата открыты заявки на должность "Журналист"..')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] РўР°Рє-Р¶Рµ, РЅР° РћС„С„. РџРѕСЂС‚Р°Р»Рµ С€С‚Р°С‚Р° РѕС‚РєСЂС‹С‚С‹ Р·Р°СЏРІРєРё РЅР° РґРѕР»Р¶РЅРѕСЃС‚СЊ "Р–СѓСЂРЅР°Р»РёСЃС‚"..')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Хочу добавить, что в нашем радиоцентре часто проводятся..')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] РҐРѕС‡Сѓ РґРѕР±Р°РІРёС‚СЊ, С‡С‚Рѕ РІ РЅР°С€РµРј СЂР°РґРёРѕС†РµРЅС‚СЂРµ С‡Р°СЃС‚Рѕ РїСЂРѕРІРѕРґСЏС‚СЃСЏ..')
 						wait(6000)
-						sampSendChat('/news [Собеседование] .. конкурсы и викторины как для сотрудников, так и для обычных граждан.')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] .. РєРѕРЅРєСѓСЂСЃС‹ Рё РІРёРєС‚РѕСЂРёРЅС‹ РєР°Рє РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ, С‚Р°Рє Рё РґР»СЏ РѕР±С‹С‡РЅС‹С… РіСЂР°Р¶РґР°РЅ.')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Собеседование проходит в холле радиоцентра г. Лос-Сантос..')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ РїСЂРѕС…РѕРґРёС‚ РІ С…РѕР»Р»Рµ СЂР°РґРёРѕС†РµРЅС‚СЂР° Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ..')
 						wait(6000)
-						sampSendChat('/news [Собеседование] .. Потому настойчиво прошу вас явиться в наш радиоцентр..')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] .. РџРѕС‚РѕРјСѓ РЅР°СЃС‚РѕР№С‡РёРІРѕ РїСЂРѕС€Сѓ РІР°СЃ СЏРІРёС‚СЊСЃСЏ РІ РЅР°С€ СЂР°РґРёРѕС†РµРЅС‚СЂ..')
 						wait(6000)
-						sampSendChat('/news [Собеседование] .. и вступить в ряды нашей организации!')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] .. Рё РІСЃС‚СѓРїРёС‚СЊ РІ СЂСЏРґС‹ РЅР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё!')
 						wait(6000)
-						sampSendChat('/news [Собеседование] И помните: Мы всегда рады новичкам!')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] Р РїРѕРјРЅРёС‚Рµ: РњС‹ РІСЃРµРіРґР° СЂР°РґС‹ РЅРѕРІРёС‡РєР°Рј!')
 						wait(6000)
-                        sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'.')
+                        sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'.')
 						wait(6000)
-						sampSendChat('/news [Собеседование] Надеюсь, что вы вступите в наши ряды!')
+						sampSendChat('/news [РЎРѕР±РµСЃРµРґРѕРІР°РЅРёРµ] РќР°РґРµСЋСЃСЊ, С‡С‚Рѕ РІС‹ РІСЃС‚СѓРїРёС‚Рµ РІ РЅР°С€Рё СЂСЏРґС‹!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' До свидания, штат. Оставайтесь на волне 98.6 ФМ.')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ В» В°вЂўВ°вЂўВ°')
 						wait(6000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. Лос-Сантос » •°•°•°•°•')
+						sampSendChat('/news '..u8:decode(mainIni.tags['sobes'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 98.6 Р¤Рњ.')
+						wait(6000)
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. Р›РѕСЃ-РЎР°РЅС‚РѕСЃ В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(2000)
-						sampSendChat('/d [CNN LS] - [MM] занимаю новостную волну 98.6 ФМ. Просьба не перебивать')
+						sampSendChat('/d [CNN LS] - [MM] Р·Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 98.6 Р¤Рњ. РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ')
 						wait(2000)
-						sampSendChat('/todo На этом всё..*выключив микрофон')
+						sampSendChat('/todo РќР° СЌС‚РѕРј РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.EndChild()
 		end
 		if smi_menu == 'reklama_efir' then 
 			imgui.BeginChild('##EFIR REKLAMA', imgui.ImVec2(-1, -1))
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
 			imgui.StrCopy(rektext, string.gsub(tostring(mainIni.efir['reklama_text']), "&", "\n"))
-			imgui.Text(u8'Эфир реклама')
+			imgui.Text(u8'Р­С„РёСЂ СЂРµРєР»Р°РјР°')
 			imgui.SameLine()
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function ()
-					sampSendChat('/todo Начнем..*включив микрофон')
+					sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					wait(2000)
-					if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Занимаю новостную волну 98.6 ФМ! Просьба не перебивать') end
+					if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] Р—Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 98.6 Р¤Рњ! РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ') end
 					wait(2000)
-					sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+					sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' Доброе время суток, уважаемые радиослушатели!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' Р”РѕР±СЂРѕРµ РІСЂРµРјСЏ СЃСѓС‚РѕРє, СѓРІР°Р¶Р°РµРјС‹Рµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' С вами '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' РЎ РІР°РјРё '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' Вы находитесь на волне 96.6 ФМ.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' Р’С‹ РЅР°С…РѕРґРёС‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 96.6 Р¤Рњ.')
 					wait(6000)
 					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' '..u8:decode(string.match(mainIni.efir['reklama_text'], "([^&]+)")))
 					for ttext in string.gmatch(mainIni.efir['reklama_text'], "&([^&]+)") do
@@ -3266,21 +3266,21 @@ local main_menu = imgui.OnFrame(
 						sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' '..u8:decode(ttext))
 					end
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' На этом наш эфир подходит к концу.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' РќР° СЌС‚РѕРј РЅР°С€ СЌС„РёСЂ РїРѕРґС…РѕРґРёС‚ Рє РєРѕРЅС†Сѓ.')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'.')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' До свидания, штат. Оставайтесь на волне 98.6 ФМ.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['reklama'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 98.6 Р¤Рњ.')
 					wait(6000)
-					sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+					sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 					wait(2000)
-					if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Освободил новостную волну 95.5 ФМ.') end
+					if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] РћСЃРІРѕР±РѕРґРёР» РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 95.5 Р¤Рњ.') end
 					wait(2000)
-					sampSendChat('/todo На этом всё..*выключив микрофон')
+					sampSendChat('/todo РќР° СЌС‚РѕРј РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 				end)
 			end
 			imgui.SameLine()
-			imgui.Ques("Как правильно проводить рекламу?\n1. Необходимо ввести ТОЛЬКО текст рекламы организации (без тегов, приветствия и тд.)\n2. /d, Тэги, Приветствие ставится само по себе")
+			imgui.Ques("РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РїСЂРѕРІРѕРґРёС‚СЊ СЂРµРєР»Р°РјСѓ?\n1. РќРµРѕР±С…РѕРґРёРјРѕ РІРІРµСЃС‚Рё РўРћР›Р¬РљРћ С‚РµРєСЃС‚ СЂРµРєР»Р°РјС‹ РѕСЂРіР°РЅРёР·Р°С†РёРё (Р±РµР· С‚РµРіРѕРІ, РїСЂРёРІРµС‚СЃС‚РІРёСЏ Рё С‚Рґ.)\n2. /d, РўСЌРіРё, РџСЂРёРІРµС‚СЃС‚РІРёРµ СЃС‚Р°РІРёС‚СЃСЏ СЃР°РјРѕ РїРѕ СЃРµР±Рµ")
 			if imgui.InputTextMultiline("	 ", rektext, ffi.sizeof(rektext), imgui.ImVec2(500 * MONET_DPI_SCALE, -1)) then
 				mainIni.efir['reklama_text'] = string.gsub(str(rektext), "\n", "&")
 				inicfg.save(mainIni, 'smi.ini')
@@ -3288,64 +3288,64 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'inter_efir' then 
 			imgui.BeginChild('##EFIR INTER', imgui.ImVec2(-1, -1))
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
-			imgui.Text(u8'Интервью')
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			imgui.Text(u8'РРЅС‚РµСЂРІСЊСЋ')
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function ()
-					sampSendChat('/todo Начнем..*включив микрофон')
+					sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					wait(2000)
-					sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Занимаю новостную волну 107.3 ФМ! Просьба не перебивать')
+					sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] Р—Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 107.3 Р¤Рњ! РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ')
 					wait(2000)
-					sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » °•°•°•°•')
+					sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» В°вЂўВ°вЂўВ°вЂўВ°вЂў')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Добрый день, уважаемые радиослушатели! У микрофона..')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, СѓРІР°Р¶Р°РµРјС‹Рµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё! РЈ РјРёРєСЂРѕС„РѕРЅР°..')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Вы находитесь на волне 107.3 ФМ...')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Р’С‹ РЅР°С…РѕРґРёС‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 107.3 Р¤Рњ...')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' И сейчас я проведу интервью.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Р СЃРµР№С‡Р°СЃ СЏ РїСЂРѕРІРµРґСѓ РёРЅС‚РµСЂРІСЊСЋ.')
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Закончить эфир', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р—Р°РєРѕРЅС‡РёС‚СЊ СЌС„РёСЂ', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function ()
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' На этом наше интервью подходит к концу.')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' РќР° СЌС‚РѕРј РЅР°С€Рµ РёРЅС‚РµСЂРІСЊСЋ РїРѕРґС…РѕРґРёС‚ Рє РєРѕРЅС†Сѓ.')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' До свидания, штат. Оставайтесь на волне 107.3 ФМ!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['inter'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 107.3 Р¤Рњ!')
 					wait(6000)
-					sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » °•°•°•°•')
+					sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» В°вЂўВ°вЂўВ°вЂўВ°вЂў')
 					wait(2000)
-					sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Освободил новостную волну 107.3 ФМ!')
+					sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] РћСЃРІРѕР±РѕРґРёР» РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 107.3 Р¤Рњ!')
 					wait(2000)
-					sampSendChat('/todo Вот и всё..*выключив микрофон')
+					sampSendChat('/todo Р’РѕС‚ Рё РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Вопросы от штата') then
+			if imgui.Button(u8'Р’РѕРїСЂРѕСЃС‹ РѕС‚ С€С‚Р°С‚Р°') then
 				lua_thread.create(function ()
-					sampSendChat('Сейчас жители штата могут задать свои вопросы..')
+					sampSendChat('РЎРµР№С‡Р°СЃ Р¶РёС‚РµР»Рё С€С‚Р°С‚Р° РјРѕРіСѓС‚ Р·Р°РґР°С‚СЊ СЃРІРѕРё РІРѕРїСЂРѕСЃС‹..')
 					wait(2000)
-					sampSendChat('Отправляйте свои вопросы на наш радиоцентр!')
+					sampSendChat('РћС‚РїСЂР°РІР»СЏР№С‚Рµ СЃРІРѕРё РІРѕРїСЂРѕСЃС‹ РЅР° РЅР°С€ СЂР°РґРёРѕС†РµРЅС‚СЂ!')
 				end)
 			end
 			imgui.PushItemWidth(180 * MONET_DPI_SCALE)
-			imgui.InputText(u8'Имя и Фамилия', interv['name'], ffi.sizeof(interv['name']))
+			imgui.InputText(u8'РРјСЏ Рё Р¤Р°РјРёР»РёСЏ', interv['name'], ffi.sizeof(interv['name']))
 			imgui.SameLine()
-			imgui.InputText(u8'Должность', interv['rang'], ffi.sizeof(interv['rang']))
-			if imgui.Button(u8'Назвать', (imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			imgui.InputText(u8'Р”РѕР»Р¶РЅРѕСЃС‚СЊ', interv['rang'], ffi.sizeof(interv['rang']))
+			if imgui.Button(u8'РќР°Р·РІР°С‚СЊ', (imgui.ImVec2(60 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function ()
-					sampSendChat('Здравствуйте дорогие жители штата!')
+					sampSendChat('Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ РґРѕСЂРѕРіРёРµ Р¶РёС‚РµР»Рё С€С‚Р°С‚Р°!')
 					wait(2000)
 					if str(interv['rang']) == '' then
-						sampSendChat('Сегодня у нас в гостях '.. u8:decode(str(interv['name'])))
+						sampSendChat('РЎРµРіРѕРґРЅСЏ Сѓ РЅР°СЃ РІ РіРѕСЃС‚СЏС… '.. u8:decode(str(interv['name'])))
 					else
-						sampSendChat('Сегодня у нас в гостях '.. u8:decode(str(interv['rang'])) ..' - '.. u8:decode(str(interv['name'])))
+						sampSendChat('РЎРµРіРѕРґРЅСЏ Сѓ РЅР°СЃ РІ РіРѕСЃС‚СЏС… '.. u8:decode(str(interv['rang'])) ..' - '.. u8:decode(str(interv['name'])))
 					end
 					wait(2000)
-					sampSendChat('И сейчас я задам вам несколько вопросов.')
+					sampSendChat('Р СЃРµР№С‡Р°СЃ СЏ Р·Р°РґР°Рј РІР°Рј РЅРµСЃРєРѕР»СЊРєРѕ РІРѕРїСЂРѕСЃРѕРІ.')
 				end)
 			end
 			imgui.PopItemWidth()
@@ -3360,76 +3360,76 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'himia_efir' then 
 			imgui.BeginChild('##EFIR HIMIA', imgui.ImVec2(340 * MONET_DPI_SCALE, -1))
-			if imgui.Button(faicons('ARROW_LEFT') .. u8' Назад', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
-			imgui.CenterTextColoredRGB('Эфир Химия')
+			if imgui.Button(faicons('ARROW_LEFT') .. u8' РќР°Р·Р°Рґ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'efir' end
+			imgui.CenterTextColoredRGB('Р­С„РёСЂ РҐРёРјРёСЏ')
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'Денежный приз(без $)', money_math, ffi.sizeof(money_math))
+			imgui.InputText(u8'Р”РµРЅРµР¶РЅС‹Р№ РїСЂРёР·(Р±РµР· $)', money_math, ffi.sizeof(money_math))
 			imgui.PopItemWidth()
-			if imgui.Button(u8'Начать эфир', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°С‡Р°С‚СЊ СЌС„РёСЂ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/todo Начнем..*включив микрофон')
+						sampSendChat('/todo РќР°С‡РЅРµРј..*РІРєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Занимаю новостную волну 114.6 ФМ! Просьба не перебивать') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] Р—Р°РЅРёРјР°СЋ РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 114.6 Р¤Рњ! РџСЂРѕСЃСЊР±Р° РЅРµ РїРµСЂРµР±РёРІР°С‚СЊ') end
 						wait(2000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Добрый день, уважаемые радиослушатели! У микрофона..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, СѓРІР°Р¶Р°РµРјС‹Рµ СЂР°РґРёРѕСЃР»СѓС€Р°С‚РµР»Рё! РЈ РјРёРєСЂРѕС„РѕРЅР°..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Сегодня я проведу мероприятие "Химия"..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РЎРµРіРѕРґРЅСЏ СЏ РїСЂРѕРІРµРґСѓ РјРµСЂРѕРїСЂРёСЏС‚РёРµ "РҐРёРјРёСЏ"..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' ..я называю элемент - Вы в СМС на студию его название!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' ..СЏ РЅР°Р·С‹РІР°СЋ СЌР»РµРјРµРЅС‚ - Р’С‹ РІ РЎРњРЎ РЅР° СЃС‚СѓРґРёСЋ РµРіРѕ РЅР°Р·РІР°РЅРёРµ!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Правила просты, а приз большой..')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџСЂР°РІРёР»Р° РїСЂРѕСЃС‚С‹, Р° РїСЂРёР· Р±РѕР»СЊС€РѕР№..')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Призовой фонд составляет целых ' .. str(money_math) ..'$!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџСЂРёР·РѕРІРѕР№ С„РѕРЅРґ СЃРѕСЃС‚Р°РІР»СЏРµС‚ С†РµР»С‹С… ' .. str(money_math) ..'$!')
 						wait(6000)
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Закончить эфир', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р—Р°РєРѕРЅС‡РёС‚СЊ СЌС„РёСЂ', (imgui.ImVec2(120 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				if mainIni.config.c_nick ~= nil then
 					lua_thread.create(function()
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' На этом наш эфир подходит к концу.')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РќР° СЌС‚РѕРј РЅР°С€ СЌС„РёСЂ РїРѕРґС…РѕРґРёС‚ Рє РєРѕРЅС†Сѓ.')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' С вами был '.. u8:decode(mainIni.config.c_rang) .. ' СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РЎ РІР°РјРё Р±С‹Р» '.. u8:decode(mainIni.config.c_rang) .. ' РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' - ' .. u8:decode(mainIni.config.c_nick)  ..'!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' До свидания, штат. Оставайтесь на волне 114.6 ФМ!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Р”Рѕ СЃРІРёРґР°РЅРёСЏ, С€С‚Р°С‚. РћСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РІРѕР»РЅРµ 114.6 Р¤Рњ!')
 						wait(6000)
-						sampSendChat('/news •°•°•°•° Музыкальная заставка радиостанции « СМИ г. ' .. u8:decode(mainIni.config.c_city) ..' » •°•°•°•°•')
+						sampSendChat('/news вЂўВ°вЂўВ°вЂўВ°вЂўВ° РњСѓР·С‹РєР°Р»СЊРЅР°СЏ Р·Р°СЃС‚Р°РІРєР° СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё В« РЎРњР Рі. ' .. u8:decode(mainIni.config.c_city) ..' В» вЂўВ°вЂўВ°вЂўВ°вЂўВ°вЂў')
 						wait(2000)
-						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [СМИ] Освободил новостную волну 114.6 ФМ!') end
+						if mainIni.efir['dep'] then sampSendChat('/d ['.. u8:decode(mainIni.config.c_cnn) ..'] - [РЎРњР] РћСЃРІРѕР±РѕРґРёР» РЅРѕРІРѕСЃС‚РЅСѓСЋ РІРѕР»РЅСѓ 114.6 Р¤Рњ!') end
 						wait(2000)
-						sampSendChat('/todo Вот и всё..*выключив микрофон')
+						sampSendChat('/todo Р’РѕС‚ Рё РІСЃС‘..*РІС‹РєР»СЋС‡РёРІ РјРёРєСЂРѕС„РѕРЅ')
 					end)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}У вас не введен ник-нейм, зайдите в "..curcolor.."/smi {FFFFFF}и в настройках измените его!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РЈ РІР°СЃ РЅРµ РІРІРµРґРµРЅ РЅРёРє-РЅРµР№Рј, Р·Р°Р№РґРёС‚Рµ РІ "..curcolor.."/smi {FFFFFF}Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С… РёР·РјРµРЅРёС‚Рµ РµРіРѕ!", curcolor1)
 				end
 			end
 			imgui.PushItemWidth(100 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Элемент', primer, ffi.sizeof(primer))
+			imgui.InputText(u8'##Р­Р»РµРјРµРЅС‚', primer, ffi.sizeof(primer))
 			imgui.PopItemWidth()
 			imgui.SameLine()
-			if imgui.Button(u8'Назвать элемент', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'РќР°Р·РІР°С‚СЊ СЌР»РµРјРµРЅС‚', (imgui.ImVec2(115 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Следующий элемент..')
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РЎР»РµРґСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚..')
 					wait(6020)
 					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' '.. u8:decode(str(primer)))
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Сказать стоп', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
-				sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Стоп!')
+			if imgui.Button(u8'РЎРєР°Р·Р°С‚СЊ СЃС‚РѕРї', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+				sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РЎС‚РѕРї!')
 			end
 			imgui.Text("ID: ")
 			imgui.SameLine()
 			imgui.PushItemWidth(40 * MONET_DPI_SCALE)
-			imgui.InputText(u8'##Введите id', chel_ball_c, ffi.sizeof(chel_ball_c))
+			imgui.InputText(u8'##Р’РІРµРґРёС‚Рµ id', chel_ball_c, ffi.sizeof(chel_ball_c))
 			imgui.PopItemWidth()
 			if str(chel_ball_c) ~= "" then
 				if sampIsPlayerConnected(str(chel_ball_c)) then
@@ -3440,42 +3440,42 @@ local main_menu = imgui.OnFrame(
 				end
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'Добавить балл', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			if imgui.Button(u8'Р”РѕР±Р°РІРёС‚СЊ Р±Р°Р»Р»', (imgui.ImVec2(110 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				addball(u_name)
 				if tostring(efir_counter[u_name]) == '1' then
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балл!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»!')
 				end
 				if tostring(efir_counter[u_name]) == '2' then
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Первым был '.. u8:decode(u_name) .. ' и у него '.. efir_counter[u_name] .. ' балла!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџРµСЂРІС‹Рј Р±С‹Р» '.. u8:decode(u_name) .. ' Рё Сѓ РЅРµРіРѕ '.. efir_counter[u_name] .. ' Р±Р°Р»Р»Р°!')
 				end
 				if tostring(efir_counter[u_name]) == '3' then 
 					lua_thread.create(function()
 						efir_counter = {}
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' И у нас есть победитель!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 						wait(6000)
-						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-						addWithTag("Не забудьте завершить эфир.")
+						sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+						addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 					end)
 				end
 			end
-			imgui.Text(u8'Балл получит: '..u_name)
-			if imgui.Button(u8'Победитель', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
+			imgui.Text(u8'Р‘Р°Р»Р» РїРѕР»СѓС‡РёС‚: '..u_name)
+			if imgui.Button(u8'РџРѕР±РµРґРёС‚РµР»СЊ', (imgui.ImVec2(100 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then
 				lua_thread.create(function()
 					efir_counter = {}
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' И у нас есть победитель!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Р Сѓ РЅР°СЃ РµСЃС‚СЊ РїРѕР±РµРґРёС‚РµР»СЊ!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Побеждает ' .. u8:decode(u_name).. ' он первый набрал 3 балла и получает приз!')
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџРѕР±РµР¶РґР°РµС‚ ' .. u8:decode(u_name).. ' РѕРЅ РїРµСЂРІС‹Р№ РЅР°Р±СЂР°Р» 3 Р±Р°Р»Р»Р° Рё РїРѕР»СѓС‡Р°РµС‚ РїСЂРёР·!')
 					wait(6000)
-					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' Просим победителя прийти в офис СМИ г.'..u8:decode(mainIni.config.c_city)..' для получения приза.')
-					addWithTag("Не забудьте завершить эфир.")
+					sampSendChat('/news '..u8:decode(mainIni.tags['himia'])..' РџСЂРѕСЃРёРј РїРѕР±РµРґРёС‚РµР»СЏ РїСЂРёР№С‚Рё РІ РѕС„РёСЃ РЎРњР Рі.'..u8:decode(mainIni.config.c_city)..' РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРёР·Р°.')
+					addWithTag("РќРµ Р·Р°Р±СѓРґСЊС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЌС„РёСЂ.")
 				end)
 			end
 			imgui.EndChild()
 			imgui.SameLine()
 			imgui.BeginChild('a##country1', imgui.ImVec2(-1, -1), false)
-			imgui.CenterTextColoredRGB("Баллы")
+			imgui.CenterTextColoredRGB("Р‘Р°Р»Р»С‹")
 			imgui.Separator()
 			lua_thread.create(function()
 				for i in pairs(efir_counter) do
@@ -3487,15 +3487,15 @@ local main_menu = imgui.OnFrame(
 
 		if smi_menu == 'settings' then
 			imgui.BeginChild('settings', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-			imgui.Text(u8"Введите имя:")
+			imgui.Text(u8"Р’РІРµРґРёС‚Рµ РёРјСЏ:")
 			imgui.SameLine(100 * MONET_DPI_SCALE)
 			imgui.PushItemWidth(150 * MONET_DPI_SCALE)
-			if imgui.InputText(u8'##Введите имя', nick, ffi.sizeof(nick)) then
+			if imgui.InputText(u8'##Р’РІРµРґРёС‚Рµ РёРјСЏ', nick, ffi.sizeof(nick)) then
 				mainIni.config['c_nick'] = str(nick)
 				inicfg.save(mainIni,'smi.ini')
 			end
 			imgui.PopItemWidth()
-			imgui.Text(u8'Тема: ')
+			imgui.Text(u8'РўРµРјР°: ')
 			imgui.SameLine()
 			if imgui.Combo(u8'##theme', selected_theme, items, #theme_a) then
 				themeta = theme_t[selected_theme[0]+1]
@@ -3505,7 +3505,7 @@ local main_menu = imgui.OnFrame(
 				apply_n_t()
 			end
 			if not isMonetLoader() then
-				imgui.Text(u8'Цвет MoonMonet  -')
+				imgui.Text(u8'Р¦РІРµС‚ MoonMonet  -')
 				imgui.SameLine()
 				if imgui.ColorEdit3('## COLOR', mmcolor, imgui.ColorEditFlags.NoInputs) then
 					local r,g,b = mmcolor[0] * 255, mmcolor[1] * 255, mmcolor[2] * 255
@@ -3514,13 +3514,13 @@ local main_menu = imgui.OnFrame(
 					apply_n_t()
 					inicfg.save(mainIni, 'smi.ini')
 				end
-				imgui.Text(u8'\nМеню взаимодействия:')
+				imgui.Text(u8'\nРњРµРЅСЋ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ:')
 				imgui.SetCursorPosY(imgui.GetCursorPosY() + 2)
-				imgui.Text(u8'ПКМ +')
+				imgui.Text(u8'РџРљРњ +')
 				imgui.SameLine(nil, 5)
 				imgui.SetCursorPosY(imgui.GetCursorPosY() - 4)
-				imgui.HotKey('меню быстрого доступа', mainIni.settings, 'bind', 'R', string.find(mainIni.settings.bind, '+') and 150 * MONET_DPI_SCALE or 75 * MONET_DPI_SCALE)
-				if imgui.Button(u8'Сбросить бинд', imgui.ImVec2(150 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then
+				imgui.HotKey('РјРµРЅСЋ Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°', mainIni.settings, 'bind', 'R', string.find(mainIni.settings.bind, '+') and 150 * MONET_DPI_SCALE or 75 * MONET_DPI_SCALE)
+				if imgui.Button(u8'РЎР±СЂРѕСЃРёС‚СЊ Р±РёРЅРґ', imgui.ImVec2(150 * MONET_DPI_SCALE, 25 * MONET_DPI_SCALE)) then
 					mainIni.settings.bind = 'R'
 					inicfg.save(mainIni, 'smi.ini')
 				end
@@ -3534,60 +3534,60 @@ local main_menu = imgui.OnFrame(
 		end
 		if smi_menu == 'about' then
 			imgui.BeginChild('about', imgui.ImVec2(-1, 233 * MONET_DPI_SCALE), true)
-			imgui.TextColoredRGB('Автор скрипта: plalkeo')
-			imgui.TextColoredRGB('Скрипт был настроен для сотрудников СМИ ЛС сервера Yuma')
+			imgui.TextColoredRGB('РђРІС‚РѕСЂ СЃРєСЂРёРїС‚Р°: plalkeo')
+			imgui.TextColoredRGB('РЎРєСЂРёРїС‚ Р±С‹Р» РЅР°СЃС‚СЂРѕРµРЅ РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РЎРњР Р›РЎ СЃРµСЂРІРµСЂР° Yuma')
 			imgui.TextColoredRGB('VK: ' .. curcolor .. 'vk.com/plalkeo')
 			if not isMonetLoader() then
-				if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы скопировать, или ПКМ, чтобы открыть в браузере")  end
+				if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ, РёР»Рё РџРљРњ, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РІ Р±СЂР°СѓР·РµСЂРµ")  end
 				if imgui.IsItemClicked(0) then setClipboardText("https://vk.com/plalkeo") end
 				if imgui.IsItemClicked(1) then shell32.ShellExecuteA(nil, 'open', 'https://vk.com/im?sel=238453770', nil, nil, 1) end
 			else
 				if imgui.IsItemClicked(0) then openLink("https://vk.com/im?sel=238453770") end
 			end
-			imgui.TextColoredRGB('Группа VK: ' .. curcolor .. 'vk.com/smiplalkeo')
+			imgui.TextColoredRGB('Р“СЂСѓРїРїР° VK: ' .. curcolor .. 'vk.com/smiplalkeo')
 			if not isMonetLoader() then
-				if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы скопировать, или ПКМ, чтобы открыть в браузере")  end
+				if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ, РёР»Рё РџРљРњ, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РІ Р±СЂР°СѓР·РµСЂРµ")  end
 				if imgui.IsItemClicked(0) then setClipboardText("https://vk.com/smiplalkeo") end
 				if imgui.IsItemClicked(1) then shell32.ShellExecuteA(nil, 'open', 'https://vk.com/smiplalkeo', nil, nil, 1) end
 			else
 				if imgui.IsItemClicked(0) then openLink("https://vk.com/smiplalkeo") end
 			end
 			imgui.Text(u8[[blast hk: plalkeo
-Скрипт был разработан для Arizona RP]])
-			if imgui.Button(u8'Перезагрузить') then
+РЎРєСЂРёРїС‚ Р±С‹Р» СЂР°Р·СЂР°Р±РѕС‚Р°РЅ РґР»СЏ Arizona RP]])
+			if imgui.Button(u8'РџРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ') then
 				lua_thread.create(function() wait(5) thisScript():reload() end)
 				imgui.ShowCursor = false
 			end
-				if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы перезагрузить скрипт")  end -- для перезагрузки
+				if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ РїРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ СЃРєСЂРёРїС‚")  end -- РґР»СЏ РїРµСЂРµР·Р°РіСЂСѓР·РєРё
 			imgui.SameLine()
-			if imgui.Button(u8'Выгрузить') then
+			if imgui.Button(u8'Р’С‹РіСЂСѓР·РёС‚СЊ') then
 				lua_thread.create(function() wait(1) thisScript():unload() end)
 				imgui.ShowCursor = false
 			end
-				if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы выгрузить скрипт")  end -- для выгрузки
+				if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ РІС‹РіСЂСѓР·РёС‚СЊ СЃРєСЂРёРїС‚")  end -- РґР»СЏ РІС‹РіСЂСѓР·РєРё
 			imgui.SameLine()
-			if imgui.Button(u8'Проверить обновления') then
+			if imgui.Button(u8'РџСЂРѕРІРµСЂРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ') then
 				buttonupdate('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/smiplalkeo.json','[SMI-plalkeo]{FFFFFF}','url')
 			end
-				if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы проверить обновления скрипта")  end -- для обнов
-			imgui.Text(u8'Если у вас есть какие-то проблемы/баги - напишите разработчику скрипта')
-			if imgui.Button(u8'Сообщить о проблеме/баге') then
+				if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ РїСЂРѕРІРµСЂРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°")  end -- РґР»СЏ РѕР±РЅРѕРІ
+			imgui.Text(u8'Р•СЃР»Рё Сѓ РІР°СЃ РµСЃС‚СЊ РєР°РєРёРµ-С‚Рѕ РїСЂРѕР±Р»РµРјС‹/Р±Р°РіРё - РЅР°РїРёС€РёС‚Рµ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєСѓ СЃРєСЂРёРїС‚Р°')
+			if imgui.Button(u8'РЎРѕРѕР±С‰РёС‚СЊ Рѕ РїСЂРѕР±Р»РµРјРµ/Р±Р°РіРµ') then
 				if not isMonetLoader() then
 					shell32.ShellExecuteA(nil, 'open', 'https://vk.com/im?sel=238453770', nil, nil, 1)
 				else
 					openLink("https://vk.com/im?sel=238453770")
 				end
 			end
-			if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы написать разработчику")  end -- для сообщения о трабле/баге
-			imgui.TextColoredRGB('Версия: '..thisScript().version, 3)
-			if imgui.Button(faicons('INFO') .. u8' Чейнджлог', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'changelog' end
+			if imgui.IsItemHovered() then imgui.SetTooltip(u8"РљР»РёРєРЅРёС‚Рµ Р›РљРњ, С‡С‚РѕР±С‹ РЅР°РїРёСЃР°С‚СЊ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєСѓ")  end -- РґР»СЏ СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ С‚СЂР°Р±Р»Рµ/Р±Р°РіРµ
+			imgui.TextColoredRGB('Р’РµСЂСЃРёСЏ: '..thisScript().version, 3)
+			if imgui.Button(faicons('INFO') .. u8' Р§РµР№РЅРґР¶Р»РѕРі', (imgui.ImVec2(200 * MONET_DPI_SCALE, 20 * MONET_DPI_SCALE))) then smi_menu = 'changelog' end
 			imgui.EndChild()
 		end
 		imgui.End()
 	end
 )
 local russian_characters = {
-    [168] = 'Ё', [184] = 'ё', [192] = 'А', [193] = 'Б', [194] = 'В', [195] = 'Г', [196] = 'Д', [197] = 'Е', [198] = 'Ж', [199] = 'З', [200] = 'И', [201] = 'Й', [202] = 'К', [203] = 'Л', [204] = 'М', [205] = 'Н', [206] = 'О', [207] = 'П', [208] = 'Р', [209] = 'С', [210] = 'Т', [211] = 'У', [212] = 'Ф', [213] = 'Х', [214] = 'Ц', [215] = 'Ч', [216] = 'Ш', [217] = 'Щ', [218] = 'Ъ', [219] = 'Ы', [220] = 'Ь', [221] = 'Э', [222] = 'Ю', [223] = 'Я', [224] = 'а', [225] = 'б', [226] = 'в', [227] = 'г', [228] = 'д', [229] = 'е', [230] = 'ж', [231] = 'з', [232] = 'и', [233] = 'й', [234] = 'к', [235] = 'л', [236] = 'м', [237] = 'н', [238] = 'о', [239] = 'п', [240] = 'р', [241] = 'с', [242] = 'т', [243] = 'у', [244] = 'ф', [245] = 'х', [246] = 'ц', [247] = 'ч', [248] = 'ш', [249] = 'щ', [250] = 'ъ', [251] = 'ы', [252] = 'ь', [253] = 'э', [254] = 'ю', [255] = 'я',
+    [168] = 'РЃ', [184] = 'С‘', [192] = 'Рђ', [193] = 'Р‘', [194] = 'Р’', [195] = 'Р“', [196] = 'Р”', [197] = 'Р•', [198] = 'Р–', [199] = 'Р—', [200] = 'Р', [201] = 'Р™', [202] = 'Рљ', [203] = 'Р›', [204] = 'Рњ', [205] = 'Рќ', [206] = 'Рћ', [207] = 'Рџ', [208] = 'Р ', [209] = 'РЎ', [210] = 'Рў', [211] = 'РЈ', [212] = 'Р¤', [213] = 'РҐ', [214] = 'Р¦', [215] = 'Р§', [216] = 'РЁ', [217] = 'Р©', [218] = 'РЄ', [219] = 'Р«', [220] = 'Р¬', [221] = 'Р­', [222] = 'Р®', [223] = 'РЇ', [224] = 'Р°', [225] = 'Р±', [226] = 'РІ', [227] = 'Рі', [228] = 'Рґ', [229] = 'Рµ', [230] = 'Р¶', [231] = 'Р·', [232] = 'Рё', [233] = 'Р№', [234] = 'Рє', [235] = 'Р»', [236] = 'Рј', [237] = 'РЅ', [238] = 'Рѕ', [239] = 'Рї', [240] = 'СЂ', [241] = 'СЃ', [242] = 'С‚', [243] = 'Сѓ', [244] = 'С„', [245] = 'С…', [246] = 'С†', [247] = 'С‡', [248] = 'С€', [249] = 'С‰', [250] = 'СЉ', [251] = 'С‹', [252] = 'СЊ', [253] = 'СЌ', [254] = 'СЋ', [255] = 'СЏ',
 }
 function string.rlower(text)
 	text = tostring(text)
@@ -3600,7 +3600,7 @@ function string.rlower(text)
         local ch = s:byte(i)
         if ch >= 192 and ch <= 223 then -- upper russian characters
             output = output .. russian_characters[ch + 32]
-        elseif ch == 168 then -- Ё
+        elseif ch == 168 then -- РЃ
             output = output .. russian_characters[184]
         else
             output = output .. string.char(ch)
@@ -3620,9 +3620,9 @@ local autoedit = imgui.OnFrame(
 	function(self)
 		imgui.SetNextWindowPos(imgui.ImVec2(iScreenWidth / 2, iScreenHeight / 2), imgui.Cond.FirstUseEver, imgui.ImVec2(0.5, 0.5))
 		imgui.SetNextWindowSize(imgui.ImVec2(1100 * MONET_DPI_SCALE, 350 * MONET_DPI_SCALE), imgui.Cond.Always)
-		imgui.Begin(u8'Авторедактирование', autoedit_slots, imgui.WindowFlags.NoResize)
+		imgui.Begin(u8'РђРІС‚РѕСЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ', autoedit_slots, imgui.WindowFlags.NoResize)
 		imgui.PushItemWidth(500 * MONET_DPI_SCALE)
-		imgui.InputTextWithHint('##SEARCHINPUT', faicons('magnifying_glass')..u8' Поиск', buffer, ffi.sizeof(buffer))
+		imgui.InputTextWithHint('##SEARCHINPUT', faicons('magnifying_glass')..u8' РџРѕРёСЃРє', buffer, ffi.sizeof(buffer))
 		imgui.PopItemWidth()
 		imgui.BeginChild("", imgui.ImVec2(500 * MONET_DPI_SCALE, -1), true)
 		if #u8:decode(str(buffer)) ~= 0 then 
@@ -3667,7 +3667,7 @@ local autoedit = imgui.OnFrame(
 							end
 						end
 					else
-						if imgui.Selectable(u8("Слот №") .. number) then
+						if imgui.Selectable(u8("РЎР»РѕС‚ в„–") .. number) then
 							if mainIni.edit[number] ~= nil then
 								if mainIni.edit[number..'_input'] ~= nil then
 									imgui.StrCopy(ae[3], mainIni.edit[number..'_input'])
@@ -3705,7 +3705,7 @@ local autoedit = imgui.OnFrame(
 							end
 						end
 					else
-						if imgui.Selectable(u8("Слот №") .. number) then
+						if imgui.Selectable(u8("РЎР»РѕС‚ в„–") .. number) then
 							if mainIni.edit[number] ~= nil then
 								if mainIni.edit[number..'_input'] ~= nil then
 									imgui.StrCopy(ae[3], mainIni.edit[number..'_input'])
@@ -3727,21 +3727,21 @@ local autoedit = imgui.OnFrame(
 		end
 		imgui.EndChild()
 		imgui.SameLine()
-		imgui.BeginChild("##фывыф", imgui.ImVec2(-1, -1), true)
+		imgui.BeginChild("##С„С‹РІС‹С„", imgui.ImVec2(-1, -1), true)
 			if ae[1] == 1 then
-				imgui.Text(u8'Оригинал: '.. ae[2])
-				imgui.TextColoredRGB('Данное объявление сохраняется для '..curcolor..(ae[4] and "отклонения" or "отправления"))
+				imgui.Text(u8'РћСЂРёРіРёРЅР°Р»: '.. ae[2])
+				imgui.TextColoredRGB('Р”Р°РЅРЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ РґР»СЏ '..curcolor..(ae[4] and "РѕС‚РєР»РѕРЅРµРЅРёСЏ" or "РѕС‚РїСЂР°РІР»РµРЅРёСЏ"))
 				imgui.PushItemWidth(500 * MONET_DPI_SCALE)
 				imgui.InputText(" ", ae[3], ffi.sizeof(ae[3]))
 				imgui.PopItemWidth()
-				if imgui.Button(u8'Сохранить') then
+				if imgui.Button(u8'РЎРѕС…СЂР°РЅРёС‚СЊ') then
 					if not ae[4] then
 						mainIni.edit[ttax..'_input'] = str(ae[3])
 					else
 						mainIni.edit[ttax..'_cancel'] = str(ae[3])
 					end
 					inicfg.save(mainIni, 'smi.ini')
-					sampAddChatMessage('[SMI-plalkeo] {FFFFFF}Успешно сохранено.', curcolor1)
+					sampAddChatMessage('[SMI-plalkeo] {FFFFFF}РЈСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅРѕ.', curcolor1)
 				end
 			end
 		imgui.EndChild()
@@ -3759,47 +3759,47 @@ local autoedit = imgui.OnFrame(
 -- 			saveInfo('config','c_nick',u8(trst(u_name)))
 -- 		end
 -- 		saveInfo('config','c_nicken',u_name)
--- 		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Приветствуем вас: "..curcolor.. u_name .. '[' .. u_id .. ']', curcolor1)
--- 		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Для открытия главного меню введите "..curcolor.."/smi", curcolor1)
+-- 		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РџСЂРёРІРµС‚СЃС‚РІСѓРµРј РІР°СЃ: "..curcolor.. u_name .. '[' .. u_id .. ']', curcolor1)
+-- 		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р”Р»СЏ РѕС‚РєСЂС‹С‚РёСЏ РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ РІРІРµРґРёС‚Рµ "..curcolor.."/smi", curcolor1)
 -- 	end
 -- end
 
 jobs = {
-	'Таксист',
-	'Механик',
-	'Фермер',
-	'Водитель автобуса',
-	'Адвокат',
-	'Развозчик продуктов',
-	'Развозчик пиццы',
-	'Крупье',
-	'Работник налоговой',
-	'Инкассатор',
-	'Дальнобойщик',
-	'Металлоломщик',
-	'Мусорщик',
-	'Пожарный',
-	'Пилот',
-	'Водитель трамвая',
-	'Машинист электропоезда',
-	'Главный фермер',
-	'Руководитель грузчиков',
-	'Руководитель завода',
-	'Ремонтник дорог',
-	'Продавец хотдогов'
+	'РўР°РєСЃРёСЃС‚',
+	'РњРµС…Р°РЅРёРє',
+	'Р¤РµСЂРјРµСЂ',
+	'Р’РѕРґРёС‚РµР»СЊ Р°РІС‚РѕР±СѓСЃР°',
+	'РђРґРІРѕРєР°С‚',
+	'Р Р°Р·РІРѕР·С‡РёРє РїСЂРѕРґСѓРєС‚РѕРІ',
+	'Р Р°Р·РІРѕР·С‡РёРє РїРёС†С†С‹',
+	'РљСЂСѓРїСЊРµ',
+	'Р Р°Р±РѕС‚РЅРёРє РЅР°Р»РѕРіРѕРІРѕР№',
+	'РРЅРєР°СЃСЃР°С‚РѕСЂ',
+	'Р”Р°Р»СЊРЅРѕР±РѕР№С‰РёРє',
+	'РњРµС‚Р°Р»Р»РѕР»РѕРјС‰РёРє',
+	'РњСѓСЃРѕСЂС‰РёРє',
+	'РџРѕР¶Р°СЂРЅС‹Р№',
+	'РџРёР»РѕС‚',
+	'Р’РѕРґРёС‚РµР»СЊ С‚СЂР°РјРІР°СЏ',
+	'РњР°С€РёРЅРёСЃС‚ СЌР»РµРєС‚СЂРѕРїРѕРµР·РґР°',
+	'Р“Р»Р°РІРЅС‹Р№ С„РµСЂРјРµСЂ',
+	'Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ РіСЂСѓР·С‡РёРєРѕРІ',
+	'Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ Р·Р°РІРѕРґР°',
+	'Р РµРјРѕРЅС‚РЅРёРє РґРѕСЂРѕРі',
+	'РџСЂРѕРґР°РІРµС† С…РѕС‚РґРѕРіРѕРІ'
 }
 
 function sampev.onServerMessage(color, msg)
-	if msg:find('предложение') and msg:find(sampGetPlayerNickname(fastmenuID)) then
+	if msg:find('РїСЂРµРґР»РѕР¶РµРЅРёРµ') and msg:find(sampGetPlayerNickname(fastmenuID)) then
 		sampSendChat('/offer')
 	end
-	if msg:find('Вы заглушены. Оставшееся время заглушки') then
-		mms = string.match(msg,'заглушки (%d+) секунд.')
-		return {color, 'Вы заглушены. Оставшееся время заглушки ~'..string.format("%2.0f", tonumber(mms)/60)..' минут.('.. mms ..' секунд)'}
+	if msg:find('Р’С‹ Р·Р°РіР»СѓС€РµРЅС‹. РћСЃС‚Р°РІС€РµРµСЃСЏ РІСЂРµРјСЏ Р·Р°РіР»СѓС€РєРё') then
+		mms = string.match(msg,'Р·Р°РіР»СѓС€РєРё (%d+) СЃРµРєСѓРЅРґ.')
+		return {color, 'Р’С‹ Р·Р°РіР»СѓС€РµРЅС‹. РћСЃС‚Р°РІС€РµРµСЃСЏ РІСЂРµРјСЏ Р·Р°РіР»СѓС€РєРё ~'..string.format("%2.0f", tonumber(mms)/60)..' РјРёРЅСѓС‚.('.. mms ..' СЃРµРєСѓРЅРґ)'}
 	end
-	if msg:find('У вас отобран доступ к %/newsredak') then
-		mms = string.match(msg,'newsredak на (%d+) секунд.')
-		return {color, 'У вас отобран доступ к /newsredak на ~'..string.format("%2.0f", tonumber(mms)/60)..' минут.('.. mms ..' секунд)'}
+	if msg:find('РЈ РІР°СЃ РѕС‚РѕР±СЂР°РЅ РґРѕСЃС‚СѓРї Рє %/newsredak') then
+		mms = string.match(msg,'newsredak РЅР° (%d+) СЃРµРєСѓРЅРґ.')
+		return {color, 'РЈ РІР°СЃ РѕС‚РѕР±СЂР°РЅ РґРѕСЃС‚СѓРї Рє /newsredak РЅР° ~'..string.format("%2.0f", tonumber(mms)/60)..' РјРёРЅСѓС‚.('.. mms ..' СЃРµРєСѓРЅРґ)'}
 	end
 	local job, name_job, id_job, msg_job = string.match(msg, '%[(.+)%] (.+)%[(%d+)%]: (.+)')
 	if job and name_job and msg_job then
@@ -3819,16 +3819,16 @@ function sampev.onServerMessage(color, msg)
 			end
 		end
 	end
-	local ad_text, ad_author, ad_a_id = string.match(msg,'Объявление: (.+). Отправил: (.+)%[(%d+)%]')
+	local ad_text, ad_author, ad_a_id = string.match(msg,'РћР±СЉСЏРІР»РµРЅРёРµ: (.+). РћС‚РїСЂР°РІРёР»: (.+)%[(%d+)%]')
 	if ad_author and ad_text and ad_a_id and mainIni.chat['ad'] then
 		return false
 	end
-	if msg:find('Сообщение до редакции') then
+	if msg:find('РЎРѕРѕР±С‰РµРЅРёРµ РґРѕ СЂРµРґР°РєС†РёРё') then
 		if mainIni.chat['ad'] then
 			return false
 		end
 	end
-	local ad_z_smi, ad_z_name, ad_z_id = string.match(msg,'сотрудник СМИ %[ (.+) %] : (.+)%[(%d+)%]')
+	local ad_z_smi, ad_z_name, ad_z_id = string.match(msg,'СЃРѕС‚СЂСѓРґРЅРёРє РЎРњР %[ (.+) %] : (.+)%[(%d+)%]')
 	if ad_z_smi and ad_z_name and ad_z_id and mainIni.chat['ad'] then
 		return false
 	end
@@ -3840,7 +3840,7 @@ function sampev.onSendChat(cmd)
 		if cmd == ')' or cmd == '(' or cmd ==  '))' or cmd == '((' or cmd == 'xD' or cmd == ':D' or cmd == ':d' or cmd == 'XD' then 
 			return{cmd}
 		end
-		return{'['..u8:decode(str(accent[2]))..' акцент]: '..cmd}
+		return{'['..u8:decode(str(accent[2]))..' Р°РєС†РµРЅС‚]: '..cmd}
 	end
 end
 
@@ -3870,18 +3870,18 @@ function main()
 	while not isSampAvailable() do
 		wait(0)
 	end
-	sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Загружен. Автор: "..curcolor.."{ff0000} plalkeo", curcolor1)
+	sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р—Р°РіСЂСѓР¶РµРЅ. РђРІС‚РѕСЂ: "..curcolor.."{ff0000} plalkeo", curcolor1)
 	sampRegisterChatCommand("smi",test)
 	sampRegisterChatCommand("update", update)
 	sampRegisterChatCommand("r", function(text) 
-		if accent[5][0] and accent[1][0] then sampSendChat('/r ['..u8:decode(accent[2][0])..' акцент]: '..text) 
+		if accent[5][0] and accent[1][0] then sampSendChat('/r ['..u8:decode(accent[2][0])..' Р°РєС†РµРЅС‚]: '..text) 
 		else sampSendChat('/r '..text) end 
 	end)
 	sampRegisterChatCommand("s", function(text) 
-		if accent[4][0] and accent[1][0] then sampSendChat('/s ['..u8:decode(accent[2][0])..' акцент]: '..text) 
+		if accent[4][0] and accent[1][0] then sampSendChat('/s ['..u8:decode(accent[2][0])..' Р°РєС†РµРЅС‚]: '..text) 
 		else sampSendChat('/s '..text) end 
 	end)
-	-- Изменение комманд на рп отыгровки
+	-- РР·РјРµРЅРµРЅРёРµ РєРѕРјРјР°РЅРґ РЅР° СЂРї РѕС‚С‹РіСЂРѕРІРєРё
 	sampRegisterChatCommand("expel", expel)
 	sampRegisterChatCommand("giverank", giverank)
 	sampRegisterChatCommand("fwarn", fwarn)
@@ -3900,13 +3900,13 @@ function main()
 				end
 			end
 
-			if isKeysDown(mainIni.settings.bind) and not sampIsChatInputActive() then -- Взято из https://www.blast.hk/threads/87533/
+			if isKeysDown(mainIni.settings.bind) and not sampIsChatInputActive() then -- Р’Р·СЏС‚Рѕ РёР· https://www.blast.hk/threads/87533/
 				if sampGetPlayerIdByCharHandle(select(2,getCharPlayerIsTargeting())) then
 					setVirtualKeyDown(0x02,false)
 					fastmenuID = select(2,sampGetPlayerIdByCharHandle(select(2,getCharPlayerIsTargeting())))
 					selected_user = fastmenuID
 					wait(0)
-					addWithTag('Чтобы закрыть окно - нажмите '..curcolor..'ESC')
+					addWithTag('Р§С‚РѕР±С‹ Р·Р°РєСЂС‹С‚СЊ РѕРєРЅРѕ - РЅР°Р¶РјРёС‚Рµ '..curcolor..'ESC')
 					renderWindow[0] = true
 				end
 			end
@@ -3924,20 +3924,21 @@ function main()
 				saveInfo('config','c_nick',u8(trst(u_name)))
 			end
 			saveInfo('config','c_nicken',u_name)
-			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Приветствуем вас: "..curcolor.. u_name .. '[' .. u_id .. ']', curcolor1)
-			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Для открытия главного меню введите "..curcolor.."/smi", curcolor1)
-			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Скрипт был настроен заместителем директора "..curcolor.."специально для сотрудников СМИ ЛС сервера {ff0000}Yuma.", curcolor1)
-			sampAddChatMessage("[ИНФОРМАЦИЯ] {FFFFFF}Последее обновление информации "..curcolor.."{008000} 09.07.2024", curcolor1)
+			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РџСЂРёРІРµС‚СЃС‚РІСѓРµРј РІР°СЃ: "..curcolor.. u_name .. '[' .. u_id .. ']', curcolor1)
+			sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р”Р»СЏ РѕС‚РєСЂС‹С‚РёСЏ РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ РІРІРµРґРёС‚Рµ "..curcolor.."/smi", curcolor1)
+			sampAddChatMessage("[РРќР¤РћР РњРђР¦РРЇ] {FFFFFF}РЎРєСЂРёРїС‚ Р±С‹Р» РЅР°СЃС‚СЂРѕРµРЅ Р·Р°РјРµСЃС‚РёС‚РµР»РµРј РґРёСЂРµРєС‚РѕСЂР° "..curcolor.."СЃРїРµС†РёР°Р»СЊРЅРѕ РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РЎРњР Р›РЎ СЃРµСЂРІРµСЂР° {ff0000}Yuma.", curcolor1)
+			sampAddChatMessage("[РРќР¤РћР РњРђР¦РРЇ] {FFFFFF}РџРѕСЃР»РµРґРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё "..curcolor.."{008000} 09.07.2024", curcolor1)
+			sampAddChatMessage("[РРќР¤РћР РњРђР¦РРЇ] {FFFFFF}--> "..curcolor.."Р”Р°РЅРЅР°СЏ РІРµСЂСЃРёСЏ С‚РµСЃС‚РѕРІР°СЏ!!!", curcolor1)
 			if not doesFileExist(getFontsPath()) then
-				sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Отсутствует необходимый файл для работы скрипта. Загружаю файл..", curcolor1)
+				sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РЅРµРѕР±С…РѕРґРёРјС‹Р№ С„Р°Р№Р» РґР»СЏ СЂР°Р±РѕС‚С‹ СЃРєСЂРёРїС‚Р°. Р—Р°РіСЂСѓР¶Р°СЋ С„Р°Р№Р»..", curcolor1)
 				downloadFileToPath('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/Trebucbd.ttf', getFontsPath())
 				if doesFileExist(getFontsPath()) then
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Файл скачан успешно!", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р¤Р°Р№Р» СЃРєР°С‡Р°РЅ СѓСЃРїРµС€РЅРѕ!", curcolor1)
 				else
-					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Не удалось скачать файл.", curcolor1)
+					sampAddChatMessage("[SMI-plalkeo] {FFFFFF}РќРµ СѓРґР°Р»РѕСЃСЊ СЃРєР°С‡Р°С‚СЊ С„Р°Р№Р».", curcolor1)
 				end
 			end
-			buttonupdate('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/smiplalkeo.json','[SMI-plalkeo]{FFFFFF}')
+			buttonupdate('https://raw.githubusercontent.com/nightooes/script/main/version.json','[SMI-plalkeo]{FFFFFF}')
 		end
 	end
 end
@@ -3985,11 +3986,11 @@ function expel(params)
 		if check_rank(2) then
 			if mainIni.rpbind['expel'] then
 				lua_thread.create(function()
-					sampSendChat("/do Рация на поясе.")
+					sampSendChat("/do Р Р°С†РёСЏ РЅР° РїРѕСЏСЃРµ.")
 					wait(2500)
-					sampSendChat("/me достал рацию и вызвал охрану по ней")
+					sampSendChat("/me РґРѕСЃС‚Р°Р» СЂР°С†РёСЋ Рё РІС‹Р·РІР°Р» РѕС…СЂР°РЅСѓ РїРѕ РЅРµР№")
 					wait(2000)
-					sampSendChat("/do Охрана вывела человека из радиоцентра.")
+					sampSendChat("/do РћС…СЂР°РЅР° РІС‹РІРµР»Р° С‡РµР»РѕРІРµРєР° РёР· СЂР°РґРёРѕС†РµРЅС‚СЂР°.")
 					wait(1000)
 					sampSendChat("/expel ".. id .. " " .. arg)
 				end)
@@ -3999,7 +4000,7 @@ function expel(params)
 			return false
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /expel [id] [причина]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /expel [id] [РїСЂРёС‡РёРЅР°]", curcolor1)
 	end
 end
 
@@ -4009,13 +4010,13 @@ function giverank(params)
 		if check_rank(9) then
 			if mainIni.rpbind['giverank'] then
 				lua_thread.create(function()
-					sampSendChat("/do Новый бейджик в кармане.")
+					sampSendChat("/do РќРѕРІС‹Р№ Р±РµР№РґР¶РёРє РІ РєР°СЂРјР°РЅРµ.")
 					wait(2500)
-					sampSendChat("/me достал из кармана бейджик")
+					sampSendChat("/me РґРѕСЃС‚Р°Р» РёР· РєР°СЂРјР°РЅР° Р±РµР№РґР¶РёРє")
 					wait(2000)
-					sampSendChat("/todo С повышением, дорогой сотрудник*передав бейджик сотруднику")
+					sampSendChat("/todo РЎ РїРѕРІС‹С€РµРЅРёРµРј, РґРѕСЂРѕРіРѕР№ СЃРѕС‚СЂСѓРґРЅРёРє*РїРµСЂРµРґР°РІ Р±РµР№РґР¶РёРє СЃРѕС‚СЂСѓРґРЅРёРєСѓ")
 					wait(2000)
-					sampSendChat("Продолжайте работать в том же духе.")
+					sampSendChat("РџСЂРѕРґРѕР»Р¶Р°Р№С‚Рµ СЂР°Р±РѕС‚Р°С‚СЊ РІ С‚РѕРј Р¶Рµ РґСѓС…Рµ.")
 					wait(1000)
 					sampSendChat("/giverank ".. id .. " " .. arg)
 				end)
@@ -4024,7 +4025,7 @@ function giverank(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /giverank [id] [ранг]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /giverank [id] [СЂР°РЅРі]", curcolor1)
 	end
 end
 
@@ -4034,13 +4035,13 @@ function fwarn(params)
 		if check_rank(9) then
 			if mainIni.rpbind['fwarn'] then
 				lua_thread.create(function()
-					sampSendChat("/do Планшет с базой данных сотрудников в руках.")
+					sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ СЂСѓРєР°С….")
 					wait(2500)
-					sampSendChat("/me зашел в раздел \"Выговоры\"")
+					sampSendChat("/me Р·Р°С€РµР» РІ СЂР°Р·РґРµР» \"Р’С‹РіРѕРІРѕСЂС‹\"")
 					wait(2000)
-					sampSendChat("/do Раздел открыт.")
+					sampSendChat("/do Р Р°Р·РґРµР» РѕС‚РєСЂС‹С‚.")
 					wait(2000)
-					sampSendChat("/me выдал выговор сотруднику в разделе \"Выговоры\"")
+					sampSendChat("/me РІС‹РґР°Р» РІС‹РіРѕРІРѕСЂ СЃРѕС‚СЂСѓРґРЅРёРєСѓ РІ СЂР°Р·РґРµР»Рµ \"Р’С‹РіРѕРІРѕСЂС‹\"")
 					wait(1000)
 					sampSendChat("/fwarn ".. id .. " " .. arg)
 				end)
@@ -4049,7 +4050,7 @@ function fwarn(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /fwarn [id] [причина]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /fwarn [id] [РїСЂРёС‡РёРЅР°]", curcolor1)
 	end
 end
 
@@ -4060,13 +4061,13 @@ function unfwarn(params)
 			if check_rank(9) then
 				if mainIni.rpbind['unfwarn'] then
 					lua_thread.create(function()
-						sampSendChat("/do Планшет с базой данных сотрудников в руках.")
+						sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ СЂСѓРєР°С….")
 						wait(2500)
-						sampSendChat("/me зашел в раздел \"Выговоры\"")
+						sampSendChat("/me Р·Р°С€РµР» РІ СЂР°Р·РґРµР» \"Р’С‹РіРѕРІРѕСЂС‹\"")
 						wait(2000)
-						sampSendChat("/do Раздел открыт.")
+						sampSendChat("/do Р Р°Р·РґРµР» РѕС‚РєСЂС‹С‚.")
 						wait(2000)
-						sampSendChat("/me снял выговор сотруднику в разделе \"Выговоры\"")
+						sampSendChat("/me СЃРЅСЏР» РІС‹РіРѕРІРѕСЂ СЃРѕС‚СЂСѓРґРЅРёРєСѓ РІ СЂР°Р·РґРµР»Рµ \"Р’С‹РіРѕРІРѕСЂС‹\"")
 						wait(1000)
 						sampSendChat("/unfwarn ".. id)
 					end)
@@ -4076,7 +4077,7 @@ function unfwarn(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /unfwarn [id]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /unfwarn [id]", curcolor1)
 	end
 end
 
@@ -4087,13 +4088,13 @@ function invite(params)
 			if check_rank(9) then
 				if mainIni.rpbind['invite'] then
 					lua_thread.create(function()
-						sampSendChat("/do Ключ от раздевалки в кармане.")
+						sampSendChat("/do РљР»СЋС‡ РѕС‚ СЂР°Р·РґРµРІР°Р»РєРё РІ РєР°СЂРјР°РЅРµ.")
 						wait(2500)
-						sampSendChat("/me достал ключ от раздевалки из кармана")
+						sampSendChat("/me РґРѕСЃС‚Р°Р» РєР»СЋС‡ РѕС‚ СЂР°Р·РґРµРІР°Р»РєРё РёР· РєР°СЂРјР°РЅР°")
 						wait(2000)
-						sampSendChat("/todo Добро пожаловать!*передав ключ человеку напротив")
+						sampSendChat("/todo Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!*РїРµСЂРµРґР°РІ РєР»СЋС‡ С‡РµР»РѕРІРµРєСѓ РЅР°РїСЂРѕС‚РёРІ")
 						wait(2000)
-						sampSendChat("Раздевалка на 2 этаже.")
+						sampSendChat("Р Р°Р·РґРµРІР°Р»РєР° РЅР° 2 СЌС‚Р°Р¶Рµ.")
 						wait(1000)
 						sampSendChat("/invite ".. id)
 					end)
@@ -4103,7 +4104,7 @@ function invite(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /invite [id]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /invite [id]", curcolor1)
 	end
 end
 
@@ -4114,13 +4115,13 @@ function blacklist(params)
 			if check_rank(9) then
 				if mainIni.rpbind['blacklist'] then
 					lua_thread.create(function()
-						sampSendChat("/do Планшет с базой данных сотрудников в руках.")
+						sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ СЂСѓРєР°С….")
 						wait(2500)
-						sampSendChat("/me зашел в раздел \"Чёрный список\"")
+						sampSendChat("/me Р·Р°С€РµР» РІ СЂР°Р·РґРµР» \"Р§С‘СЂРЅС‹Р№ СЃРїРёСЃРѕРє\"")
 						wait(2000)
-						sampSendChat("/do Раздел открыт.")
+						sampSendChat("/do Р Р°Р·РґРµР» РѕС‚РєСЂС‹С‚.")
 						wait(2000)
-						sampSendChat("/me добавил человека в раздел \"Чёрный список\"")
+						sampSendChat("/me РґРѕР±Р°РІРёР» С‡РµР»РѕРІРµРєР° РІ СЂР°Р·РґРµР» \"Р§С‘СЂРЅС‹Р№ СЃРїРёСЃРѕРє\"")
 						wait(1000)
 						sampSendChat("/blacklist ".. id)
 					end)
@@ -4130,7 +4131,7 @@ function blacklist(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /blacklist [id]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /blacklist [id]", curcolor1)
 	end
 end
 
@@ -4141,13 +4142,13 @@ function unblacklist(params)
 			if check_rank(9) then
 				if mainIni.rpbind['unblacklist'] then
 					lua_thread.create(function()
-						sampSendChat("/do Планшет с базой данных сотрудников в руках.")
+						sampSendChat("/do РџР»Р°РЅС€РµС‚ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ СЂСѓРєР°С….")
 						wait(2500)
-						sampSendChat("/me зашел в раздел \"Чёрный список\"")
+						sampSendChat("/me Р·Р°С€РµР» РІ СЂР°Р·РґРµР» \"Р§С‘СЂРЅС‹Р№ СЃРїРёСЃРѕРє\"")
 						wait(2000)
-						sampSendChat("/do Раздел открыт.")
+						sampSendChat("/do Р Р°Р·РґРµР» РѕС‚РєСЂС‹С‚.")
 						wait(2000)
-						sampSendChat("/me убрал человека из раздела \"Чёрный список\"")
+						sampSendChat("/me СѓР±СЂР°Р» С‡РµР»РѕРІРµРєР° РёР· СЂР°Р·РґРµР»Р° \"Р§С‘СЂРЅС‹Р№ СЃРїРёСЃРѕРє\"")
 						wait(1000)
 						sampSendChat("/unblacklist ".. id)
 					end)
@@ -4157,7 +4158,7 @@ function unblacklist(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /unblacklist [id]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /unblacklist [id]", curcolor1)
 	end
 end
 
@@ -4179,7 +4180,7 @@ function funmute(params)
 			end
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /funmute [id]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /funmute [id]", curcolor1)
 	end
 end
 
@@ -4192,20 +4193,20 @@ function fmute(params)
 			end)
 		end
 	else
-		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Введите: /fmute [id] [причина]", curcolor1)
+		sampAddChatMessage("[SMI-plalkeo] {FFFFFF}Р’РІРµРґРёС‚Рµ: /fmute [id] [РїСЂРёС‡РёРЅР°]", curcolor1)
 	end
 end
 
 function update()
 	prefix = '[SMI-plalkeo]{FFFFFF}'
 	color = curcolor1
-	local file, code = downloadFileToPath2('https://raw.githubusercontent.com/pla1keo/smiplalkeo/main/smiplalkeo.lua', thisScript().path)
+	local file, code = downloadFileToPath2('https://raw.githubusercontent.com/nightooes/script/main/smiplalkeo.lua', thisScript().path)
 	if file then
-		print('Загрузка обновления завершена.')
-		sampAddChatMessage((prefix..' Обновление завершено!'), color)
+		print('Р—Р°РіСЂСѓР·РєР° РѕР±РЅРѕРІР»РµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅР°.')
+		sampAddChatMessage((prefix..' РћР±РЅРѕРІР»РµРЅРёРµ Р·Р°РІРµСЂС€РµРЅРѕ!'), color)
 		lua_thread.create(function() wait(500) thisScript():reload() end)
 	else
-		sampAddChatMessage((prefix..' Обновление прошло неудачно. Запускаю устаревшую версию..'), color)
+		sampAddChatMessage((prefix..' РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕС€Р»Рѕ РЅРµСѓРґР°С‡РЅРѕ. Р—Р°РїСѓСЃРєР°СЋ СѓСЃС‚Р°СЂРµРІС€СѓСЋ РІРµСЂСЃРёСЋ..'), color)
 	end
 end
 
@@ -4222,16 +4223,16 @@ function buttonupdate(json_url, prefix)
 			os.remove(json)
 			if updateversion ~= thisScript().version then
 				local color = curcolor1
-				sampAddChatMessage((prefix..' Обнаружено обновление. v'..updateversion), color)
-				sampAddChatMessage(prefix..' Для обновления используйте команду '..curcolor..'/update', color)
+				sampAddChatMessage((prefix..' РћР±РЅР°СЂСѓР¶РµРЅРѕ РѕР±РЅРѕРІР»РµРЅРёРµ. v'..updateversion), color)
+				sampAddChatMessage(prefix..' Р”Р»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕРјР°РЅРґСѓ '..curcolor..'/update', color)
 			else
 				update = false
-				sampAddChatMessage(prefix..' Обновления не найдены.', curcolor1)
-				print('v'..thisScript().version..': Обновление не требуется.')
+				sampAddChatMessage(prefix..' РћР±РЅРѕРІР»РµРЅРёСЏ РЅРµ РЅР°Р№РґРµРЅС‹.', curcolor1)
+				print('v'..thisScript().version..': РћР±РЅРѕРІР»РµРЅРёРµ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ.')
 			end
 		end
 	else
-		print('v'..thisScript().version..': Не могу проверить обновление.')
+		print('v'..thisScript().version..': РќРµ РјРѕРіСѓ РїСЂРѕРІРµСЂРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ.')
 		update = false
 	end
 end
